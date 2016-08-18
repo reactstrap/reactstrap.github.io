@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Media object</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot="" data-reactid="1" data-react-checksum="248290419"><!-- react-empty: 2 --><nav role="navigation" class="header navbar navbar-light bg-faded" data-reactid="3"><div class="container-fluid" data-reactid="4"><a class="navbar-brand" href="/" data-reactid="5">reactstrap</a><ul class="nav navbar-nav pull-xs-right nav" data-reactid="6"><li class="nav-item" data-reactid="7"><a class="nav-link nav-link active" href="/components/" data-reactid="8">Components</a></li><li class="nav-item" data-reactid="9"><a href="https://github.com/reactstrap/reactstrap" class="nav-link" data-reactid="10">Github</a></li></ul></div></nav><div class="content container-fluid" data-reactid="11"><div class="row" data-reactid="12"><div class="col-xs-12 col-md-3 push-md-9" data-reactid="13"><div class="docs-sidebar m-b-3" data-reactid="14"><h5 data-reactid="15">Components</h5><ul class="nav" data-reactid="16"><li class="nav-item" data-reactid="17"><a class="nav-link" href="/components/buttons/" data-reactid="18">Buttons</a></li><li class="nav-item" data-reactid="19"><a class="nav-link" href="/components/button-group/" data-reactid="20">Button Group</a></li><li class="nav-item" data-reactid="21"><a class="nav-link" href="/components/button-dropdown/" data-reactid="22">Button Dropdown</a></li><li class="nav-item" data-reactid="23"><a class="nav-link" href="/components/dropdowns/" data-reactid="24">Dropdowns</a></li><li class="nav-item" data-reactid="25"><a class="nav-link" href="/components/form/" data-reactid="26">Form</a></li><li class="nav-item" data-reactid="27"><a class="nav-link" href="/components/input-group/" data-reactid="28">Input Group</a></li><li class="nav-item" data-reactid="29"><a class="nav-link" href="/components/breadcrumbs/" data-reactid="30">Breadscrumbs</a></li><li class="nav-item" data-reactid="31"><a class="nav-link" href="/components/tags/" data-reactid="32">Tags</a></li><li class="nav-item" data-reactid="33"><a class="nav-link" href="/components/card/" data-reactid="34">Card</a></li><li class="nav-item" data-reactid="35"><a class="nav-link" href="/components/navs/" data-reactid="36">Navs</a></li><li class="nav-item" data-reactid="37"><a class="nav-link" href="/components/navbar/" data-reactid="38">Navbar</a></li><li class="nav-item" data-reactid="39"><a class="nav-link" href="/components/tooltips/" data-reactid="40">Tooltips</a></li><li class="nav-item" data-reactid="41"><a class="nav-link" href="/components/popovers/" data-reactid="42">Popovers</a></li><li class="nav-item" data-reactid="43"><a class="nav-link" href="/components/modals/" data-reactid="44">Modals</a></li><li class="nav-item" data-reactid="45"><a class="nav-link" href="/components/layout/" data-reactid="46">Layout</a></li><li class="nav-item" data-reactid="47"><a class="nav-link" href="/components/tables/" data-reactid="48">Tables</a></li><li class="nav-item" data-reactid="49"><a class="nav-link active" href="/components/media/" data-reactid="50">Media</a></li><li class="nav-item" data-reactid="51"><a href="https://github.com/reactstrap/reactstrap/issues/13" class="nav-link" data-reactid="52"><small data-reactid="53">Additional Components</small></a></li></ul></div></div><div class="col-xs-12 col-md-9 pull-md-3" data-reactid="54"><div data-reactid="55"><!-- react-empty: 56 --><h3 data-reactid="57">Media object</h3><div class="docs-example" data-reactid="58"><div class="media" data-reactid="59"><a href="#" class="media-left" data-reactid="60"><img data-src="holder.js/64x64" alt="Generic placeholder image" class="media-object" data-reactid="61"/></a><div class="media-body" data-reactid="62"><h4 class="media-heading" data-reactid="63">Media heading</h4><!-- react-text: 64 -->Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<!-- /react-text --></div></div></div><pre data-reactid="65"><code class="language-jsx" data-reactid="66">import React from &#x27;react&#x27;;
+import { Media } from &#x27;reactstrap&#x27;;
+
+const Example = () =&gt; {
+  return (
+    &lt;Media&gt;
+      &lt;Media left href=&quot;#&quot;&gt;
+        &lt;Media object data-src=&quot;holder.js/64x64&quot; alt=&quot;Generic placeholder image&quot; /&gt;
+      &lt;/Media&gt;
+      &lt;Media body&gt;
+        &lt;Media heading&gt;
+          Media heading
+        &lt;/Media&gt;
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+      &lt;/Media&gt;
+    &lt;/Media&gt;
+  );
+};
+
+export default Example;
+</code></pre><h4 data-reactid="67">Properties</h4><pre data-reactid="68"><code class="language-jsx" data-reactid="69">Media.propTypes = {
+  body: PropTypes.bool,
+  bottom: PropTypes.bool,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  heading: PropTypes.bool,
+  left: PropTypes.bool,
+  list: PropTypes.bool,
+  middle: PropTypes.bool,
+  object: PropTypes.bool,
+  right: PropTypes.bool,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  top: PropTypes.bool,
+};</code></pre><h4 data-reactid="70">Nesting</h4><div class="docs-example" data-reactid="71"><div class="media" data-reactid="72"><a href="#" class="media-left" data-reactid="73"><img data-src="holder.js/64x64" alt="Generic placeholder image" class="media-object" data-reactid="74"/></a><div class="media-body" data-reactid="75"><h4 class="media-heading" data-reactid="76">Media heading</h4><!-- react-text: 77 -->Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<!-- /react-text --><div class="media" data-reactid="78"><a href="#" class="media-left" data-reactid="79"><img data-src="holder.js/64x64" alt="Generic placeholder image" class="media-object" data-reactid="80"/></a><div class="media-body" data-reactid="81"><h4 class="media-heading" data-reactid="82">Nested media heading</h4><!-- react-text: 83 -->Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<!-- /react-text --></div></div></div></div></div><pre data-reactid="84"><code class="language-jsx" data-reactid="85">import React from &#x27;react&#x27;;
+import { Media } from &#x27;reactstrap&#x27;;
+
+const Example = () =&gt; {
+  return (
+    &lt;Media&gt;
+      &lt;Media left href=&quot;#&quot;&gt;
+        &lt;Media object data-src=&quot;holder.js/64x64&quot; alt=&quot;Generic placeholder image&quot; /&gt;
+      &lt;/Media&gt;
+      &lt;Media body&gt;
+        &lt;Media heading&gt;
+          Media heading
+        &lt;/Media&gt;
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        &lt;Media&gt;
+          &lt;Media left href=&quot;#&quot;&gt;
+            &lt;Media object data-src=&quot;holder.js/64x64&quot; alt=&quot;Generic placeholder image&quot; /&gt;
+          &lt;/Media&gt;
+          &lt;Media body&gt;
+            &lt;Media heading&gt;
+              Nested media heading
+            &lt;/Media&gt;
+            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          &lt;/Media&gt;
+        &lt;/Media&gt;
+      &lt;/Media&gt;
+    &lt;/Media&gt;
+  );
+};
+
+export default Example;
+</code></pre><h4 data-reactid="86">Alignment</h4><div class="docs-example" data-reactid="87"><div data-reactid="88"><div class="media" data-reactid="89"><a href="#" class="media-left media-top" data-reactid="90"><img data-src="holder.js/64x64" alt="Generic placeholder image" class="media-object" data-reactid="91"/></a><div class="media-body" data-reactid="92"><h4 class="media-heading" data-reactid="93">Top aligned media</h4><!-- react-text: 94 -->Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<!-- /react-text --></div></div><div class="m-t-1 media" data-reactid="95"><a href="#" class="media-left media-middle" data-reactid="96"><img data-src="holder.js/64x64" alt="Generic placeholder image" class="media-object" data-reactid="97"/></a><div class="media-body" data-reactid="98"><h4 class="media-heading" data-reactid="99">Middle aligned media</h4><!-- react-text: 100 -->Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<!-- /react-text --></div></div><div class="m-t-1 media" data-reactid="101"><a href="#" class="media-left media-bottom" data-reactid="102"><img data-src="holder.js/64x64" alt="Generic placeholder image" class="media-object" data-reactid="103"/></a><div class="media-body" data-reactid="104"><h4 class="media-heading" data-reactid="105">Bottom aligned media</h4><!-- react-text: 106 -->Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<!-- /react-text --></div></div></div></div><pre data-reactid="107"><code class="language-jsx" data-reactid="108">import React from &#x27;react&#x27;;
+import { Media } from &#x27;reactstrap&#x27;;
+
+const Example = () =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Media&gt;
+        &lt;Media left top href=&quot;#&quot;&gt;
+          &lt;Media object data-src=&quot;holder.js/64x64&quot; alt=&quot;Generic placeholder image&quot; /&gt;
+        &lt;/Media&gt;
+        &lt;Media body&gt;
+          &lt;Media heading&gt;
+            Top aligned media
+          &lt;/Media&gt;
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        &lt;/Media&gt;
+      &lt;/Media&gt;
+      &lt;Media className=&quot;m-t-1&quot;&gt;
+        &lt;Media left middle href=&quot;#&quot;&gt;
+          &lt;Media object data-src=&quot;holder.js/64x64&quot; alt=&quot;Generic placeholder image&quot; /&gt;
+        &lt;/Media&gt;
+        &lt;Media body&gt;
+          &lt;Media heading&gt;
+            Middle aligned media
+          &lt;/Media&gt;
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        &lt;/Media&gt;
+      &lt;/Media&gt;
+      &lt;Media className=&quot;m-t-1&quot;&gt;
+        &lt;Media left bottom href=&quot;#&quot;&gt;
+          &lt;Media object data-src=&quot;holder.js/64x64&quot; alt=&quot;Generic placeholder image&quot; /&gt;
+        &lt;/Media&gt;
+        &lt;Media body&gt;
+          &lt;Media heading&gt;
+            Bottom aligned media
+          &lt;/Media&gt;
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        &lt;/Media&gt;
+      &lt;/Media&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h4 data-reactid="109">Media list</h4><div class="docs-example" data-reactid="110"><ul class="media-list" data-reactid="111"><li class="media" data-reactid="112"><a href="#" class="media-left" data-reactid="113"><img data-src="holder.js/64x64" alt="Generic placeholder image" class="media-object" data-reactid="114"/></a><div class="media-body" data-reactid="115"><h4 class="media-heading" data-reactid="116">Media heading</h4><!-- react-text: 117 -->Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<!-- /react-text --><div class="media" data-reactid="118"><a href="#" class="media-left" data-reactid="119"><img data-src="holder.js/64x64" alt="Generic placeholder image" class="media-object" data-reactid="120"/></a><div class="media-body" data-reactid="121"><h4 class="media-heading" data-reactid="122">Nested media heading</h4><!-- react-text: 123 -->Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<!-- /react-text --><div class="media" data-reactid="124"><a href="#" class="media-left" data-reactid="125"><img data-src="holder.js/64x64" alt="Generic placeholder image" class="media-object" data-reactid="126"/></a><div class="media-body" data-reactid="127"><h4 class="media-heading" data-reactid="128">Nested media heading</h4><!-- react-text: 129 -->Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<!-- /react-text --></div></div></div></div><div class="media" data-reactid="130"><a href="#" class="media-left" data-reactid="131"><img data-src="holder.js/64x64" alt="Generic placeholder image" class="media-object" data-reactid="132"/></a><div class="media-body" data-reactid="133"><h4 class="media-heading" data-reactid="134">Nested media heading</h4><!-- react-text: 135 -->Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<!-- /react-text --></div></div></div></li><li class="media" data-reactid="136"><div class="media-body" data-reactid="137"><h4 class="media-heading" data-reactid="138">Media heading</h4><!-- react-text: 139 -->Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.<!-- /react-text --></div><a href="#" class="media-right" data-reactid="140"><img data-src="holder.js/64x64" alt="Generic placeholder image" class="media-object" data-reactid="141"/></a></li></ul></div><pre data-reactid="142"><code class="language-jsx" data-reactid="143">import React from &#x27;react&#x27;;
+import { Media } from &#x27;reactstrap&#x27;;
+
+const Example = () =&gt; {
+  return (
+    &lt;Media list&gt;
+      &lt;Media tag=&quot;li&quot;&gt;
+        &lt;Media left href=&quot;#&quot;&gt;
+          &lt;Media object data-src=&quot;holder.js/64x64&quot; alt=&quot;Generic placeholder image&quot; /&gt;
+        &lt;/Media&gt;
+        &lt;Media body&gt;
+          &lt;Media heading&gt;
+            Media heading
+          &lt;/Media&gt;
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+          &lt;Media&gt;
+            &lt;Media left href=&quot;#&quot;&gt;
+              &lt;Media object data-src=&quot;holder.js/64x64&quot; alt=&quot;Generic placeholder image&quot; /&gt;
+            &lt;/Media&gt;
+            &lt;Media body&gt;
+              &lt;Media heading&gt;
+                Nested media heading
+              &lt;/Media&gt;
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              &lt;Media&gt;
+                &lt;Media left href=&quot;#&quot;&gt;
+                  &lt;Media object data-src=&quot;holder.js/64x64&quot; alt=&quot;Generic placeholder image&quot; /&gt;
+                &lt;/Media&gt;
+                &lt;Media body&gt;
+                  &lt;Media heading&gt;
+                    Nested media heading
+                  &lt;/Media&gt;
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                &lt;/Media&gt;
+              &lt;/Media&gt;
+            &lt;/Media&gt;
+          &lt;/Media&gt;
+          &lt;Media&gt;
+            &lt;Media left href=&quot;#&quot;&gt;
+              &lt;Media object data-src=&quot;holder.js/64x64&quot; alt=&quot;Generic placeholder image&quot; /&gt;
+            &lt;/Media&gt;
+            &lt;Media body&gt;
+              &lt;Media heading&gt;
+                Nested media heading
+              &lt;/Media&gt;
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            &lt;/Media&gt;
+          &lt;/Media&gt;
+        &lt;/Media&gt;
+      &lt;/Media&gt;
+      &lt;Media tag=&quot;li&quot;&gt;
+        &lt;Media body&gt;
+          &lt;Media heading&gt;
+            Media heading
+          &lt;/Media&gt;
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        &lt;/Media&gt;
+        &lt;Media right href=&quot;#&quot;&gt;
+          &lt;Media object data-src=&quot;holder.js/64x64&quot; alt=&quot;Generic placeholder image&quot; /&gt;
+        &lt;/Media&gt;
+      &lt;/Media&gt;
+    &lt;/Media&gt;
+  );
+};
+
+export default Example;
+</code></pre></div></div></div></div><div class="footer" data-reactid="144"><div class="container-fluid" data-reactid="145"><div class="row" data-reactid="146"><div class="text-xs-center col-xs-12" data-reactid="147"><p class="social" data-reactid="148"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameborder="0" scrolling="0" width="100" height="20px" data-reactid="149"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameborder="0" scrolling="0" width="100" height="20px" data-reactid="150"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+        </body>
+      </html>

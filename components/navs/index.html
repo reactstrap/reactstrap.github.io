@@ -54,7 +54,8 @@ export default class Example extends React.Component {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
   // pass in custom element to use
 }</code></pre><h4>NavItem Properties</h4><pre><code class="language-jsx">NavItem.propTypes = {
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  active: PropTypes.bool,
   // pass in custom element to use
 }</code></pre><h4>NavLink Properties</h4><pre><code class="language-jsx">NavLink.propTypes = {
   disabled: PropTypes.bool,

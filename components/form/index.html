@@ -196,23 +196,21 @@ export default class Example extends React.Component {
     );
   }
 }
-</code></pre><h3>Inline Form</h3><div class="docs-example"><form class="form-inline"><div class="form-group"><label for="exampleEmail" class="">Email</label> <input type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" class="form-control"/></div> <div class="form-group"><label for="examplePassword" class="">Password</label> <input type="password" name="password" id="examplePassword" placeholder="don&#x27;t tell!" class="form-control"/></div> <button class="btn btn-secondary">Submit</button></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+</code></pre><h3>Inline Form</h3><div class="docs-example"><form class="form-inline"><div class="mb-2 mr-sm-2 mb-sm-0 form-group"><label for="exampleEmail" class="mr-sm-2 ">Email</label><input type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" class="form-control"/></div><div class="mb-2 mr-sm-2 mb-sm-0 form-group"><label for="examplePassword" class="mr-sm-2 ">Password</label><input type="password" name="password" id="examplePassword" placeholder="don&#x27;t tell!" class="form-control"/></div><button class="btn btn-secondary">Submit</button></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Button, Form, FormGroup, Label, Input } from &#x27;reactstrap&#x27;;
 
 export default class Example extends React.Component {
   render() {
     return (
       &lt;Form inline&gt;
-        &lt;FormGroup&gt;
-          &lt;Label for=&quot;exampleEmail&quot;&gt;Email&lt;/Label&gt;{&#x27; &#x27;}
+        &lt;FormGroup className=&quot;mb-2 mr-sm-2 mb-sm-0&quot;&gt;
+          &lt;Label for=&quot;exampleEmail&quot; className=&quot;mr-sm-2&quot;&gt;Email&lt;/Label&gt;
           &lt;Input type=&quot;email&quot; name=&quot;email&quot; id=&quot;exampleEmail&quot; placeholder=&quot;something@idk.cool&quot; /&gt;
         &lt;/FormGroup&gt;
-        {&#x27; &#x27;}
-        &lt;FormGroup&gt;
-          &lt;Label for=&quot;examplePassword&quot;&gt;Password&lt;/Label&gt;{&#x27; &#x27;}
+        &lt;FormGroup className=&quot;mb-2 mr-sm-2 mb-sm-0&quot;&gt;
+          &lt;Label for=&quot;examplePassword&quot; className=&quot;mr-sm-2&quot;&gt;Password&lt;/Label&gt;
           &lt;Input type=&quot;password&quot; name=&quot;password&quot; id=&quot;examplePassword&quot; placeholder=&quot;don&#x27;t tell!&quot; /&gt;
         &lt;/FormGroup&gt;
-        {&#x27; &#x27;}
         &lt;Button&gt;Submit&lt;/Button&gt;
       &lt;/Form&gt;
     );

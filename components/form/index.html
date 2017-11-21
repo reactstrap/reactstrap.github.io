@@ -216,7 +216,7 @@ export default class Example extends React.Component {
     );
   }
 }
-</code></pre><h3>Form Validation</h3><div class="docs-example"><form class=""><div class="form-group"><label for="exampleEmail" class="">Input with success</label><input type="text" class="is-valid form-control"/><div class="invalid-feedback"><a href="https://github.com/twbs/bootstrap/issues/23372">A bug</a> fixed in (the currently unreleased) (<a href="https://github.com/twbs/bootstrap/pull/23377">PR</a>) bootstrap <a href="https://github.com/twbs/bootstrap/issues/23278">v4 beta-2</a> shows invalid-feedback with is-valid inputs.</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div><div class="form-group"><label for="examplePassword" class="">Input with danger</label><input type="text" class="is-invalid form-control"/><div class="invalid-feedback">Oh noes! that name is already taken</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+</code></pre><h3>Form Validation</h3><div class="docs-example"><form class=""><div class="form-group"><label for="exampleEmail" class="">Input with success</label><input type="text" class="is-valid form-control"/><small class="form-text text-muted">Example help text that remains unchanged.</small></div><div class="form-group"><label for="examplePassword" class="">Input with danger</label><input type="text" class="is-invalid form-control"/><div class="invalid-feedback">Oh noes! that name is already taken</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Form, FormGroup, Label, Input, FormFeedback, FormText } from &#x27;reactstrap&#x27;;
 
 export default class Example extends React.Component {
@@ -226,13 +226,6 @@ export default class Example extends React.Component {
         &lt;FormGroup&gt;
           &lt;Label for=&quot;exampleEmail&quot;&gt;Input with success&lt;/Label&gt;
           &lt;Input valid /&gt;
-          &lt;FormFeedback&gt;
-            &lt;a href=&quot;https://github.com/twbs/bootstrap/issues/23372&quot;&gt;A bug&lt;/a&gt; fixed in (the currently
-            unreleased) (
-            &lt;a href=&quot;https://github.com/twbs/bootstrap/pull/23377&quot;&gt;PR&lt;/a&gt;
-            ) bootstrap &lt;a href=&quot;https://github.com/twbs/bootstrap/issues/23278&quot;&gt;v4 beta-2&lt;/a&gt; shows invalid-feedback
-            with is-valid inputs.
-          &lt;/FormFeedback&gt;
           &lt;FormText&gt;Example help text that remains unchanged.&lt;/FormText&gt;
         &lt;/FormGroup&gt;
         &lt;FormGroup&gt;

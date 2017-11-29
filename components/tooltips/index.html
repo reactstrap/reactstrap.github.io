@@ -82,7 +82,9 @@ export default class Example extends React.Component {
     &#x27;left&#x27;,
     &#x27;left-start&#x27;,
     &#x27;left-end&#x27;,
-  ])
+  ]),
+  // Custom modifiers that are passed to Popper.js, see https://popper.js.org/popper-documentation.html#modifiers
+  modifiers: PropTypes.object
 }</code></pre><h3>Tooltip Disable Autohide</h3><div class="docs-example"><div><p>Sometimes you need to allow users to select text within a <a href="#" id="DisabledAutoHideExample">tooltip</a>.</p></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React from &#x27;react&#x27;;
 import { Tooltip } from &#x27;reactstrap&#x27;;

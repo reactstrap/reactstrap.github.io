@@ -49,7 +49,7 @@ export default class Example extends React.Component {
 }
 </code></pre><h4>Properties</h4><pre><code class="language-jsx">ButtonDropdown.propTypes = {
   disabled: PropTypes.bool,
-  dropup: PropTypes.bool,
+  direction: PropTypes.oneOf([&#x27;up&#x27;, &#x27;down&#x27;, &#x27;left&#x27;, &#x27;right&#x27;]),
   group: PropTypes.bool,
   isOpen: PropTypes.bool,
   tag: PropTypes.string,
@@ -102,9 +102,29 @@ DropdownToggle.propTypes = {
     &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
     &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
   &lt;/DropdownMenu&gt;
-&lt;/ButtonDropdown&gt;</code></pre><h3>Dropup variation</h3><div class="docs-example"><div><div class="btn-group dropup"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary btn-lg">Dropup</button><div tabIndex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button></div></div></div></div><pre><code class="language-jsx">&lt;ButtonDropdown isOpen={isOpen} toggle={toggle} dropup&gt;
-  &lt;DropdownToggle caret caret size=&quot;lg&quot;&gt;
+&lt;/ButtonDropdown&gt;</code></pre><h3>Drop direction variations</h3><div class="docs-example"><div><div class="dropup btn-group"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropup</button><div tabIndex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button></div></div> <div class="dropleft btn-group"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropleft</button><div tabIndex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button></div></div> <div class="dropright btn-group"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropright</button><div tabIndex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button></div></div></div></div><pre><code class="language-jsx">&lt;ButtonDropdown direction=&quot;up&quot; isOpen={isOpen} toggle={toggle}&gt;
+  &lt;DropdownToggle caret&gt;
     Dropup
+  &lt;/DropdownToggle&gt;
+  &lt;DropdownMenu&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+  &lt;/DropdownMenu&gt;
+&lt;/ButtonDropdown&gt;
+
+&lt;ButtonDropdown direction=&quot;left&quot; isOpen={this.state.btnDropleft} toggle={() =&gt; { this.setState({ btnDropleft: !this.state.btnDropleft }); }}&gt;
+  &lt;DropdownToggle caret&gt;
+    Dropleft
+  &lt;/DropdownToggle&gt;
+  &lt;DropdownMenu&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+  &lt;/DropdownMenu&gt;
+&lt;/ButtonDropdown&gt;
+
+&lt;ButtonDropdown direction=&quot;right&quot; isOpen={this.state.btnDropright} toggle={() =&gt; { this.setState({ btnDropright: !this.state.btnDropright }); }}&gt;
+  &lt;DropdownToggle caret&gt;
+    Dropright
   &lt;/DropdownToggle&gt;
   &lt;DropdownMenu&gt;
     &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;

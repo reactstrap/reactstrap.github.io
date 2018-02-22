@@ -97,7 +97,8 @@ export default class Example extends React.Component {
   size: PropTypes.string,
   bsSize: PropTypes.string,
   state: deprecated(PropTypes.string, &#x27;Please use the prop &quot;valid&quot;&#x27;),
-  valid: PropTypes.bool,
+  valid: PropTypes.bool, // applied the is-valid class when true, does nothing when false
+  invalid: PropTypes.bool, // applied the is-invalid class when true, does nothing when false
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   // ref will only get you a reference to the Input component, use innerRef to get a reference to the DOM input (for things like focus management).
   innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -216,7 +217,7 @@ export default class Example extends React.Component {
     );
   }
 }
-</code></pre><h3>Form Validation</h3><div class="docs-example"><form class=""><div class="form-group"><label for="exampleEmail" class="">Input with success</label><input type="text" class="is-valid form-control"/><div class="valid-feedback">Oh noes! that name is already taken</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div><div class="form-group"><label for="examplePassword" class="">Input with danger</label><input type="text" class="is-invalid form-control"/><div class="invalid-feedback">Oh noes! that name is already taken</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+</code></pre><h3>Form Validation</h3><div class="docs-example"><form class=""><div class="form-group"><label for="exampleEmail" class="">Input wihtout validation</label><input type="text" class="form-control"/><div class="invalid-feedback">You will not be able to see this</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div><div class="form-group"><label for="exampleEmail" class="">Valid input</label><input type="text" class="is-valid form-control"/><div class="valid-feedback">Sweet! that name is available</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div><div class="form-group"><label for="examplePassword" class="">Invalid input</label><input type="text" class="is-invalid form-control"/><div class="invalid-feedback">Oh noes! that name is already taken</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Form, FormGroup, Label, Input, FormFeedback, FormText } from &#x27;reactstrap&#x27;;
 
 export default class Example extends React.Component {
@@ -224,14 +225,20 @@ export default class Example extends React.Component {
     return (
       &lt;Form&gt;
         &lt;FormGroup&gt;
-          &lt;Label for=&quot;exampleEmail&quot;&gt;Input with success&lt;/Label&gt;
-          &lt;Input valid /&gt;
-          &lt;FormFeedback valid&gt;Oh noes! that name is already taken&lt;/FormFeedback&gt;
+          &lt;Label for=&quot;exampleEmail&quot;&gt;Input wihtout validation&lt;/Label&gt;
+          &lt;Input /&gt;
+          &lt;FormFeedback&gt;You will not be able to see this&lt;/FormFeedback&gt;
           &lt;FormText&gt;Example help text that remains unchanged.&lt;/FormText&gt;
         &lt;/FormGroup&gt;
         &lt;FormGroup&gt;
-          &lt;Label for=&quot;examplePassword&quot;&gt;Input with danger&lt;/Label&gt;
-          &lt;Input valid={false} /&gt;
+          &lt;Label for=&quot;exampleEmail&quot;&gt;Valid input&lt;/Label&gt;
+          &lt;Input valid /&gt;
+          &lt;FormFeedback valid&gt;Sweet! that name is available&lt;/FormFeedback&gt;
+          &lt;FormText&gt;Example help text that remains unchanged.&lt;/FormText&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;examplePassword&quot;&gt;Invalid input&lt;/Label&gt;
+          &lt;Input invalid /&gt;
           &lt;FormFeedback&gt;Oh noes! that name is already taken&lt;/FormFeedback&gt;
           &lt;FormText&gt;Example help text that remains unchanged.&lt;/FormText&gt;
         &lt;/FormGroup&gt;

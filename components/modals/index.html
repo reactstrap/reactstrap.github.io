@@ -70,6 +70,8 @@ export default ModalExample;
     PropTypes.bool,
     PropTypes.oneOf([&#x27;static&#x27;])
   ]),
+  // allows for a node/componet to exist next to the modal (outside of it). Useful for external close buttons
+  // external: PropTypes.node,
   // called on componentDidMount
   onEnter: PropTypes.func,
   // called on componentWillUnmount
@@ -300,6 +302,49 @@ class ModalExample extends React.Component {
         &lt;Modal isOpen={this.state.modal} fade={false} toggle={this.toggle} className={this.props.className}&gt;
           &lt;ModalHeader toggle={this.toggle}&gt;Modal title&lt;/ModalHeader&gt;
           &lt;ModalBody&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          &lt;/ModalBody&gt;
+          &lt;ModalFooter&gt;
+            &lt;Button color=&quot;primary&quot; onClick={this.toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+            &lt;Button color=&quot;secondary&quot; onClick={this.toggle}&gt;Cancel&lt;/Button&gt;
+          &lt;/ModalFooter&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default ModalExample;
+</code></pre><h4>Modals with external button</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with external close button</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+class ModalExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
+
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  render() {
+    const externalCloseBtn = &lt;button className=&quot;close&quot; style={{ position: &#x27;absolute&#x27;, top: &#x27;15px&#x27;, right: &#x27;15px&#x27; }} onClick={this.toggle}&gt;&amp;times;&lt;/button&gt;;
+    return (
+      &lt;div&gt;
+        &lt;Button color=&quot;danger&quot; onClick={this.toggle}&gt;{this.props.buttonLabel}&lt;/Button&gt;
+        &lt;Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} external={externalCloseBtn}&gt;
+          &lt;ModalHeader&gt;Modal title&lt;/ModalHeader&gt;
+          &lt;ModalBody&gt;
+            &lt;b&gt;Look at the top right of the page/viewport!&lt;/b&gt;&lt;br /&gt;
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           &lt;/ModalBody&gt;
           &lt;ModalFooter&gt;

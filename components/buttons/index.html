@@ -40,6 +40,9 @@ export default class Example extends React.Component {
   // default: &#x27;button&#x27;
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 
+  // ref will only get you a reference to the Button component, use innerRef to get a reference to the DOM element (for things like focus management).
+  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+
   onClick: PropTypes.func,
   size: PropTypes.string
 }</code></pre><h3>Outline Buttons</h3><div class="docs-example"><div><button class="btn btn-outline-primary">primary</button> <button class="btn btn-outline-secondary">secondary</button> <button class="btn btn-outline-success">success</button> <button class="btn btn-outline-info">info</button> <button class="btn btn-outline-warning">warning</button> <button class="btn btn-outline-danger">danger</button></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;

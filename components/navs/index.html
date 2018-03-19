@@ -60,8 +60,10 @@ export default class Example extends React.Component {
 }</code></pre><h4>NavLink Properties</h4><pre><code class="language-jsx">NavLink.propTypes = {
   disabled: PropTypes.bool,
   active: PropTypes.bool,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
   // pass in custom element to use
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  // ref will only get you a reference to the NavLink component, use innerRef to get a reference to the DOM element (for things like focus management).
+  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
 }</code></pre><h3>Vertical</h3><div class="docs-example"><div><p>List Based</p><ul class="nav flex-column"><li class="nav-item"><a href="#" class="nav-link">Link</a></li><li class="nav-item"><a href="#" class="nav-link">Link</a></li><li class="nav-item"><a href="#" class="nav-link">Another Link</a></li><li class="nav-item"><a disabled="" href="#" class="nav-link disabled">Disabled Link</a></li></ul><hr/><p>Link based</p><ul class="nav flex-column"><a href="#" class="nav-link">Link</a> <a href="#" class="nav-link">Link</a> <a href="#" class="nav-link">Another Link</a> <a disabled="" href="#" class="nav-link disabled">Disabled Link</a></ul></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Nav, NavItem, NavLink } from &#x27;reactstrap&#x27;;
 

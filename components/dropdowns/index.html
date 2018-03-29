@@ -82,6 +82,8 @@ DropdownMenu.propTypes = {
   flip: PropTypes.bool, // default: true,
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  // Custom modifiers that are passed to DropdownMenu.js, see https://popper.js.org/popper-documentation.html#modifiers
+  modifiers: PropTypes.object
 };
 
 DropdownItem.propTypes = {
@@ -215,6 +217,39 @@ export default function Example () {
     Dropright
   &lt;/DropdownToggle&gt;
   &lt;DropdownMenu&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+  &lt;/DropdownMenu&gt;
+&lt;/Dropdown&gt;</code></pre><h3>Modifiers</h3><div class="docs-example"><div class="row"><div class="col"><div class="dropdown"><button type="button" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary">Dropdown</button><div tabIndex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button><button type="button" tabIndex="0" class="dropdown-item">Another Action</button></div></div></div></div></div><pre><code class="language-jsx">&lt;Dropdown isOpen={isOpen} toggle={toggle}&gt;
+  &lt;DropdownToggle&gt;
+    Dropdown
+  &lt;/DropdownToggle&gt;
+  &lt;DropdownMenu
+    modifiers={{
+      setMaxHeight: {
+        enabled: true,
+        order: 890,
+        fn: (data) =&gt; {
+          return {
+            ...data,
+            styles: {
+              ...data.styles,
+              overflow: &#x27;auto&#x27;,
+              maxHeight: 100,
+            },
+          };
+        },
+      },
+    }}
+  &gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
+    &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
     &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
     &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
   &lt;/DropdownMenu&gt;

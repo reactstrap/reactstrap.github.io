@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Collapse</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">Github</a></li></ul></div></div></nav><div class="content container"><div class="row"><div class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h5>Utilities</h5><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link active" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></div><div class="docSearch-content col-md-9 order-md-1"><div><h3 id="Collapse">Collapse</h3><div class="docs-example"><div><button type="button" style="margin-bottom:1rem" class="btn btn-primary">Toggle</button><div class="collapse"><div class="card"><div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div></div></div></div></div><pre><code class="language-jsx">import React, { Component } from &#x27;react&#x27;;
+import { Collapse, Button, CardBody, Card } from &#x27;reactstrap&#x27;;
+
+class Example extends Component {
+  constructor(props) {
+    super(props);
+    this.toggle = this.toggle.bind(this);
+    this.state = { collapse: false };
+  }
+
+  toggle() {
+    this.setState({ collapse: !this.state.collapse });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button color=&quot;primary&quot; onClick={this.toggle} style={{ marginBottom: &#x27;1rem&#x27; }}&gt;Toggle&lt;/Button&gt;
+        &lt;Collapse isOpen={this.state.collapse}&gt;
+          &lt;Card&gt;
+            &lt;CardBody&gt;
+            Anim pariatur cliche reprehenderit,
+             enim eiusmod high life accusamus terry richardson ad squid. Nihil
+             anim keffiyeh helvetica, craft beer labore wes anderson cred
+             nesciunt sapiente ea proident.
+            &lt;/CardBody&gt;
+          &lt;/Card&gt;
+        &lt;/Collapse&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default Example;
+</code></pre><h3 id="Properties">Properties</h3><pre><code class="language-jsx">Collapse.propTypes = {
+  ...Transition.propTypes,
+  isOpen: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.node,
+  navbar: PropTypes.bool,
+  cssModule: PropTypes.object,
+};</code></pre><h3 id="Events">Events</h3><p>Use the <code>onEnter</code>, onEntering, onEntered, onExit, onExiting and onExited props for callbacks when the Collapse has finished opening (entering) or closing (exiting).</p><div class="docs-example"><div><button type="button" style="margin-bottom:1rem" class="btn btn-primary">Toggle</button><h5>Current state: <!-- -->Closed</h5><div class="collapse"><div class="card"><div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div></div></div></div></div><pre><code class="language-jsx">import React, { Component } from &#x27;react&#x27;;
+import { Collapse, Button, CardBody, Card } from &#x27;reactstrap&#x27;;
+
+class Example extends Component {
+  constructor(props) {
+    super(props);
+    this.onEntering = this.onEntering.bind(this);
+    this.onEntered = this.onEntered.bind(this);
+    this.onExiting = this.onExiting.bind(this);
+    this.onExited = this.onExited.bind(this);
+    this.toggle = this.toggle.bind(this);
+    this.state = { collapse: false, status: &#x27;Closed&#x27; };
+  }
+
+  onEntering() {
+    this.setState({ status: &#x27;Opening...&#x27; });
+  }
+
+  onEntered() {
+    this.setState({ status: &#x27;Opened&#x27; });
+  }
+
+  onExiting() {
+    this.setState({ status: &#x27;Closing...&#x27; });
+  }
+
+  onExited() {
+    this.setState({ status: &#x27;Closed&#x27; });
+  }
+
+  toggle() {
+    this.setState({ collapse: !this.state.collapse });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button color=&quot;primary&quot; onClick={this.toggle} style={{ marginBottom: &#x27;1rem&#x27; }}&gt;Toggle&lt;/Button&gt;
+        &lt;h5&gt;Current state: {this.state.status}&lt;/h5&gt;
+        &lt;Collapse
+          isOpen={this.state.collapse}
+          onEntering={this.onEntering}
+          onEntered={this.onEntered}
+          onExiting={this.onExiting}
+          onExited={this.onExited}
+        &gt;
+          &lt;Card&gt;
+            &lt;CardBody&gt;
+              Anim pariatur cliche reprehenderit,
+             enim eiusmod high life accusamus terry richardson ad squid. Nihil
+             anim keffiyeh helvetica, craft beer labore wes anderson cred
+             nesciunt sapiente ea proident.
+            &lt;/CardBody&gt;
+          &lt;/Card&gt;
+        &lt;/Collapse&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default Example;
+</code></pre></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

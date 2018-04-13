@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Tables</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">Github</a></li></ul></div></div></nav><div class="content container"><div class="row"><div class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h5>Utilities</h5><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link active" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></div><div class="docSearch-content col-md-9 order-md-1"><div><h3 id="Tables">Tables</h3><hr/><div class="docs-example"><table class="table"><thead><tr><th>#</th><th>First Name</th><th>Last Name</th><th>Username</th></tr></thead><tbody><tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><th scope="row">2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr><tr><th scope="row">3</th><td>Larry</td><td>the Bird</td><td>@twitter</td></tr></tbody></table></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Table } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+            &lt;th&gt;Username&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+            &lt;td&gt;Larry&lt;/td&gt;
+            &lt;td&gt;the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/Table&gt;
+    );
+  }
+}
+</code></pre><h4>Properties</h4><pre><code class="language-jsx">Table.propTypes = {
+// Pass in a Component to override default element
+tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+size: PropTypes.string,
+bordered: PropTypes.bool,
+striped: PropTypes.bool,
+dark: PropTypes.bool,
+hover: PropTypes.bool,
+responsive: PropTypes.bool
+};</code></pre><h3 id="Dark-table">Dark table</h3><div class="docs-example"><table class="table table-dark"><thead><tr><th>#</th><th>First Name</th><th>Last Name</th><th>Username</th></tr></thead><tbody><tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><th scope="row">2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr><tr><th scope="row">3</th><td>Larry</td><td>the Bird</td><td>@twitter</td></tr></tbody></table></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Table } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Table dark&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+            &lt;th&gt;Username&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+            &lt;td&gt;Larry&lt;/td&gt;
+            &lt;td&gt;the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/Table&gt;
+    );
+  }
+}
+</code></pre><h3 id="Striped-rows">Striped rows</h3><div class="docs-example"><table class="table table-striped"><thead><tr><th>#</th><th>First Name</th><th>Last Name</th><th>Username</th></tr></thead><tbody><tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><th scope="row">2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr><tr><th scope="row">3</th><td>Larry</td><td>the Bird</td><td>@twitter</td></tr></tbody></table></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Table } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Table striped&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+            &lt;th&gt;Username&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+            &lt;td&gt;Larry&lt;/td&gt;
+            &lt;td&gt;the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/Table&gt;
+    );
+  }
+}
+</code></pre><h3 id="Bordered-table">Bordered table</h3><div class="docs-example"><table class="table table-bordered"><thead><tr><th>#</th><th>First Name</th><th>Last Name</th><th>Username</th></tr></thead><tbody><tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><th scope="row">2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr><tr><th scope="row">3</th><td>Larry</td><td>the Bird</td><td>@twitter</td></tr></tbody></table></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Table } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Table bordered&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+            &lt;th&gt;Username&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+            &lt;td&gt;Larry&lt;/td&gt;
+            &lt;td&gt;the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/Table&gt;
+    );
+  }
+}
+</code></pre><h3 id="Hoverable-rows">Hoverable rows</h3><div class="docs-example"><table class="table table-hover"><thead><tr><th>#</th><th>First Name</th><th>Last Name</th><th>Username</th></tr></thead><tbody><tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><th scope="row">2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr><tr><th scope="row">3</th><td>Larry</td><td>the Bird</td><td>@twitter</td></tr></tbody></table></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Table } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Table hover&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+            &lt;th&gt;Username&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+            &lt;td&gt;Larry&lt;/td&gt;
+            &lt;td&gt;the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/Table&gt;
+    );
+  }
+}
+</code></pre><h3 id="Small-table">Small table</h3><div class="docs-example"><table class="table table-sm"><thead><tr><th>#</th><th>First Name</th><th>Last Name</th><th>Username</th></tr></thead><tbody><tr><th scope="row">1</th><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><th scope="row">2</th><td>Jacob</td><td>Thornton</td><td>@fat</td></tr><tr><th scope="row">3</th><td>Larry</td><td>the Bird</td><td>@twitter</td></tr></tbody></table></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Table } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Table size=&quot;sm&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;First Name&lt;/th&gt;
+            &lt;th&gt;Last Name&lt;/th&gt;
+            &lt;th&gt;Username&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+            &lt;td&gt;Mark&lt;/td&gt;
+            &lt;td&gt;Otto&lt;/td&gt;
+            &lt;td&gt;@mdo&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+            &lt;td&gt;Jacob&lt;/td&gt;
+            &lt;td&gt;Thornton&lt;/td&gt;
+            &lt;td&gt;@fat&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+            &lt;td&gt;Larry&lt;/td&gt;
+            &lt;td&gt;the Bird&lt;/td&gt;
+            &lt;td&gt;@twitter&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/Table&gt;
+    );
+  }
+}
+</code></pre><h3 id="Responsive-table">Responsive table</h3><div class="docs-example"><div class="table-responsive"><table class="table"><thead><tr><th>#</th><th>Table heading</th><th>Table heading</th><th>Table heading</th><th>Table heading</th><th>Table heading</th><th>Table heading</th></tr></thead><tbody><tr><th scope="row">1</th><td>Table cell</td><td>Table cell</td><td>Table cell</td><td>Table cell</td><td>Table cell</td><td>Table cell</td></tr><tr><th scope="row">2</th><td>Table cell</td><td>Table cell</td><td>Table cell</td><td>Table cell</td><td>Table cell</td><td>Table cell</td></tr><tr><th scope="row">3</th><td>Table cell</td><td>Table cell</td><td>Table cell</td><td>Table cell</td><td>Table cell</td><td>Table cell</td></tr></tbody></table></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Table } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Table responsive&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Table heading&lt;/th&gt;
+            &lt;th&gt;Table heading&lt;/th&gt;
+            &lt;th&gt;Table heading&lt;/th&gt;
+            &lt;th&gt;Table heading&lt;/th&gt;
+            &lt;th&gt;Table heading&lt;/th&gt;
+            &lt;th&gt;Table heading&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+            &lt;td&gt;Table cell&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/Table&gt;
+    );
+  }
+}
+</code></pre></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Progress</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">Github</a></li></ul></div></div></nav><div class="content container"><div class="row"><div class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h5>Utilities</h5><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link active" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></div><div class="docSearch-content col-md-9 order-md-1"><div><h3 id="Progress">Progress</h3><div class="docs-example"><div><div class="text-center">0%</div><div class="progress"><div class="progress-bar" style="width:0%" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div><div class="text-center">25%</div><div class="progress"><div class="progress-bar" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div><div class="text-center">50%</div><div class="progress"><div class="progress-bar" style="width:50%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div></div><div class="text-center">75%</div><div class="progress"><div class="progress-bar" style="width:75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div><div class="text-center">100%</div><div class="progress"><div class="progress-bar" style="width:100%" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div></div><div class="text-center">Multiple bars</div><div class="progress"><div class="progress-bar" style="width:15%" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar bg-success" style="width:30%" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar bg-info" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar bg-warning" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar bg-danger" style="width:5%" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Progress } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;div className=&quot;text-center&quot;&gt;0%&lt;/div&gt;
+      &lt;Progress /&gt;
+      &lt;div className=&quot;text-center&quot;&gt;25%&lt;/div&gt;
+      &lt;Progress value=&quot;25&quot; /&gt;
+      &lt;div className=&quot;text-center&quot;&gt;50%&lt;/div&gt;
+      &lt;Progress value={50} /&gt;
+      &lt;div className=&quot;text-center&quot;&gt;75%&lt;/div&gt;
+      &lt;Progress value={75} /&gt;
+      &lt;div className=&quot;text-center&quot;&gt;100%&lt;/div&gt;
+      &lt;Progress value=&quot;100&quot; /&gt;
+      &lt;div className=&quot;text-center&quot;&gt;Multiple bars&lt;/div&gt;
+      &lt;Progress multi&gt;
+        &lt;Progress bar value=&quot;15&quot; /&gt;
+        &lt;Progress bar color=&quot;success&quot; value=&quot;30&quot; /&gt;
+        &lt;Progress bar color=&quot;info&quot; value=&quot;25&quot; /&gt;
+        &lt;Progress bar color=&quot;warning&quot; value=&quot;20&quot; /&gt;
+        &lt;Progress bar color=&quot;danger&quot; value=&quot;5&quot; /&gt;
+      &lt;/Progress&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h4>Properties</h4><pre><code class="language-jsx">Progress.propTypes = {
+  multi: PropTypes.bool,
+  bar: PropTypes.bool, // used in combination with multi
+  tag: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
+  max: PropTypes.oneOf([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
+  animated: PropTypes.bool,
+  striped: PropTypes.bool,
+  color: PropTypes.string,
+  className: PropTypes.string,
+  barClassName: PropTypes.string // used to add class to the inner progress-bar element
+};
+
+Progress.defaultProps = {
+  tag: &#x27;progress&#x27;,
+  value: 0,
+  max: 100,
+};</code></pre><h3 id="Color-Variants">Color Variants</h3><div class="docs-example"><div><div><div class="progress"><div class="progress-bar" style="width:10%" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar bg-success" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar bg-info" style="width:50%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar bg-warning" style="width:75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar bg-danger" style="width:100%" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Progress } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Progress value={2 * 5} /&gt;
+      &lt;Progress color=&quot;success&quot; value=&quot;25&quot; /&gt;
+      &lt;Progress color=&quot;info&quot; value={50} /&gt;
+      &lt;Progress color=&quot;warning&quot; value={75} /&gt;
+      &lt;Progress color=&quot;danger&quot; value=&quot;100&quot; /&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Labels">Labels</h3><div class="docs-example"><div><div><div class="progress"><div class="progress-bar" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div></div><div class="progress"><div class="progress-bar" style="width:50%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">1/2</div></div><div class="progress"><div class="progress-bar" style="width:75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">You&#x27;re almost there!</div></div><div class="progress"><div class="progress-bar bg-success" style="width:100%" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">You did it!</div></div><div class="progress"><div class="progress-bar" style="width:15%" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Meh</div><div class="progress-bar bg-success" style="width:30%" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Wow!</div><div class="progress-bar bg-info" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Cool</div><div class="progress-bar bg-warning" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div><div class="progress-bar bg-danger" style="width:5%" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">!!</div></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Progress } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Progress value=&quot;25&quot;&gt;25%&lt;/Progress&gt;
+      &lt;Progress value={50}&gt;1/2&lt;/Progress&gt;
+      &lt;Progress value={75}&gt;You&#x27;re almost there!&lt;/Progress&gt;
+      &lt;Progress color=&quot;success&quot; value=&quot;100&quot;&gt;You did it!&lt;/Progress&gt;
+      &lt;Progress multi&gt;
+        &lt;Progress bar value=&quot;15&quot;&gt;Meh&lt;/Progress&gt;
+        &lt;Progress bar color=&quot;success&quot; value=&quot;30&quot;&gt;Wow!&lt;/Progress&gt;
+        &lt;Progress bar color=&quot;info&quot; value=&quot;25&quot;&gt;Cool&lt;/Progress&gt;
+        &lt;Progress bar color=&quot;warning&quot; value=&quot;20&quot;&gt;20%&lt;/Progress&gt;
+        &lt;Progress bar color=&quot;danger&quot; value=&quot;5&quot;&gt;!!&lt;/Progress&gt;
+      &lt;/Progress&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Striped">Striped</h3><div class="docs-example"><div><div><div class="progress"><div class="progress-bar progress-bar-striped" style="width:10%" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar bg-success progress-bar-striped" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar bg-info progress-bar-striped" style="width:50%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar bg-warning progress-bar-striped" style="width:75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar bg-danger progress-bar-striped" style="width:100%" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar progress-bar-striped" style="width:10%" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar bg-success progress-bar-striped" style="width:30%" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar bg-warning progress-bar-striped" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar bg-danger progress-bar-striped" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Progress } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Progress striped value={2 * 5} /&gt;
+      &lt;Progress striped color=&quot;success&quot; value=&quot;25&quot; /&gt;
+      &lt;Progress striped color=&quot;info&quot; value={50} /&gt;
+      &lt;Progress striped color=&quot;warning&quot; value={75} /&gt;
+      &lt;Progress striped color=&quot;danger&quot; value=&quot;100&quot; /&gt;
+      &lt;Progress multi&gt;
+        &lt;Progress striped bar value=&quot;10&quot; /&gt;
+        &lt;Progress striped bar color=&quot;success&quot; value=&quot;30&quot; /&gt;
+        &lt;Progress striped bar color=&quot;warning&quot; value=&quot;20&quot; /&gt;
+        &lt;Progress striped bar color=&quot;danger&quot; value=&quot;20&quot; /&gt;
+      &lt;/Progress&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Animated">Animated</h3><p>The <code>animated</code> prop also adds the <code>striped</code> prop; there is no need to pass both.</p><div class="docs-example"><div><div><div class="progress"><div class="progress-bar progress-bar-animated progress-bar-striped" style="width:10%" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar progress-bar-animated bg-success progress-bar-striped" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar progress-bar-animated bg-info progress-bar-striped" style="width:50%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar progress-bar-animated bg-warning progress-bar-striped" style="width:75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar progress-bar-animated bg-danger progress-bar-striped" style="width:100%" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div></div><div class="progress"><div class="progress-bar progress-bar-animated progress-bar-striped" style="width:10%" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar progress-bar-animated bg-success progress-bar-striped" style="width:30%" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar progress-bar-animated bg-warning progress-bar-striped" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar progress-bar-animated bg-danger progress-bar-striped" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Progress } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Progress animated value={2 * 5} /&gt;
+      &lt;Progress animated color=&quot;success&quot; value=&quot;25&quot; /&gt;
+      &lt;Progress animated color=&quot;info&quot; value={50} /&gt;
+      &lt;Progress animated color=&quot;warning&quot; value={75} /&gt;
+      &lt;Progress animated color=&quot;danger&quot; value=&quot;100&quot; /&gt;
+      &lt;Progress multi&gt;
+        &lt;Progress animated bar value=&quot;10&quot; /&gt;
+        &lt;Progress animated bar color=&quot;success&quot; value=&quot;30&quot; /&gt;
+        &lt;Progress animated bar color=&quot;warning&quot; value=&quot;20&quot; /&gt;
+        &lt;Progress animated bar color=&quot;danger&quot; value=&quot;20&quot; /&gt;
+      &lt;/Progress&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Multiple-bars--Stacked">Multiple bars / Stacked</h3><div class="docs-example"><div><div><div class="text-center">Plain</div><div class="progress"><div class="progress-bar" style="width:15%" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar bg-success" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar bg-info" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar bg-warning" style="width:20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div><div class="progress-bar bg-danger" style="width:15%" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div></div><div class="text-center">With Labels</div><div class="progress"><div class="progress-bar" style="width:15%" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Meh</div><div class="progress-bar bg-success" style="width:35%" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">Wow!</div><div class="progress-bar bg-warning" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div><div class="progress-bar bg-danger" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">LOOK OUT!!</div></div><div class="text-center">Stripes and Animations</div><div class="progress"><div class="progress-bar progress-bar-striped" style="width:15%" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Stripes</div><div class="progress-bar progress-bar-animated bg-success progress-bar-striped" style="width:30%" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Animated Stripes</div><div class="progress-bar bg-info" style="width:25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Plain</div></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Progress } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;div className=&quot;text-center&quot;&gt;Plain&lt;/div&gt;
+      &lt;Progress multi&gt;
+        &lt;Progress bar value=&quot;15&quot; /&gt;
+        &lt;Progress bar color=&quot;success&quot; value=&quot;20&quot; /&gt;
+        &lt;Progress bar color=&quot;info&quot; value=&quot;25&quot; /&gt;
+        &lt;Progress bar color=&quot;warning&quot; value=&quot;20&quot; /&gt;
+        &lt;Progress bar color=&quot;danger&quot; value=&quot;15&quot; /&gt;
+      &lt;/Progress&gt;
+      &lt;div className=&quot;text-center&quot;&gt;With Labels&lt;/div&gt;
+      &lt;Progress multi&gt;
+        &lt;Progress bar value=&quot;15&quot;&gt;Meh&lt;/Progress&gt;
+        &lt;Progress bar color=&quot;success&quot; value=&quot;35&quot;&gt;Wow!&lt;/Progress&gt;
+        &lt;Progress bar color=&quot;warning&quot; value=&quot;25&quot;&gt;25%&lt;/Progress&gt;
+        &lt;Progress bar color=&quot;danger&quot; value=&quot;25&quot;&gt;LOOK OUT!!&lt;/Progress&gt;
+      &lt;/Progress&gt;
+      &lt;div className=&quot;text-center&quot;&gt;Stripes and Animations&lt;/div&gt;
+      &lt;Progress multi&gt;
+        &lt;Progress bar striped value=&quot;15&quot;&gt;Stripes&lt;/Progress&gt;
+        &lt;Progress bar animated color=&quot;success&quot; value=&quot;30&quot;&gt;Animated Stripes&lt;/Progress&gt;
+        &lt;Progress bar color=&quot;info&quot; value=&quot;25&quot;&gt;Plain&lt;/Progress&gt;
+      &lt;/Progress&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Max-value">Max value</h3><div class="docs-example"><div><div><div class="text-center">1 of 5</div><div class="progress"><div class="progress-bar" style="width:20%" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="5"></div></div><div class="text-center">50 of 135</div><div class="progress"><div class="progress-bar" style="width:37.03703703703704%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="135"></div></div><div class="text-center">75 of 111</div><div class="progress"><div class="progress-bar" style="width:67.56756756756756%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="111"></div></div><div class="text-center">463 of 500</div><div class="progress"><div class="progress-bar" style="width:92.60000000000001%" role="progressbar" aria-valuenow="463" aria-valuemin="0" aria-valuemax="500"></div></div><div class="text-center">Various (40) of 55</div><div class="progress"><div class="progress-bar" style="width:9.090909090909092%" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="55">5</div><div class="progress-bar bg-success" style="width:27.27272727272727%" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="55">15</div><div class="progress-bar bg-warning" style="width:18.181818181818183%" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="55">10</div><div class="progress-bar bg-danger" style="width:18.181818181818183%" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="55">10</div></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Progress } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;div className=&quot;text-center&quot;&gt;1 of 5&lt;/div&gt;
+      &lt;Progress value=&quot;1&quot; max=&quot;5&quot; /&gt;
+      &lt;div className=&quot;text-center&quot;&gt;50 of 135&lt;/div&gt;
+      &lt;Progress value={50} max=&quot;135&quot; /&gt;
+      &lt;div className=&quot;text-center&quot;&gt;75 of 111&lt;/div&gt;
+      &lt;Progress value={75} max={111} /&gt;
+      &lt;div className=&quot;text-center&quot;&gt;463 of 500&lt;/div&gt;
+      &lt;Progress value=&quot;463&quot; max={500} /&gt;
+
+      &lt;div className=&quot;text-center&quot;&gt;Various (40) of 55&lt;/div&gt;
+      &lt;Progress multi&gt;
+        &lt;Progress bar value=&quot;5&quot; max={55}&gt;5&lt;/Progress&gt;
+        &lt;Progress bar color=&quot;success&quot; value=&quot;15&quot; max={55}&gt;15&lt;/Progress&gt;
+        &lt;Progress bar color=&quot;warning&quot; value=&quot;10&quot; max={55}&gt;10&lt;/Progress&gt;
+        &lt;Progress bar color=&quot;danger&quot; value=&quot;10&quot; max={55}&gt;10&lt;/Progress&gt;
+      &lt;/Progress&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Badges</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">Github</a></li></ul></div></div></nav><div class="content container"><div class="row"><div class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h5>Utilities</h5><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link active" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></div><div class="docSearch-content col-md-9 order-md-1"><div><h3 id="Badges">Badges</h3><hr/><p>Scale to parent</p><div class="docs-example"><div><h1>Heading <span class="badge badge-secondary">New</span></h1><h2>Heading <span class="badge badge-secondary">New</span></h2><h3>Heading <span class="badge badge-secondary">New</span></h3><h4>Heading <span class="badge badge-secondary">New</span></h4><h5>Heading <span class="badge badge-secondary">New</span></h5><h6>Heading <span class="badge badge-secondary">New</span></h6></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Badge } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Heading &lt;Badge color=&quot;secondary&quot;&gt;New&lt;/Badge&gt;&lt;/h1&gt;
+        &lt;h2&gt;Heading &lt;Badge color=&quot;secondary&quot;&gt;New&lt;/Badge&gt;&lt;/h2&gt;
+        &lt;h3&gt;Heading &lt;Badge color=&quot;secondary&quot;&gt;New&lt;/Badge&gt;&lt;/h3&gt;
+        &lt;h4&gt;Heading &lt;Badge color=&quot;secondary&quot;&gt;New&lt;/Badge&gt;&lt;/h4&gt;
+        &lt;h5&gt;Heading &lt;Badge color=&quot;secondary&quot;&gt;New&lt;/Badge&gt;&lt;/h5&gt;
+        &lt;h6&gt;Heading &lt;Badge color=&quot;secondary&quot;&gt;New&lt;/Badge&gt;&lt;/h6&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre><p>Badges can be used as part of links or buttons to provide a counter.</p><div class="docs-example"><div><button class="btn btn-outline-primary">Notifications <span class="badge badge-secondary">4</span></button></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Badge, Button } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button color=&quot;primary&quot; outline&gt;
+          Notifications &lt;Badge color=&quot;secondary&quot;&gt;4&lt;/Badge&gt;
+        &lt;/Button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre><h3 id="Contextual-variations">Contextual variations</h3><div class="docs-example"><div><span class="badge badge-primary">Primary</span><span class="badge badge-secondary">Secondary</span><span class="badge badge-success">Success</span><span class="badge badge-danger">Danger</span><span class="badge badge-warning">Warning</span><span class="badge badge-info">Info</span><span class="badge badge-light">Light</span><span class="badge badge-dark">Dark</span></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Badge } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Badge color=&quot;primary&quot;&gt;Primary&lt;/Badge&gt;
+        &lt;Badge color=&quot;secondary&quot;&gt;Secondary&lt;/Badge&gt;
+        &lt;Badge color=&quot;success&quot;&gt;Success&lt;/Badge&gt;
+        &lt;Badge color=&quot;danger&quot;&gt;Danger&lt;/Badge&gt;
+        &lt;Badge color=&quot;warning&quot;&gt;Warning&lt;/Badge&gt;
+        &lt;Badge color=&quot;info&quot;&gt;Info&lt;/Badge&gt;
+        &lt;Badge color=&quot;light&quot;&gt;Light&lt;/Badge&gt;
+        &lt;Badge color=&quot;dark&quot;&gt;Dark&lt;/Badge&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre><h3 id="Pills">Pills</h3><div class="docs-example"><div><span class="badge badge-primary badge-pill">Primary</span><span class="badge badge-secondary badge-pill">Secondary</span><span class="badge badge-success badge-pill">Success</span><span class="badge badge-danger badge-pill">Danger</span><span class="badge badge-warning badge-pill">Warning</span><span class="badge badge-info badge-pill">Info</span><span class="badge badge-light badge-pill">Light</span><span class="badge badge-dark badge-pill">Dark</span></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Badge } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Badge color=&quot;primary&quot; pill&gt;Primary&lt;/Badge&gt;
+        &lt;Badge color=&quot;secondary&quot; pill&gt;Secondary&lt;/Badge&gt;
+        &lt;Badge color=&quot;success&quot; pill&gt;Success&lt;/Badge&gt;
+        &lt;Badge color=&quot;danger&quot; pill&gt;Danger&lt;/Badge&gt;
+        &lt;Badge color=&quot;warning&quot; pill&gt;Warning&lt;/Badge&gt;
+        &lt;Badge color=&quot;info&quot; pill&gt;Info&lt;/Badge&gt;
+        &lt;Badge color=&quot;light&quot; pill&gt;Light&lt;/Badge&gt;
+        &lt;Badge color=&quot;dark&quot; pill&gt;Dark&lt;/Badge&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre><h3 id="Links">Links</h3><p>Adding the <code>href</code> prop (without specifying a <code>tag</code> prop) will default the badge to a link.</p><div class="docs-example"><div><a href="#" class="badge badge-primary">Primary</a><a href="#" class="badge badge-secondary">Secondary</a><a href="#" class="badge badge-success">Success</a><a href="#" class="badge badge-danger">Danger</a><a href="#" class="badge badge-warning">Warning</a><a href="#" class="badge badge-info">Info</a><a href="#" class="badge badge-light">Light</a><a href="#" class="badge badge-dark">Dark</a></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Badge } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Badge href=&quot;#&quot; color=&quot;primary&quot;&gt;Primary&lt;/Badge&gt;
+        &lt;Badge href=&quot;#&quot; color=&quot;secondary&quot;&gt;Secondary&lt;/Badge&gt;
+        &lt;Badge href=&quot;#&quot; color=&quot;success&quot;&gt;Success&lt;/Badge&gt;
+        &lt;Badge href=&quot;#&quot; color=&quot;danger&quot;&gt;Danger&lt;/Badge&gt;
+        &lt;Badge href=&quot;#&quot; color=&quot;warning&quot;&gt;Warning&lt;/Badge&gt;
+        &lt;Badge href=&quot;#&quot; color=&quot;info&quot;&gt;Info&lt;/Badge&gt;
+        &lt;Badge href=&quot;#&quot; color=&quot;light&quot;&gt;Light&lt;/Badge&gt;
+        &lt;Badge href=&quot;#&quot; color=&quot;dark&quot;&gt;Dark&lt;/Badge&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

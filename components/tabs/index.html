@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Tabs</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">Github</a></li></ul></div></div></nav><div class="content container"><div class="row"><div class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h5>Utilities</h5><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link active" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></div><div class="docSearch-content col-md-9 order-md-1"><div><h3 id="Tabs">Tabs</h3><hr/><div class="docs-example"><div><ul class="nav nav-tabs"><li class="nav-item"><a class="active nav-link">Tab1</a></li><li class="nav-item"><a class="nav-link">Moar Tabs</a></li></ul><div class="tab-content"><div class="tab-pane active"><div class="row"><div class="col-sm-12"><h4>Tab 1 Contents</h4></div></div></div><div class="tab-pane"><div class="row"><div class="col-sm-6"><div class="card card-body"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Go somewhere</button></div></div><div class="col-sm-6"><div class="card card-body"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Go somewhere</button></div></div></div></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from &#x27;reactstrap&#x27;;
+import classnames from &#x27;classnames&#x27;;
+
+export default class Example extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      activeTab: &#x27;1&#x27;
+    };
+  }
+
+  toggle(tab) {
+    if (this.state.activeTab !== tab) {
+      this.setState({
+        activeTab: tab
+      });
+    }
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Nav tabs&gt;
+          &lt;NavItem&gt;
+            &lt;NavLink
+              className={classnames({ active: this.state.activeTab === &#x27;1&#x27; })}
+              onClick={() =&gt; { this.toggle(&#x27;1&#x27;); }}
+            &gt;
+              Tab1
+            &lt;/NavLink&gt;
+          &lt;/NavItem&gt;
+          &lt;NavItem&gt;
+            &lt;NavLink
+              className={classnames({ active: this.state.activeTab === &#x27;2&#x27; })}
+              onClick={() =&gt; { this.toggle(&#x27;2&#x27;); }}
+            &gt;
+              Moar Tabs
+            &lt;/NavLink&gt;
+          &lt;/NavItem&gt;
+        &lt;/Nav&gt;
+        &lt;TabContent activeTab={this.state.activeTab}&gt;
+          &lt;TabPane tabId=&quot;1&quot;&gt;
+            &lt;Row&gt;
+              &lt;Col sm=&quot;12&quot;&gt;
+                &lt;h4&gt;Tab 1 Contents&lt;/h4&gt;
+              &lt;/Col&gt;
+            &lt;/Row&gt;
+          &lt;/TabPane&gt;
+          &lt;TabPane tabId=&quot;2&quot;&gt;
+            &lt;Row&gt;
+              &lt;Col sm=&quot;6&quot;&gt;
+                &lt;Card body&gt;
+                  &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+                  &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+                  &lt;Button&gt;Go somewhere&lt;/Button&gt;
+                &lt;/Card&gt;
+              &lt;/Col&gt;
+              &lt;Col sm=&quot;6&quot;&gt;
+                &lt;Card body&gt;
+                  &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+                  &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+                  &lt;Button&gt;Go somewhere&lt;/Button&gt;
+                &lt;/Card&gt;
+              &lt;/Col&gt;
+            &lt;/Row&gt;
+          &lt;/TabPane&gt;
+        &lt;/TabContent&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

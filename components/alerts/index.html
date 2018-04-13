@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Alerts</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">Github</a></li></ul></div></div></nav><div class="content container"><div class="row"><div class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h5>Utilities</h5><ul class="flex-column nav"><li class="nav-item"><a class="nav-link active" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></div><div class="docSearch-content col-md-9 order-md-1"><div><h3 id="Alerts">Alerts</h3><div class="docs-example"><div><div class="alert alert-primary fade" role="alert">This is a primary alert — check it out!</div><div class="alert alert-secondary fade" role="alert">This is a secondary alert — check it out!</div><div class="alert alert-success fade" role="alert">This is a success alert — check it out!</div><div class="alert alert-danger fade" role="alert">This is a danger alert — check it out!</div><div class="alert alert-warning fade" role="alert">This is a warning alert — check it out!</div><div class="alert alert-info fade" role="alert">This is a info alert — check it out!</div><div class="alert alert-light fade" role="alert">This is a light alert — check it out!</div><div class="alert alert-dark fade" role="alert">This is a dark alert — check it out!</div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Alert } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Alert color=&quot;primary&quot;&gt;
+        This is a primary alert — check it out!
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;secondary&quot;&gt;
+        This is a secondary alert — check it out!
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;success&quot;&gt;
+        This is a success alert — check it out!
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;danger&quot;&gt;
+        This is a danger alert — check it out!
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;warning&quot;&gt;
+        This is a warning alert — check it out!
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;info&quot;&gt;
+        This is a info alert — check it out!
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;light&quot;&gt;
+        This is a light alert — check it out!
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;dark&quot;&gt;
+        This is a dark alert — check it out!
+      &lt;/Alert&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Properties">Properties</h3><pre><code class="language-jsx">Alert.propTypes = {
+  className: PropTypes.string,
+  closeClassName: PropTypes.string,
+  color: PropTypes.string, // default: &#x27;success&#x27;
+  isOpen: PropTypes.bool,  // default: true
+  toggle: PropTypes.func,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  // Controls the transition of the alert fading in and out
+  // See [Fade](/components/fade/) for more details
+  transition: PropTypes.shape(Fade.propTypes),
+}</code></pre><h3 id="Link-color">Link color</h3><div class="docs-example"><div><div class="alert alert-primary fade" role="alert">This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div><div class="alert alert-secondary fade" role="alert">This is a secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div><div class="alert alert-success fade" role="alert">This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div><div class="alert alert-danger fade" role="alert">This is a danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div><div class="alert alert-warning fade" role="alert">This is a warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div><div class="alert alert-info fade" role="alert">This is a info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div><div class="alert alert-light fade" role="alert">This is a light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div><div class="alert alert-dark fade" role="alert">This is a dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.</div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Alert } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Alert color=&quot;primary&quot;&gt;
+        This is a primary alert with &lt;a href=&quot;#&quot; className=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;secondary&quot;&gt;
+        This is a secondary alert with &lt;a href=&quot;#&quot; className=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;success&quot;&gt;
+        This is a success alert with &lt;a href=&quot;#&quot; className=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;danger&quot;&gt;
+        This is a danger alert with &lt;a href=&quot;#&quot; className=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;warning&quot;&gt;
+        This is a warning alert with &lt;a href=&quot;#&quot; className=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;info&quot;&gt;
+        This is a info alert with &lt;a href=&quot;#&quot; className=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;light&quot;&gt;
+        This is a light alert with &lt;a href=&quot;#&quot; className=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+      &lt;/Alert&gt;
+      &lt;Alert color=&quot;dark&quot;&gt;
+        This is a dark alert with &lt;a href=&quot;#&quot; className=&quot;alert-link&quot;&gt;an example link&lt;/a&gt;. Give it a click if you like.
+      &lt;/Alert&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Additional-content">Additional content</h3><div class="docs-example"><div><div class="alert alert-success fade" role="alert"><h4 class="alert-heading">Well done!</h4><p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p><hr/><p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Alert } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Alert color=&quot;success&quot;&gt;
+        &lt;h4 className=&quot;alert-heading&quot;&gt;Well done!&lt;/h4&gt;
+        &lt;p&gt;
+          Aww yeah, you successfully read this important alert message. This example text is going
+          to run a bit longer so that you can see how spacing within an alert works with this kind
+          of content.
+        &lt;/p&gt;
+        &lt;hr /&gt;
+        &lt;p className=&quot;mb-0&quot;&gt;
+          Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+        &lt;/p&gt;
+      &lt;/Alert&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Dismissing">Dismissing</h3><div class="docs-example"><div class="alert alert-info alert-dismissible fade" role="alert"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>I am an alert and I can be dismissed!</div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Alert } from &#x27;reactstrap&#x27;;
+
+class AlertExample extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      visible: true
+    };
+
+    this.onDismiss = this.onDismiss.bind(this);
+  }
+
+  onDismiss() {
+    this.setState({ visible: false });
+  }
+
+  render() {
+    return (
+      &lt;Alert color=&quot;info&quot; isOpen={this.state.visible} toggle={this.onDismiss}&gt;
+        I am an alert and I can be dismissed!
+      &lt;/Alert&gt;
+    );
+  }
+}
+
+export default AlertExample;
+</code></pre><h3 id="Uncontrolled-disable-Alerts">Uncontrolled [disable] Alerts</h3><p>For the most basic use-case an uncontrolled component can provide the functionality wanted without the need to manage/control the state of the component. <code>UncontrolledAlert</code> does not require <code>isOpen</code> nor <code>toggle</code> props to work.</p><div class="docs-example"><div class="alert alert-info alert-dismissible fade" role="alert"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>I am an alert and I can be dismissed!</div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { UncontrolledAlert } from &#x27;reactstrap&#x27;;
+
+function AlertExample() {
+  return (
+    &lt;UncontrolledAlert color=&quot;info&quot;&gt;
+      I am an alert and I can be dismissed!
+    &lt;/UncontrolledAlert&gt;
+  );
+}
+
+export default AlertExample;
+</code></pre></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

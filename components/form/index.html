@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Form</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">Github</a></li></ul></div></div></nav><div class="content container"><div class="row"><div class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h5>Utilities</h5><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link active" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></div><div class="docSearch-content col-md-9 order-md-1"><div><h3 id="Form">Form</h3><div class="docs-example"><form class=""><div class="form-group"><label for="exampleEmail" class="">Email</label><input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" class="form-control"/></div><div class="form-group"><label for="examplePassword" class="">Password</label><input type="password" name="password" id="examplePassword" placeholder="password placeholder" class="form-control"/></div><div class="form-group"><label for="exampleSelect" class="">Select</label><select name="select" id="exampleSelect" type="select" class="form-control"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="form-group"><label for="exampleSelectMulti" class="">Select Multiple</label><select name="selectMulti" id="exampleSelectMulti" multiple="" type="select" class="form-control"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="form-group"><label for="exampleText" class="">Text Area</label><textarea name="text" id="exampleText" type="textarea" class="form-control"></textarea></div><div class="form-group"><label for="exampleFile" class="">File</label><input type="file" name="file" id="exampleFile" class="form-control-file"/><small class="form-text text-muted">This is some placeholder block-level help text for the above input. It&#x27;s a bit lighter and easily wraps to a new line.</small></div><fieldset class="form-group"><legend>Radio Buttons</legend><div class="form-check"><label class="form-check-label "><input type="radio" name="radio1" class="form-check-input"/> <!-- -->Option one is this and that—be sure to include why it&#x27;s great</label></div><div class="form-check"><label class="form-check-label "><input type="radio" name="radio1" class="form-check-input"/> <!-- -->Option two can be something else and selecting it will deselect option one</label></div><div class="form-check disabled"><label class="form-check-label "><input type="radio" name="radio1" disabled="" class="form-check-input"/> <!-- -->Option three is disabled</label></div></fieldset><div class="form-check"><label class="form-check-label "><input type="checkbox" class="form-check-input"/> <!-- -->Check me out</label></div><button class="btn btn-secondary">Submit</button></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Button, Form, FormGroup, Label, Input, FormText } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Form&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleEmail&quot;&gt;Email&lt;/Label&gt;
+          &lt;Input type=&quot;email&quot; name=&quot;email&quot; id=&quot;exampleEmail&quot; placeholder=&quot;with a placeholder&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;examplePassword&quot;&gt;Password&lt;/Label&gt;
+          &lt;Input type=&quot;password&quot; name=&quot;password&quot; id=&quot;examplePassword&quot; placeholder=&quot;password placeholder&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleSelect&quot;&gt;Select&lt;/Label&gt;
+          &lt;Input type=&quot;select&quot; name=&quot;select&quot; id=&quot;exampleSelect&quot;&gt;
+            &lt;option&gt;1&lt;/option&gt;
+            &lt;option&gt;2&lt;/option&gt;
+            &lt;option&gt;3&lt;/option&gt;
+            &lt;option&gt;4&lt;/option&gt;
+            &lt;option&gt;5&lt;/option&gt;
+          &lt;/Input&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleSelectMulti&quot;&gt;Select Multiple&lt;/Label&gt;
+          &lt;Input type=&quot;select&quot; name=&quot;selectMulti&quot; id=&quot;exampleSelectMulti&quot; multiple&gt;
+            &lt;option&gt;1&lt;/option&gt;
+            &lt;option&gt;2&lt;/option&gt;
+            &lt;option&gt;3&lt;/option&gt;
+            &lt;option&gt;4&lt;/option&gt;
+            &lt;option&gt;5&lt;/option&gt;
+          &lt;/Input&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleText&quot;&gt;Text Area&lt;/Label&gt;
+          &lt;Input type=&quot;textarea&quot; name=&quot;text&quot; id=&quot;exampleText&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleFile&quot;&gt;File&lt;/Label&gt;
+          &lt;Input type=&quot;file&quot; name=&quot;file&quot; id=&quot;exampleFile&quot; /&gt;
+          &lt;FormText color=&quot;muted&quot;&gt;
+            This is some placeholder block-level help text for the above input.
+            It&#x27;s a bit lighter and easily wraps to a new line.
+          &lt;/FormText&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup tag=&quot;fieldset&quot;&gt;
+          &lt;legend&gt;Radio Buttons&lt;/legend&gt;
+          &lt;FormGroup check&gt;
+            &lt;Label check&gt;
+              &lt;Input type=&quot;radio&quot; name=&quot;radio1&quot; /&gt;{&#x27; &#x27;}
+              Option one is this and that—be sure to include why it&#x27;s great
+            &lt;/Label&gt;
+          &lt;/FormGroup&gt;
+          &lt;FormGroup check&gt;
+            &lt;Label check&gt;
+              &lt;Input type=&quot;radio&quot; name=&quot;radio1&quot; /&gt;{&#x27; &#x27;}
+              Option two can be something else and selecting it will deselect option one
+            &lt;/Label&gt;
+          &lt;/FormGroup&gt;
+          &lt;FormGroup check disabled&gt;
+            &lt;Label check&gt;
+              &lt;Input type=&quot;radio&quot; name=&quot;radio1&quot; disabled /&gt;{&#x27; &#x27;}
+              Option three is disabled
+            &lt;/Label&gt;
+          &lt;/FormGroup&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup check&gt;
+          &lt;Label check&gt;
+            &lt;Input type=&quot;checkbox&quot; /&gt;{&#x27; &#x27;}
+            Check me out
+          &lt;/Label&gt;
+        &lt;/FormGroup&gt;
+        &lt;Button&gt;Submit&lt;/Button&gt;
+      &lt;/Form&gt;
+    );
+  }
+}
+</code></pre><h3 id="Properties">Properties</h3><pre><code class="language-jsx">Input.propTypes = {
+  children: PropTypes.node,
+  // type can be things like text, password, (typical input types) as well as select and textarea, providing children as you normally would to those.
+  type: PropTypes.string,
+  size: PropTypes.string,
+  bsSize: PropTypes.string,
+  state: deprecated(PropTypes.string, &#x27;Please use the prop &quot;valid&quot;&#x27;),
+  valid: PropTypes.bool, // applied the is-valid class when true, does nothing when false
+  invalid: PropTypes.bool, // applied the is-invalid class when true, does nothing when false
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  // ref will only get you a reference to the Input component, use innerRef to get a reference to the DOM input (for things like focus management).
+  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  static: deprecated(PropTypes.bool, &#x27;Please use the prop &quot;plaintext&quot;&#x27;),
+  plaintext: PropTypes.bool,
+  addon: PropTypes.bool,
+  className: PropTypes.string,
+  cssModule: PropTypes.object,
+};</code></pre><h3 id="Form-Grid">Form Grid</h3><div class="docs-example"><form class=""><div class="row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Email</label><div class="col-sm-10"><input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" class="form-control"/></div></div><div class="row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Password</label><div class="col-sm-10"><input type="password" name="password" id="examplePassword" placeholder="password placeholder" class="form-control"/></div></div><div class="row form-group"><label for="exampleSelect" class="col-sm-2 col-form-label">Select</label><div class="col-sm-10"><select name="select" id="exampleSelect" type="select" class="form-control"></select></div></div><div class="row form-group"><label for="exampleSelectMulti" class="col-sm-2 col-form-label">Select Multiple</label><div class="col-sm-10"><select name="selectMulti" id="exampleSelectMulti" multiple="" type="select" class="form-control"></select></div></div><div class="row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Text Area</label><div class="col-sm-10"><textarea name="text" id="exampleText" type="textarea" class="form-control"></textarea></div></div><div class="row form-group"><label for="exampleFile" class="col-sm-2 col-form-label">File</label><div class="col-sm-10"><input type="file" name="file" id="exampleFile" class="form-control-file"/><small class="form-text text-muted">This is some placeholder block-level help text for the above input. It&#x27;s a bit lighter and easily wraps to a new line.</small></div></div><fieldset class="row form-group"><legend class="col-form-label col-sm-2">Radio Buttons</legend><div class="col-sm-10"><div class="form-check"><label class="form-check-label "><input type="radio" name="radio2" class="form-check-input"/> <!-- -->Option one is this and that—be sure to include why it&#x27;s great</label></div><div class="form-check"><label class="form-check-label "><input type="radio" name="radio2" class="form-check-input"/> <!-- -->Option two can be something else and selecting it will deselect option one</label></div><div class="form-check disabled"><label class="form-check-label "><input type="radio" name="radio2" disabled="" class="form-check-input"/> <!-- -->Option three is disabled</label></div></div></fieldset><div class="row form-group"><label for="checkbox2" class="col-sm-2 col-form-label">Checkbox</label><div class="col-sm-10"><div class="form-check"><label class="form-check-label "><input type="checkbox" id="checkbox2" class="form-check-input"/> <!-- -->Check me out</label></div></div></div><div class="row form-check"><div class="col-sm-10 offset-sm-2"><button class="btn btn-secondary">Submit</button></div></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Col, Button, Form, FormGroup, Label, Input, FormText } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Form&gt;
+        &lt;FormGroup row&gt;
+          &lt;Label for=&quot;exampleEmail&quot; sm={2}&gt;Email&lt;/Label&gt;
+          &lt;Col sm={10}&gt;
+            &lt;Input type=&quot;email&quot; name=&quot;email&quot; id=&quot;exampleEmail&quot; placeholder=&quot;with a placeholder&quot; /&gt;
+          &lt;/Col&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup row&gt;
+          &lt;Label for=&quot;examplePassword&quot; sm={2}&gt;Password&lt;/Label&gt;
+          &lt;Col sm={10}&gt;
+            &lt;Input type=&quot;password&quot; name=&quot;password&quot; id=&quot;examplePassword&quot; placeholder=&quot;password placeholder&quot; /&gt;
+          &lt;/Col&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup row&gt;
+          &lt;Label for=&quot;exampleSelect&quot; sm={2}&gt;Select&lt;/Label&gt;
+          &lt;Col sm={10}&gt;
+            &lt;Input type=&quot;select&quot; name=&quot;select&quot; id=&quot;exampleSelect&quot; /&gt;
+          &lt;/Col&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup row&gt;
+          &lt;Label for=&quot;exampleSelectMulti&quot; sm={2}&gt;Select Multiple&lt;/Label&gt;
+          &lt;Col sm={10}&gt;
+            &lt;Input type=&quot;select&quot; name=&quot;selectMulti&quot; id=&quot;exampleSelectMulti&quot; multiple /&gt;
+          &lt;/Col&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup row&gt;
+          &lt;Label for=&quot;exampleText&quot; sm={2}&gt;Text Area&lt;/Label&gt;
+          &lt;Col sm={10}&gt;
+            &lt;Input type=&quot;textarea&quot; name=&quot;text&quot; id=&quot;exampleText&quot; /&gt;
+          &lt;/Col&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup row&gt;
+          &lt;Label for=&quot;exampleFile&quot; sm={2}&gt;File&lt;/Label&gt;
+          &lt;Col sm={10}&gt;
+            &lt;Input type=&quot;file&quot; name=&quot;file&quot; id=&quot;exampleFile&quot; /&gt;
+            &lt;FormText color=&quot;muted&quot;&gt;
+              This is some placeholder block-level help text for the above input.
+              It&#x27;s a bit lighter and easily wraps to a new line.
+            &lt;/FormText&gt;
+          &lt;/Col&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup tag=&quot;fieldset&quot; row&gt;
+          &lt;legend className=&quot;col-form-label col-sm-2&quot;&gt;Radio Buttons&lt;/legend&gt;
+          &lt;Col sm={10}&gt;
+            &lt;FormGroup check&gt;
+              &lt;Label check&gt;
+                &lt;Input type=&quot;radio&quot; name=&quot;radio2&quot; /&gt;{&#x27; &#x27;}
+                Option one is this and that—be sure to include why it&#x27;s great
+              &lt;/Label&gt;
+            &lt;/FormGroup&gt;
+            &lt;FormGroup check&gt;
+              &lt;Label check&gt;
+                &lt;Input type=&quot;radio&quot; name=&quot;radio2&quot; /&gt;{&#x27; &#x27;}
+                Option two can be something else and selecting it will deselect option one
+              &lt;/Label&gt;
+            &lt;/FormGroup&gt;
+            &lt;FormGroup check disabled&gt;
+              &lt;Label check&gt;
+                &lt;Input type=&quot;radio&quot; name=&quot;radio2&quot; disabled /&gt;{&#x27; &#x27;}
+                Option three is disabled
+              &lt;/Label&gt;
+            &lt;/FormGroup&gt;
+          &lt;/Col&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup row&gt;
+          &lt;Label for=&quot;checkbox2&quot; sm={2}&gt;Checkbox&lt;/Label&gt;
+          &lt;Col sm={{ size: 10 }}&gt;
+            &lt;FormGroup check&gt;
+              &lt;Label check&gt;
+                &lt;Input type=&quot;checkbox&quot; id=&quot;checkbox2&quot; /&gt;{&#x27; &#x27;}
+                Check me out
+              &lt;/Label&gt;
+            &lt;/FormGroup&gt;
+          &lt;/Col&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup check row&gt;
+          &lt;Col sm={{ size: 10, offset: 2 }}&gt;
+            &lt;Button&gt;Submit&lt;/Button&gt;
+          &lt;/Col&gt;
+        &lt;/FormGroup&gt;
+      &lt;/Form&gt;
+    );
+  }
+}
+</code></pre><h3 id="Inline-Form">Inline Form</h3><div class="docs-example"><form class="form-inline"><div class="mb-2 mr-sm-2 mb-sm-0 form-group"><label for="exampleEmail" class="mr-sm-2 ">Email</label><input type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" class="form-control"/></div><div class="mb-2 mr-sm-2 mb-sm-0 form-group"><label for="examplePassword" class="mr-sm-2 ">Password</label><input type="password" name="password" id="examplePassword" placeholder="don&#x27;t tell!" class="form-control"/></div><button class="btn btn-secondary">Submit</button></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Button, Form, FormGroup, Label, Input } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Form inline&gt;
+        &lt;FormGroup className=&quot;mb-2 mr-sm-2 mb-sm-0&quot;&gt;
+          &lt;Label for=&quot;exampleEmail&quot; className=&quot;mr-sm-2&quot;&gt;Email&lt;/Label&gt;
+          &lt;Input type=&quot;email&quot; name=&quot;email&quot; id=&quot;exampleEmail&quot; placeholder=&quot;something@idk.cool&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup className=&quot;mb-2 mr-sm-2 mb-sm-0&quot;&gt;
+          &lt;Label for=&quot;examplePassword&quot; className=&quot;mr-sm-2&quot;&gt;Password&lt;/Label&gt;
+          &lt;Input type=&quot;password&quot; name=&quot;password&quot; id=&quot;examplePassword&quot; placeholder=&quot;don&#x27;t tell!&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;Button&gt;Submit&lt;/Button&gt;
+      &lt;/Form&gt;
+    );
+  }
+}
+</code></pre><h3 id="Form-Validation">Form Validation</h3><div class="docs-example"><form class=""><div class="form-group"><label for="exampleEmail" class="">Input without validation</label><input type="text" class="form-control"/><div class="invalid-feedback">You will not be able to see this</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div><div class="form-group"><label for="exampleEmail" class="">Valid input</label><input type="text" class="is-valid form-control"/><div class="valid-feedback">Sweet! that name is available</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div><div class="form-group"><label for="examplePassword" class="">Invalid input</label><input type="text" class="is-invalid form-control"/><div class="invalid-feedback">Oh noes! that name is already taken</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Form, FormGroup, Label, Input, FormFeedback, FormText } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Form&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleEmail&quot;&gt;Input without validation&lt;/Label&gt;
+          &lt;Input /&gt;
+          &lt;FormFeedback&gt;You will not be able to see this&lt;/FormFeedback&gt;
+          &lt;FormText&gt;Example help text that remains unchanged.&lt;/FormText&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleEmail&quot;&gt;Valid input&lt;/Label&gt;
+          &lt;Input valid /&gt;
+          &lt;FormFeedback valid&gt;Sweet! that name is available&lt;/FormFeedback&gt;
+          &lt;FormText&gt;Example help text that remains unchanged.&lt;/FormText&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;examplePassword&quot;&gt;Invalid input&lt;/Label&gt;
+          &lt;Input invalid /&gt;
+          &lt;FormFeedback&gt;Oh noes! that name is already taken&lt;/FormFeedback&gt;
+          &lt;FormText&gt;Example help text that remains unchanged.&lt;/FormText&gt;
+        &lt;/FormGroup&gt;
+      &lt;/Form&gt;
+    );
+  }
+}
+</code></pre><h3 id="Input-Types">Input Types</h3><div class="docs-example"><form class=""><div class="form-group"><label for="exampleEmail" class="">Plain Text (Static)</label><p type="text" class="form-control-plaintext">Some plain text/ static value</p></div><div class="form-group"><label for="exampleEmail" class="">Email</label><input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" class="form-control"/></div><div class="form-group"><label for="examplePassword" class="">Password</label><input type="password" name="password" id="examplePassword" placeholder="password placeholder" class="form-control"/></div><div class="form-group"><label for="exampleUrl" class="">Url</label><input type="url" name="url" id="exampleUrl" placeholder="url placeholder" class="form-control"/></div><div class="form-group"><label for="exampleNumber" class="">Number</label><input type="number" name="number" id="exampleNumber" placeholder="number placeholder" class="form-control"/></div><div class="form-group"><label for="exampleDatetime" class="">Datetime</label><input type="datetime" name="datetime" id="exampleDatetime" placeholder="datetime placeholder" class="form-control"/></div><div class="form-group"><label for="exampleDate" class="">Date</label><input type="date" name="date" id="exampleDate" placeholder="date placeholder" class="form-control"/></div><div class="form-group"><label for="exampleTime" class="">Time</label><input type="time" name="time" id="exampleTime" placeholder="time placeholder" class="form-control"/></div><div class="form-group"><label for="exampleColor" class="">Color</label><input type="color" name="color" id="exampleColor" placeholder="color placeholder" class="form-control"/></div><div class="form-group"><label for="exampleSearch" class="">Search</label><input type="search" name="search" id="exampleSearch" placeholder="search placeholder" class="form-control"/></div><div class="form-group"><label for="exampleSelect" class="">Select</label><select name="select" id="exampleSelect" type="select" class="form-control"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="form-group"><label for="exampleSelectMulti" class="">Select Multiple</label><select name="selectMulti" id="exampleSelectMulti" multiple="" type="select" class="form-control"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="form-group"><label for="exampleText" class="">Text Area</label><textarea name="text" id="exampleText" type="textarea" class="form-control"></textarea></div><div class="form-group"><label for="exampleFile" class="">File</label><input type="file" name="file" id="exampleFile" class="form-control-file"/><small class="form-text text-muted">This is some placeholder block-level help text for the above input. It&#x27;s a bit lighter and easily wraps to a new line.</small></div><div class="form-check"><label class="form-check-label "><input type="radio" class="form-check-input"/> <!-- -->Option one is this and that—be sure to include why it&#x27;s great</label></div><div class="form-check"><label class="form-check-label "><input type="checkbox" class="form-check-input"/> <!-- -->Check me out</label></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Button, Form, FormGroup, Label, Input, FormText } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Form&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleEmail&quot;&gt;Plain Text (Static)&lt;/Label&gt;
+          &lt;Input plaintext&gt;Some plain text/ static value&lt;/Input&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleEmail&quot;&gt;Email&lt;/Label&gt;
+          &lt;Input type=&quot;email&quot; name=&quot;email&quot; id=&quot;exampleEmail&quot; placeholder=&quot;with a placeholder&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;examplePassword&quot;&gt;Password&lt;/Label&gt;
+          &lt;Input type=&quot;password&quot; name=&quot;password&quot; id=&quot;examplePassword&quot; placeholder=&quot;password placeholder&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleUrl&quot;&gt;Url&lt;/Label&gt;
+          &lt;Input type=&quot;url&quot; name=&quot;url&quot; id=&quot;exampleUrl&quot; placeholder=&quot;url placeholder&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleNumber&quot;&gt;Number&lt;/Label&gt;
+          &lt;Input type=&quot;number&quot; name=&quot;number&quot; id=&quot;exampleNumber&quot; placeholder=&quot;number placeholder&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleDatetime&quot;&gt;Datetime&lt;/Label&gt;
+          &lt;Input type=&quot;datetime&quot; name=&quot;datetime&quot; id=&quot;exampleDatetime&quot; placeholder=&quot;datetime placeholder&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleDate&quot;&gt;Date&lt;/Label&gt;
+          &lt;Input type=&quot;date&quot; name=&quot;date&quot; id=&quot;exampleDate&quot; placeholder=&quot;date placeholder&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleTime&quot;&gt;Time&lt;/Label&gt;
+          &lt;Input type=&quot;time&quot; name=&quot;time&quot; id=&quot;exampleTime&quot; placeholder=&quot;time placeholder&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleColor&quot;&gt;Color&lt;/Label&gt;
+          &lt;Input type=&quot;color&quot; name=&quot;color&quot; id=&quot;exampleColor&quot; placeholder=&quot;color placeholder&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleSearch&quot;&gt;Search&lt;/Label&gt;
+          &lt;Input type=&quot;search&quot; name=&quot;search&quot; id=&quot;exampleSearch&quot; placeholder=&quot;search placeholder&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleSelect&quot;&gt;Select&lt;/Label&gt;
+          &lt;Input type=&quot;select&quot; name=&quot;select&quot; id=&quot;exampleSelect&quot;&gt;
+            &lt;option&gt;1&lt;/option&gt;
+            &lt;option&gt;2&lt;/option&gt;
+            &lt;option&gt;3&lt;/option&gt;
+            &lt;option&gt;4&lt;/option&gt;
+            &lt;option&gt;5&lt;/option&gt;
+          &lt;/Input&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleSelectMulti&quot;&gt;Select Multiple&lt;/Label&gt;
+          &lt;Input type=&quot;select&quot; name=&quot;selectMulti&quot; id=&quot;exampleSelectMulti&quot; multiple&gt;
+            &lt;option&gt;1&lt;/option&gt;
+            &lt;option&gt;2&lt;/option&gt;
+            &lt;option&gt;3&lt;/option&gt;
+            &lt;option&gt;4&lt;/option&gt;
+            &lt;option&gt;5&lt;/option&gt;
+          &lt;/Input&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleText&quot;&gt;Text Area&lt;/Label&gt;
+          &lt;Input type=&quot;textarea&quot; name=&quot;text&quot; id=&quot;exampleText&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleFile&quot;&gt;File&lt;/Label&gt;
+          &lt;Input type=&quot;file&quot; name=&quot;file&quot; id=&quot;exampleFile&quot; /&gt;
+          &lt;FormText color=&quot;muted&quot;&gt;
+            This is some placeholder block-level help text for the above input.
+            It&#x27;s a bit lighter and easily wraps to a new line.
+          &lt;/FormText&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup check&gt;
+          &lt;Label check&gt;
+            &lt;Input type=&quot;radio&quot; /&gt;{&#x27; &#x27;}
+            Option one is this and that—be sure to include why it&#x27;s great
+          &lt;/Label&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup check&gt;
+          &lt;Label check&gt;
+            &lt;Input type=&quot;checkbox&quot; /&gt;{&#x27; &#x27;}
+            Check me out
+          &lt;/Label&gt;
+        &lt;/FormGroup&gt;
+      &lt;/Form&gt;
+    );
+  }
+}
+</code></pre><h3 id="Inline-checkboxes">Inline checkboxes</h3><div class="docs-example"><form class=""><div class="form-check form-check-inline"><label class="form-check-label "><input type="checkbox" class="form-check-input"/> Some input</label></div><div class="form-check form-check-inline"><label class="form-check-label "><input type="checkbox" class="form-check-input"/> Some other input</label></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Form, FormGroup, Label, Input } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Form&gt;
+        &lt;FormGroup check inline&gt;
+          &lt;Label check&gt;
+            &lt;Input type=&quot;checkbox&quot; /&gt; Some input
+          &lt;/Label&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup check inline&gt;
+          &lt;Label check&gt;
+             &lt;Input type=&quot;checkbox&quot; /&gt; Some other input
+          &lt;/Label&gt;
+        &lt;/FormGroup&gt;
+      &lt;/Form&gt;
+    );
+  }
+}
+</code></pre><h3 id="Input-Sizing">Input Sizing</h3><div class="docs-example"><form class=""><input type="text" placeholder="lg" class="form-control-lg form-control"/><input type="text" placeholder="default" class="form-control"/><input type="text" placeholder="sm" class="form-control-sm form-control"/><select type="select" class="form-control-lg form-control"><option>Large Select</option></select><select type="select" class="form-control"><option>Default Select</option></select><select type="select" class="form-control-sm form-control"><option>Small Select</option></select></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Form, Input } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Form&gt;
+        &lt;Input placeholder=&quot;lg&quot; bsSize=&quot;lg&quot; /&gt;
+        &lt;Input placeholder=&quot;default&quot; /&gt;
+        &lt;Input placeholder=&quot;sm&quot; bsSize=&quot;sm&quot; /&gt;
+        &lt;Input type=&quot;select&quot; bsSize=&quot;lg&quot;&gt;
+          &lt;option&gt;Large Select&lt;/option&gt;
+        &lt;/Input&gt;
+        &lt;Input type=&quot;select&quot;&gt;
+          &lt;option&gt;Default Select&lt;/option&gt;
+        &lt;/Input&gt;
+        &lt;Input type=&quot;select&quot; bsSize=&quot;sm&quot;&gt;
+          &lt;option&gt;Small Select&lt;/option&gt;
+        &lt;/Input&gt;
+      &lt;/Form&gt;
+    );
+  }
+}
+</code></pre><h3 id="Input-Grid-Sizing">Input Grid Sizing</h3><div class="docs-example"><form class=""><div class="row form-group"><label for="exampleEmail" class="col-form-label-lg col-sm-2 col-form-label">Email</label><div class="col-sm-10"><input type="email" name="email" id="exampleEmail" placeholder="lg" class="form-control-lg form-control"/></div></div><div class="row form-group"><label for="exampleEmail2" class="col-sm-2 col-form-label">Email</label><div class="col-sm-10"><input type="email" name="email" id="exampleEmail2" placeholder="default" class="form-control"/></div></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Col, Form, FormGroup, Label, Input } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Form&gt;
+        &lt;FormGroup row&gt;
+          &lt;Label for=&quot;exampleEmail&quot; sm={2} size=&quot;lg&quot;&gt;Email&lt;/Label&gt;
+          &lt;Col sm={10}&gt;
+            &lt;Input type=&quot;email&quot; name=&quot;email&quot; id=&quot;exampleEmail&quot; placeholder=&quot;lg&quot; bsSize=&quot;lg&quot; /&gt;
+          &lt;/Col&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup row&gt;
+          &lt;Label for=&quot;exampleEmail2&quot; sm={2}&gt;Email&lt;/Label&gt;
+          &lt;Col sm={10}&gt;
+            &lt;Input type=&quot;email&quot; name=&quot;email&quot; id=&quot;exampleEmail2&quot; placeholder=&quot;default&quot; /&gt;
+          &lt;/Col&gt;
+        &lt;/FormGroup&gt;
+      &lt;/Form&gt;
+    );
+  }
+}
+</code></pre><h3 id="Hidden-Labels">Hidden Labels</h3><div class="docs-example"><form class="form-inline"><div class="form-group"><label for="exampleEmail" class="sr-only ">Email</label><input type="email" name="email" id="exampleEmail" placeholder="Email" class="form-control"/></div> <div class="form-group"><label for="examplePassword" class="sr-only ">Password</label><input type="password" name="password" id="examplePassword" placeholder="Password" class="form-control"/></div> <button class="btn btn-secondary">Submit</button></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Button, Form, FormGroup, Label, Input } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Form inline&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleEmail&quot; hidden&gt;Email&lt;/Label&gt;
+          &lt;Input type=&quot;email&quot; name=&quot;email&quot; id=&quot;exampleEmail&quot; placeholder=&quot;Email&quot; /&gt;
+        &lt;/FormGroup&gt;
+        {&#x27; &#x27;}
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;examplePassword&quot; hidden&gt;Password&lt;/Label&gt;
+          &lt;Input type=&quot;password&quot; name=&quot;password&quot; id=&quot;examplePassword&quot; placeholder=&quot;Password&quot; /&gt;
+        &lt;/FormGroup&gt;
+        {&#x27; &#x27;}
+        &lt;Button&gt;Submit&lt;/Button&gt;
+      &lt;/Form&gt;
+    );
+  }
+}
+</code></pre></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Buttons</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">Github</a></li></ul></div></div></nav><div class="content container"><div class="row"><div class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h5>Utilities</h5><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link active" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></div><div class="docSearch-content col-md-9 order-md-1"><div><h3 id="Buttons">Buttons</h3><div class="docs-example"><div><button class="btn btn-primary">primary</button> <button class="btn btn-secondary">secondary</button> <button class="btn btn-success">success</button> <button class="btn btn-info">info</button> <button class="btn btn-warning">warning</button> <button class="btn btn-danger">danger</button> <button class="btn btn-link">link</button></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Button } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button color=&quot;primary&quot;&gt;primary&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button color=&quot;secondary&quot;&gt;secondary&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button color=&quot;success&quot;&gt;success&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button color=&quot;info&quot;&gt;info&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button color=&quot;warning&quot;&gt;warning&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button color=&quot;danger&quot;&gt;danger&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button color=&quot;link&quot;&gt;link&lt;/Button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre><h4>Properties</h4><pre><code class="language-jsx">Button.propTypes = {
+  active: PropTypes.bool,
+  block: PropTypes.bool,
+  color: PropTypes.string, // default: &#x27;secondary&#x27;
+  disabled: PropTypes.bool,
+
+  // Pass in a Component to override default button element
+  // example: react-router Link
+  // default: &#x27;button&#x27;
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+
+  // ref will only get you a reference to the Button component, use innerRef to get a reference to the DOM element (for things like focus management).
+  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+
+  onClick: PropTypes.func,
+  size: PropTypes.string
+}</code></pre><h3 id="Outline-Buttons">Outline Buttons</h3><div class="docs-example"><div><button class="btn btn-outline-primary">primary</button> <button class="btn btn-outline-secondary">secondary</button> <button class="btn btn-outline-success">success</button> <button class="btn btn-outline-info">info</button> <button class="btn btn-outline-warning">warning</button> <button class="btn btn-outline-danger">danger</button></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Button } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button outline color=&quot;primary&quot;&gt;primary&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button outline color=&quot;secondary&quot;&gt;secondary&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button outline color=&quot;success&quot;&gt;success&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button outline color=&quot;info&quot;&gt;info&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button outline color=&quot;warning&quot;&gt;warning&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button outline color=&quot;danger&quot;&gt;danger&lt;/Button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre><h3 id="Sizes">Sizes</h3><div class="docs-example"><button class="btn btn-primary btn-lg">Large Button</button> <button class="btn btn-secondary btn-lg">Large Button</button></div><pre><code class="language-jsx">&lt;Button color=&quot;primary&quot; size=&quot;lg&quot;&gt;Large Button&lt;/Button&gt;{&#x27; &#x27;}
+&lt;Button color=&quot;secondary&quot; size=&quot;lg&quot;&gt;Large Button&lt;/Button&gt;</code></pre><div class="docs-example"><button class="btn btn-primary btn-sm">Small Button</button> <button class="btn btn-secondary btn-sm">Small Button</button></div><pre><code class="language-jsx">&lt;Button color=&quot;primary&quot; size=&quot;sm&quot;&gt;Small Button&lt;/Button&gt;{&#x27; &#x27;}
+&lt;Button color=&quot;secondary&quot; size=&quot;sm&quot;&gt;Small Button&lt;/Button&gt;</code></pre><div class="docs-example"><button class="btn btn-primary btn-lg btn-block">Block level button</button><button class="btn btn-secondary btn-lg btn-block">Block level button</button></div><pre><code class="language-jsx">&lt;Button color=&quot;primary&quot; size=&quot;lg&quot; block&gt;Block level button&lt;/Button&gt;
+&lt;Button color=&quot;secondary&quot; size=&quot;lg&quot; block&gt;Block level button&lt;/Button&gt;</code></pre><h3 id="Active-State">Active State</h3><div class="docs-example"><button class="btn btn-primary btn-lg active">Primary link</button> <button class="btn btn-secondary btn-lg active">Link</button></div><pre><code class="language-jsx">&lt;Button color=&quot;primary&quot; size=&quot;lg&quot; active&gt;Primary link&lt;/Button&gt;{&#x27; &#x27;}
+&lt;Button color=&quot;secondary&quot; size=&quot;lg&quot; active&gt;Link&lt;/Button&gt;</code></pre><h3 id="Disabled-State">Disabled State</h3><div class="docs-example"><button disabled="" class="btn btn-primary btn-lg disabled">Primary button</button> <button disabled="" class="btn btn-secondary btn-lg disabled">Button</button></div><pre><code class="language-jsx">&lt;Button color=&quot;primary&quot; size=&quot;lg&quot; disabled&gt;Primary button&lt;/Button&gt;{&#x27; &#x27;}
+&lt;Button color=&quot;secondary&quot; size=&quot;lg&quot; disabled&gt;Button&lt;/Button&gt;</code></pre><h3 id="Checkbox-and-Radio-Buttons-Stateful-Buttons">Checkbox and Radio Buttons (Stateful Buttons)</h3><p>In order to have checkbox and radio buttons, your component needs to manage the state of which button(s) are active/select. It is not in the opinion of this library to manage state within it&#x27;s components so it is left up to you. Below is a simple example showcasing how this could be done uses the components which already exist in this library.</p><div class="docs-example"><div><h5>Radio Buttons</h5><div role="group" class="btn-group"><button type="button" class="btn btn-primary">One</button><button type="button" class="btn btn-primary">Two</button><button type="button" class="btn btn-primary">Three</button></div><p>Selected: </p><h5>Checkbox Buttons</h5><div role="group" class="btn-group"><button type="button" class="btn btn-primary">One</button><button type="button" class="btn btn-primary">Two</button><button type="button" class="btn btn-primary">Three</button></div><p>Selected: <!-- -->[]</p></div></div><pre><code class="language-jsx">import React, { Component } from &#x27;react&#x27;;
+import { Button, ButtonGroup } from &#x27;reactstrap&#x27;;
+
+class Example extends Component {
+  constructor (props) {
+    super(props);
+
+    this.state = { cSelected: [] };
+
+    this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
+    this.onCheckboxBtnClick = this.onCheckboxBtnClick.bind(this);
+  }
+
+  onRadioBtnClick(rSelected) {
+    this.setState({ rSelected });
+  }
+
+  onCheckboxBtnClick(selected) {
+    const index = this.state.cSelected.indexOf(selected);
+    if (index &lt; 0) {
+      this.state.cSelected.push(selected);
+    } else {
+      this.state.cSelected.splice(index, 1);
+    }
+    this.setState({ cSelected: [...this.state.cSelected] });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h5&gt;Radio Buttons&lt;/h5&gt;
+        &lt;ButtonGroup&gt;
+          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onRadioBtnClick(1)} active={this.state.rSelected === 1}&gt;One&lt;/Button&gt;
+          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onRadioBtnClick(2)} active={this.state.rSelected === 2}&gt;Two&lt;/Button&gt;
+          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onRadioBtnClick(3)} active={this.state.rSelected === 3}&gt;Three&lt;/Button&gt;
+        &lt;/ButtonGroup&gt;
+        &lt;p&gt;Selected: {this.state.rSelected}&lt;/p&gt;
+
+        &lt;h5&gt;Checkbox Buttons&lt;/h5&gt;
+        &lt;ButtonGroup&gt;
+          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onCheckboxBtnClick(1)} active={this.state.cSelected.includes(1)}&gt;One&lt;/Button&gt;
+          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onCheckboxBtnClick(2)} active={this.state.cSelected.includes(2)}&gt;Two&lt;/Button&gt;
+          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onCheckboxBtnClick(3)} active={this.state.cSelected.includes(3)}&gt;Three&lt;/Button&gt;
+        &lt;/ButtonGroup&gt;
+        &lt;p&gt;Selected: {JSON.stringify(this.state.cSelected)}&lt;/p&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default Example;</code></pre></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

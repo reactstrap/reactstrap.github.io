@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Popovers</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">Github</a></li></ul></div></div></nav><div class="content container"><div class="row"><div class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h5>Utilities</h5><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link active" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></div><div class="docSearch-content col-md-9 order-md-1"><div><h3 id="Popovers">Popovers</h3><p>Popovers are built with <a href="https://popper.js.org/">https://popper.js.org/</a> via <a href="https://github.com/souporserious/react-popper">https://github.com/souporserious/react-popper</a>.</p><div class="docs-example"><div><button type="button" id="Popover1" class="btn btn-secondary">Launch Popover</button></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+import React from &#x27;react&#x27;;
+import { Button, Popover, PopoverHeader, PopoverBody } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      popoverOpen: false
+    };
+  }
+
+  toggle() {
+    this.setState({
+      popoverOpen: !this.state.popoverOpen
+    });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button id=&quot;Popover1&quot; onClick={this.toggle}&gt;
+          Launch Popover
+        &lt;/Button&gt;
+        &lt;Popover placement=&quot;bottom&quot; isOpen={this.state.popoverOpen} target=&quot;Popover1&quot; toggle={this.toggle}&gt;
+          &lt;PopoverHeader&gt;Popover Title&lt;/PopoverHeader&gt;
+          &lt;PopoverBody&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/PopoverBody&gt;
+        &lt;/Popover&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre><h4>Properties</h4><pre><code class="language-jsx">Popover.propTypes = {
+  // boolean to control the state of the popover
+  isOpen:  PropTypes.bool,
+  // callback for toggling isOpen in the controlling component
+  toggle:  PropTypes.func,
+  target:  PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func,
+    DOMElement, // instanceof Element (https://developer.mozilla.org/en-US/docs/Web/API/Element)
+  ]).isRequired,
+  // Where to inject the popper DOM node, default to body
+  container: PropTypes.oneOfType([PropTypes.string, PropTypes.func, DOMElement]),
+  className: PropTypes.string,
+  // Apply class to the inner-popover
+  innerClassName: PropTypes.string,
+  disabled: PropTypes.bool,
+  hideArrow: PropTypes.bool,
+  placementPrefix: PropTypes.string,
+  delay: PropTypes.oneOfType([
+    PropTypes.shape({ show: PropTypes.number, hide: PropTypes.number }),
+    PropTypes.number,
+  ]),
+  placement: PropTypes.oneOf([
+    &#x27;auto&#x27;,
+    &#x27;auto-start&#x27;,
+    &#x27;auto-end&#x27;,
+    &#x27;top&#x27;,
+    &#x27;top-start&#x27;,
+    &#x27;top-end&#x27;,
+    &#x27;right&#x27;,
+    &#x27;right-start&#x27;,
+    &#x27;right-end&#x27;,
+    &#x27;bottom&#x27;,
+    &#x27;bottom-start&#x27;,
+    &#x27;bottom-end&#x27;,
+    &#x27;left&#x27;,
+    &#x27;left-start&#x27;,
+    &#x27;left-end&#x27;,
+  ]),
+  // Custom modifiers that are passed to Popper.js, see https://popper.js.org/popper-documentation.html#modifiers
+  modifiers: PropTypes.object
+}</code></pre><h3 id="Popovers-List">Popovers List</h3><div class="docs-example"><div><span><button type="button" id="Popover-0" class="mr-1 btn btn-secondary">Top</button></span><span><button type="button" id="Popover-1" class="mr-1 btn btn-secondary">Bottom</button></span><span><button type="button" id="Popover-2" class="mr-1 btn btn-secondary">Left</button></span><span><button type="button" id="Popover-3" class="mr-1 btn btn-secondary">Right</button></span></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from &#x27;react&#x27;;
+import { Button, Popover, PopoverHeader, PopoverBody } from &#x27;reactstrap&#x27;;
+
+class PopoverItem extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      popoverOpen: false
+    };
+  }
+
+  toggle() {
+    this.setState({
+      popoverOpen: !this.state.popoverOpen
+    });
+  }
+
+  render() {
+    return (
+      &lt;span&gt;
+        &lt;Button className=&quot;mr-1&quot; color=&quot;secondary&quot; id={&#x27;Popover-&#x27; + this.props.id} onClick={this.toggle}&gt;
+          {this.props.item.text}
+        &lt;/Button&gt;
+        &lt;Popover placement={this.props.item.placement} isOpen={this.state.popoverOpen} target={&#x27;Popover-&#x27; + this.props.id} toggle={this.toggle}&gt;
+          &lt;PopoverHeader&gt;Popover Title&lt;/PopoverHeader&gt;
+          &lt;PopoverBody&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/PopoverBody&gt;
+        &lt;/Popover&gt;
+      &lt;/span&gt;
+    );
+  }
+}
+
+class PopoverExampleMulti extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      popovers: [
+        {
+          placement: &#x27;top&#x27;,
+          text: &#x27;Top&#x27;
+        },
+        {
+          placement: &#x27;bottom&#x27;,
+          text: &#x27;Bottom&#x27;
+        },
+        {
+          placement: &#x27;left&#x27;,
+          text: &#x27;Left&#x27;
+        },
+        {
+          placement: &#x27;right&#x27;,
+          text: &#x27;Right&#x27;
+        }
+      ]
+    };
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        { this.state.popovers.map((popover, i) =&gt; {
+          return &lt;PopoverItem key={i} item={popover} id={i} /&gt;;
+        })}
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default PopoverExampleMulti;
+</code></pre></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Card</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">Github</a></li></ul></div></div></nav><div class="content container"><div class="row"><div class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h5>Utilities</h5><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link active" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></div><div class="docSearch-content col-md-9 order-md-1"><div><h3 id="Card">Card</h3><hr/><div class="docs-example"><div><div class="card"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=318%C3%97180&amp;w=318&amp;h=180" alt="Card image cap" class="card-img-top"/><div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6><p class="card-text">Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.</p><button class="btn btn-secondary">Button</button></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Card&gt;
+        &lt;CardImg top width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=318%C3%97180&amp;w=318&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card title&lt;/CardTitle&gt;
+          &lt;CardSubtitle&gt;Card subtitle&lt;/CardSubtitle&gt;
+          &lt;CardText&gt;Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.&lt;/CardText&gt;
+          &lt;Button&gt;Button&lt;/Button&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h4>Properties</h4><pre><code class="language-jsx">Card.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  inverse: PropTypes.bool,
+  color: PropTypes.string,
+  body: PropTypes.bool,
+  className: PropTypes.string
+};
+
+CardBody.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};
+
+CardColumns.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};
+
+CardDeck.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};
+
+CardFooter.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};
+
+CardGroup.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};
+
+CardHeader.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};
+
+CardImg.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string,
+  // Use top or bottom to position image via &quot;card-img-top&quot; or &quot;card-img-bottom&quot;
+  top: PropTypes.bool,
+  bottom: PropTypes.bool
+};
+
+CardImgOverlay.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};
+
+CardLink.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string,
+  // ref will only get you a reference to the CardLink component, use innerRef to get a reference to the DOM element (for things like focus management).
+  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
+};
+
+CardSubtitle.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};
+
+CardText.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};
+
+CardTitle.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};</code></pre><h3 id="Content-Types">Content Types</h3><div class="docs-example"><div><div class="card"><div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6></div><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=318%C3%97180&amp;w=318&amp;h=180" alt="Card image cap"/><div class="card-body"><p class="card-text">Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.</p><a href="#" class="card-link">Card Link</a><a href="#" class="card-link">Another Link</a></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, CardImg, CardText, CardBody, CardLink,
+  CardTitle, CardSubtitle } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Card&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card title&lt;/CardTitle&gt;
+          &lt;CardSubtitle&gt;Card subtitle&lt;/CardSubtitle&gt;
+        &lt;/CardBody&gt;
+        &lt;img width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=318%C3%97180&amp;w=318&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardBody&gt;
+          &lt;CardText&gt;Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.&lt;/CardText&gt;
+          &lt;CardLink href=&quot;#&quot;&gt;Card Link&lt;/CardLink&gt;
+          &lt;CardLink href=&quot;#&quot;&gt;Another Link&lt;/CardLink&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Sizing">Sizing</h3><div class="docs-example"><div class="row"><div class="col-sm-6"><div class="card card-body"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Go somewhere</button></div></div><div class="col-sm-6"><div class="card card-body"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Go somewhere</button></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, Button, CardTitle, CardText, Row, Col } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;Row&gt;
+      &lt;Col sm=&quot;6&quot;&gt;
+        &lt;Card body&gt;
+          &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+          &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+          &lt;Button&gt;Go somewhere&lt;/Button&gt;
+        &lt;/Card&gt;
+      &lt;/Col&gt;
+      &lt;Col sm=&quot;6&quot;&gt;
+        &lt;Card body&gt;
+          &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+          &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+          &lt;Button&gt;Go somewhere&lt;/Button&gt;
+        &lt;/Card&gt;
+      &lt;/Col&gt;
+    &lt;/Row&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Text-alignment">Text alignment</h3><div class="docs-example"><div><div class="card card-body"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Go somewhere</button></div><div class="text-center card card-body"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Go somewhere</button></div><div class="text-right card card-body"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Go somewhere</button></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, Button, CardTitle, CardText } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Card body&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button&gt;Go somewhere&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body className=&quot;text-center&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button&gt;Go somewhere&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body className=&quot;text-right&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button&gt;Go somewhere&lt;/Button&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Header-and-Footer">Header and Footer</h3><div class="docs-example"><div><div class="card"><div class="card-header">Header</div><div class="card-body"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Go somewhere</button></div><div class="card-footer">Footer</div></div><div class="card"><h3 class="card-header">Featured</h3><div class="card-body"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Go somewhere</button></div><div class="text-muted card-footer">Footer</div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, Button, CardHeader, CardFooter, CardBody,
+  CardTitle, CardText } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Card&gt;
+        &lt;CardHeader&gt;Header&lt;/CardHeader&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+          &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+          &lt;Button&gt;Go somewhere&lt;/Button&gt;
+        &lt;/CardBody&gt;
+        &lt;CardFooter&gt;Footer&lt;/CardFooter&gt;
+      &lt;/Card&gt;
+
+      &lt;Card&gt;
+        &lt;CardHeader tag=&quot;h3&quot;&gt;Featured&lt;/CardHeader&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+          &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+          &lt;Button&gt;Go somewhere&lt;/Button&gt;
+        &lt;/CardBody&gt;
+        &lt;CardFooter className=&quot;text-muted&quot;&gt;Footer&lt;/CardFooter&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Image-caps">Image caps</h3><div class="docs-example"><div><div class="card"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=318%C3%97180&amp;w=318&amp;h=180" alt="Card image cap" class="card-img-top"/><div class="card-body"><h5 class="card-title">Card Title</h5><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p></div></div><div class="card"><div class="card-body"><h5 class="card-title">Card Title</h5><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p></div><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=318%C3%97180&amp;w=318&amp;h=180" alt="Card image cap" class="card-img-bottom"/></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, CardBody, Button, CardTitle, CardText, CardImg } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Card&gt;
+        &lt;CardImg top width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=318%C3%97180&amp;w=318&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card Title&lt;/CardTitle&gt;
+          &lt;CardText&gt;This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.&lt;/CardText&gt;
+          &lt;CardText&gt;
+            &lt;small className=&quot;text-muted&quot;&gt;Last updated 3 mins ago&lt;/small&gt;
+          &lt;/CardText&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+      &lt;Card&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card Title&lt;/CardTitle&gt;
+          &lt;CardText&gt;This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.&lt;/CardText&gt;
+          &lt;CardText&gt;
+            &lt;small className=&quot;text-muted&quot;&gt;Last updated 3 mins ago&lt;/small&gt;
+          &lt;/CardText&gt;
+        &lt;/CardBody&gt;
+        &lt;CardImg bottom width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=318%C3%97180&amp;w=318&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Image-overlays">Image overlays</h3><div class="docs-example"><div><div class="card text-white"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=318%C3%97270&amp;w=318&amp;h=270&amp;bg=333333&amp;txtclr=666666" alt="Card image cap" class="card-img"/><div class="card-img-overlay"><h5 class="card-title">Card Title</h5><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Card inverse&gt;
+        &lt;CardImg width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=318%C3%97270&amp;w=318&amp;h=270&amp;bg=333333&amp;txtclr=666666&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardImgOverlay&gt;
+          &lt;CardTitle&gt;Card Title&lt;/CardTitle&gt;
+          &lt;CardText&gt;This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.&lt;/CardText&gt;
+          &lt;CardText&gt;
+            &lt;small className=&quot;text-muted&quot;&gt;Last updated 3 mins ago&lt;/small&gt;
+          &lt;/CardText&gt;
+        &lt;/CardImgOverlay&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Background-variants">Background variants</h3><div class="docs-example"><div><div style="background-color:#333;border-color:#333" class="card text-white card-body"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div><div class="card text-white card-body bg-primary"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div><div class="card text-white card-body bg-success"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div><div class="card text-white card-body bg-info"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div><div class="card text-white card-body bg-warning"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div><div class="card text-white card-body bg-danger"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, Button, CardTitle, CardText } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Card body inverse style={{ backgroundColor: &#x27;#333&#x27;, borderColor: &#x27;#333&#x27; }}&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body inverse color=&quot;primary&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button color=&quot;secondary&quot;&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body inverse color=&quot;success&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button color=&quot;secondary&quot;&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body inverse color=&quot;info&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button color=&quot;secondary&quot;&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body inverse color=&quot;warning&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button color=&quot;secondary&quot;&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body inverse color=&quot;danger&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button color=&quot;secondary&quot;&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Outline-variants">Outline variants</h3><div class="docs-example"><div><div class="card card-body border-secondary"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div><div class="card card-body border-primary"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div><div class="card card-body border-success"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div><div class="card card-body border-info"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div><div class="card card-body border-warning"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div><div class="card card-body border-danger"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, Button, CardTitle, CardText } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Card body outline color=&quot;secondary&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body outline color=&quot;primary&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button color=&quot;secondary&quot;&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body outline color=&quot;success&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button color=&quot;secondary&quot;&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body outline color=&quot;info&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button color=&quot;secondary&quot;&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body outline color=&quot;warning&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button color=&quot;secondary&quot;&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card body outline color=&quot;danger&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button color=&quot;secondary&quot;&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Groups">Groups</h3><div class="docs-example"><div class="card-group"><div class="card"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180" alt="Card image cap" class="card-img-top"/><div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><button class="btn btn-secondary">Button</button></div></div><div class="card"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180" alt="Card image cap" class="card-img-top"/><div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6><p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div></div><div class="card"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180" alt="Card image cap" class="card-img-top"/><div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p><button class="btn btn-secondary">Button</button></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, Button, CardImg, CardTitle, CardText, CardGroup,
+ CardSubtitle, CardBody } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;CardGroup&gt;
+      &lt;Card&gt;
+        &lt;CardImg top width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card title&lt;/CardTitle&gt;
+          &lt;CardSubtitle&gt;Card subtitle&lt;/CardSubtitle&gt;
+          &lt;CardText&gt;This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.&lt;/CardText&gt;
+          &lt;Button&gt;Button&lt;/Button&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+      &lt;Card&gt;
+        &lt;CardImg top width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card title&lt;/CardTitle&gt;
+          &lt;CardSubtitle&gt;Card subtitle&lt;/CardSubtitle&gt;
+          &lt;CardText&gt;This card has supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+          &lt;Button&gt;Button&lt;/Button&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+      &lt;Card&gt;
+        &lt;CardImg top width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card title&lt;/CardTitle&gt;
+          &lt;CardSubtitle&gt;Card subtitle&lt;/CardSubtitle&gt;
+          &lt;CardText&gt;This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.&lt;/CardText&gt;
+          &lt;Button&gt;Button&lt;/Button&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+    &lt;/CardGroup&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Decks">Decks</h3><div class="docs-example"><div class="card-deck"><div class="card"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180" alt="Card image cap" class="card-img-top"/><div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><button class="btn btn-secondary">Button</button></div></div><div class="card"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180" alt="Card image cap" class="card-img-top"/><div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6><p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div></div><div class="card"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180" alt="Card image cap" class="card-img-top"/><div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p><button class="btn btn-secondary">Button</button></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
+ CardSubtitle, CardBody } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;CardDeck&gt;
+      &lt;Card&gt;
+        &lt;CardImg top width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card title&lt;/CardTitle&gt;
+          &lt;CardSubtitle&gt;Card subtitle&lt;/CardSubtitle&gt;
+          &lt;CardText&gt;This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.&lt;/CardText&gt;
+          &lt;Button&gt;Button&lt;/Button&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+      &lt;Card&gt;
+        &lt;CardImg top width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card title&lt;/CardTitle&gt;
+          &lt;CardSubtitle&gt;Card subtitle&lt;/CardSubtitle&gt;
+          &lt;CardText&gt;This card has supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+          &lt;Button&gt;Button&lt;/Button&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+      &lt;Card&gt;
+        &lt;CardImg top width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card title&lt;/CardTitle&gt;
+          &lt;CardSubtitle&gt;Card subtitle&lt;/CardSubtitle&gt;
+          &lt;CardText&gt;This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.&lt;/CardText&gt;
+          &lt;Button&gt;Button&lt;/Button&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+    &lt;/CardDeck&gt;
+  );
+};
+
+export default Example;
+</code></pre><h3 id="Columns">Columns</h3><div class="docs-example"><div class="card-columns"><div class="card"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180" alt="Card image cap" class="card-img-top"/><div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p><button class="btn btn-secondary">Button</button></div></div><div class="card"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180" alt="Card image cap" class="card-img-top"/></div><div class="card"><div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6><p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div></div><div style="background-color:#333;border-color:#333" class="card text-white card-body"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div><div class="card"><img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180" alt="Card image cap" class="card-img-top"/><div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p><button class="btn btn-secondary">Button</button></div></div><div class="card text-white card-body bg-primary"><h5 class="card-title">Special Title Treatment</h5><p class="card-text">With supporting text below as a natural lead-in to additional content.</p><button class="btn btn-secondary">Button</button></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Card, Button, CardImg, CardTitle, CardText, CardColumns,
+ CardSubtitle, CardBody } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;CardColumns&gt;
+      &lt;Card&gt;
+        &lt;CardImg top width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card title&lt;/CardTitle&gt;
+          &lt;CardSubtitle&gt;Card subtitle&lt;/CardSubtitle&gt;
+          &lt;CardText&gt;This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.&lt;/CardText&gt;
+          &lt;Button&gt;Button&lt;/Button&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+      &lt;Card&gt;
+        &lt;CardImg top width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+      &lt;/Card&gt;
+      &lt;Card&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card title&lt;/CardTitle&gt;
+          &lt;CardSubtitle&gt;Card subtitle&lt;/CardSubtitle&gt;
+          &lt;CardText&gt;This card has supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+          &lt;Button&gt;Button&lt;/Button&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+      &lt;Card body inverse style={{ backgroundColor: &#x27;#333&#x27;, borderColor: &#x27;#333&#x27; }}&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+      &lt;Card&gt;
+        &lt;CardImg top width=&quot;100%&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=256%C3%97180&amp;w=256&amp;h=180&quot; alt=&quot;Card image cap&quot; /&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;Card title&lt;/CardTitle&gt;
+          &lt;CardSubtitle&gt;Card subtitle&lt;/CardSubtitle&gt;
+          &lt;CardText&gt;This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.&lt;/CardText&gt;
+          &lt;Button&gt;Button&lt;/Button&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+      &lt;Card body inverse color=&quot;primary&quot;&gt;
+        &lt;CardTitle&gt;Special Title Treatment&lt;/CardTitle&gt;
+        &lt;CardText&gt;With supporting text below as a natural lead-in to additional content.&lt;/CardText&gt;
+        &lt;Button color=&quot;secondary&quot;&gt;Button&lt;/Button&gt;
+      &lt;/Card&gt;
+    &lt;/CardColumns&gt;
+  );
+};
+
+export default Example;
+</code></pre></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

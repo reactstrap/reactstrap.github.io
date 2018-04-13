@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Modals</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/style.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet", href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">Github</a></li></ul></div></div></nav><div class="content container"><div class="row"><div class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h5>Utilities</h5><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link active" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></div><div class="docSearch-content col-md-9 order-md-1"><div><h3 id="Modals">Modals</h3><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal</button></div></div><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with custom className</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+class ModalExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
+
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button color=&quot;danger&quot; onClick={this.toggle}&gt;{this.props.buttonLabel}&lt;/Button&gt;
+        &lt;Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}&gt;
+          &lt;ModalHeader toggle={this.toggle}&gt;Modal title&lt;/ModalHeader&gt;
+          &lt;ModalBody&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          &lt;/ModalBody&gt;
+          &lt;ModalFooter&gt;
+            &lt;Button color=&quot;primary&quot; onClick={this.toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+            &lt;Button color=&quot;secondary&quot; onClick={this.toggle}&gt;Cancel&lt;/Button&gt;
+          &lt;/ModalFooter&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default ModalExample;
+</code></pre><h4>Properties</h4><pre><code class="language-jsx">Modal.propTypes = {
+  // boolean to control the state of the popover
+  isOpen:  PropTypes.bool,
+  autoFocus: PropTypes.bool,
+  // if modal should be centered vertically in viewport
+  centered: PropTypes.bool,
+  // corresponds to bootstrap&#x27;s modal sizes, ie. &#x27;lg&#x27; or &#x27;sm&#x27;
+  size: PropTypes.string,
+  // callback for toggling isOpen in the controlling component
+  toggle:  PropTypes.func,
+  role: PropTypes.string, // defaults to &quot;dialog&quot;
+  // used to reference the ID of the title element in the modal
+  labelledBy: PropTypes.string,
+  keyboard: PropTypes.bool,
+  // control backdrop, see http://v4-alpha.getbootstrap.com/components/modal/#options
+  backdrop: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.oneOf([&#x27;static&#x27;])
+  ]),
+  // allows for a node/componet to exist next to the modal (outside of it). Useful for external close buttons
+  // external: PropTypes.node,
+  // called on componentDidMount
+  onEnter: PropTypes.func,
+  // called on componentWillUnmount
+  onExit: PropTypes.func,
+  // called when done transitioning in
+  onOpened: PropTypes.func,
+  // called when done transitioning out
+  onClosed: PropTypes.func,
+  className: PropTypes.string,
+  wrapClassName: PropTypes.string,
+  modalClassName: PropTypes.string,
+  backdropClassName: PropTypes.string,
+  contentClassName: PropTypes.string,
+  // boolean to control whether the fade transition occurs (default: true)
+  fade: PropTypes.bool,
+  cssModule: PropTypes.object,
+  // zIndex defaults to 1000.
+  zIndex: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
+  // backdropTransition - controls backdrop transition
+  // timeout is 150ms by default to match bootstrap
+  // see [Fade](/components/fade/) for more details
+  backdropTransition: PropTypes.shape(Fade.propTypes),
+  // modalTransition - controls modal transition 
+  // timeout is 300ms by default to match bootstrap
+  // see [Fade](/components/fade/) for more details
+  modalTransition: PropTypes.shape(Fade.propTypes),
+}</code></pre><h4>Backdrop</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><form class="form-inline"><div class="form-group"><label for="backdrop" class="">Backdrop value</label> <select name="backdrop" id="backdrop" type="select" class="form-control"><option value="true">true</option><option value="false">false</option><option value="static">&quot;static&quot;</option></select></div> <button type="button" class="btn btn-danger">Launch Modal</button></form></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } from &#x27;reactstrap&#x27;;
+
+class ModalExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false,
+      backdrop: true
+    };
+
+    this.toggle = this.toggle.bind(this);
+    this.changeBackdrop = this.changeBackdrop.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  changeBackdrop(e) {
+    let value = e.target.value;
+    if (value !== &#x27;static&#x27;) {
+      value = JSON.parse(value);
+    }
+    this.setState({ backdrop: value });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Form inline onSubmit={(e) =&gt; e.preventDefault()}&gt;
+          &lt;FormGroup&gt;
+            &lt;Label for=&quot;backdrop&quot;&gt;Backdrop value&lt;/Label&gt;{&#x27; &#x27;}
+            &lt;Input type=&quot;select&quot; name=&quot;backdrop&quot; id=&quot;backdrop&quot; onChange={this.changeBackdrop}&gt;
+              &lt;option value=&quot;true&quot;&gt;true&lt;/option&gt;
+              &lt;option value=&quot;false&quot;&gt;false&lt;/option&gt;
+              &lt;option value=&quot;static&quot;&gt;&quot;static&quot;&lt;/option&gt;
+            &lt;/Input&gt;
+          &lt;/FormGroup&gt;
+          {&#x27; &#x27;}
+          &lt;Button color=&quot;danger&quot; onClick={this.toggle}&gt;{this.props.buttonLabel}&lt;/Button&gt;
+        &lt;/Form&gt;
+        &lt;Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} backdrop={this.state.backdrop}&gt;
+          &lt;ModalHeader toggle={this.toggle}&gt;Modal title&lt;/ModalHeader&gt;
+          &lt;ModalBody&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          &lt;/ModalBody&gt;
+          &lt;ModalFooter&gt;
+            &lt;Button color=&quot;primary&quot; onClick={this.toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+            &lt;Button color=&quot;secondary&quot; onClick={this.toggle}&gt;Cancel&lt;/Button&gt;
+          &lt;/ModalFooter&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default ModalExample;
+</code></pre><h4>Nested Modals</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal w/ Nested Example</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+class ModalExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false,
+      nestedModal: false,
+      closeAll: false
+    };
+
+    this.toggle = this.toggle.bind(this);
+    this.toggleNested = this.toggleNested.bind(this);
+    this.toggleAll = this.toggleAll.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  toggleNested() {
+    this.setState({
+      nestedModal: !this.state.nestedModal,
+      closeAll: false
+    });
+  }
+
+  toggleAll() {
+    this.setState({
+      nestedModal: !this.state.nestedModal,
+      closeAll: true
+    });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button color=&quot;danger&quot; onClick={this.toggle}&gt;{this.props.buttonLabel}&lt;/Button&gt;
+        &lt;Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}&gt;
+          &lt;ModalHeader toggle={this.toggle}&gt;Modal title&lt;/ModalHeader&gt;
+          &lt;ModalBody&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            &lt;br /&gt;
+            &lt;Button color=&quot;success&quot; onClick={this.toggleNested}&gt;Show Nested Model&lt;/Button&gt;
+            &lt;Modal isOpen={this.state.nestedModal} toggle={this.toggleNested} onClosed={this.state.closeAll ? this.toggle : undefined}&gt;
+              &lt;ModalHeader&gt;Nested Modal title&lt;/ModalHeader&gt;
+              &lt;ModalBody&gt;Stuff and things&lt;/ModalBody&gt;
+              &lt;ModalFooter&gt;
+                &lt;Button color=&quot;primary&quot; onClick={this.toggleNested}&gt;Done&lt;/Button&gt;{&#x27; &#x27;}
+                &lt;Button color=&quot;secondary&quot; onClick={this.toggleAll}&gt;All Done&lt;/Button&gt;
+              &lt;/ModalFooter&gt;
+            &lt;/Modal&gt;
+          &lt;/ModalBody&gt;
+          &lt;ModalFooter&gt;
+            &lt;Button color=&quot;primary&quot; onClick={this.toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+            &lt;Button color=&quot;secondary&quot; onClick={this.toggle}&gt;Cancel&lt;/Button&gt;
+          &lt;/ModalFooter&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default ModalExample;
+</code></pre><h4>Modals with Custom Transition Timeouts</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with Custom Transition Timeouts Example</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+class ModalExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
+
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button color=&quot;danger&quot; onClick={this.toggle}&gt;{this.props.buttonLabel}&lt;/Button&gt;
+        &lt;Modal isOpen={this.state.modal} modalTransition={{ timeout: 20 }} backdropTransition={{ timeout: 10 }}
+          toggle={this.toggle} className={this.props.className}&gt;
+          &lt;ModalHeader toggle={this.toggle}&gt;Modal title&lt;/ModalHeader&gt;
+          &lt;ModalBody&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          &lt;/ModalBody&gt;
+          &lt;ModalFooter&gt;
+            &lt;Button color=&quot;primary&quot; onClick={this.toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+            &lt;Button color=&quot;secondary&quot; onClick={this.toggle}&gt;Cancel&lt;/Button&gt;
+          &lt;/ModalFooter&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default ModalExample;
+</code></pre><h4>Modals without Fade Effect</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal without Fade Effect Example</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+class ModalExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
+
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button color=&quot;danger&quot; onClick={this.toggle}&gt;{this.props.buttonLabel}&lt;/Button&gt;
+        &lt;Modal isOpen={this.state.modal} fade={false} toggle={this.toggle} className={this.props.className}&gt;
+          &lt;ModalHeader toggle={this.toggle}&gt;Modal title&lt;/ModalHeader&gt;
+          &lt;ModalBody&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          &lt;/ModalBody&gt;
+          &lt;ModalFooter&gt;
+            &lt;Button color=&quot;primary&quot; onClick={this.toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+            &lt;Button color=&quot;secondary&quot; onClick={this.toggle}&gt;Cancel&lt;/Button&gt;
+          &lt;/ModalFooter&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default ModalExample;
+</code></pre><h4>Modals with external button</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with external close button</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+class ModalExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
+
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  render() {
+    const externalCloseBtn = &lt;button className=&quot;close&quot; style={{ position: &#x27;absolute&#x27;, top: &#x27;15px&#x27;, right: &#x27;15px&#x27; }} onClick={this.toggle}&gt;&amp;times;&lt;/button&gt;;
+    return (
+      &lt;div&gt;
+        &lt;Button color=&quot;danger&quot; onClick={this.toggle}&gt;{this.props.buttonLabel}&lt;/Button&gt;
+        &lt;Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} external={externalCloseBtn}&gt;
+          &lt;ModalHeader&gt;Modal title&lt;/ModalHeader&gt;
+          &lt;ModalBody&gt;
+            &lt;b&gt;Look at the top right of the page/viewport!&lt;/b&gt;&lt;br /&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          &lt;/ModalBody&gt;
+          &lt;ModalFooter&gt;
+            &lt;Button color=&quot;primary&quot; onClick={this.toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+            &lt;Button color=&quot;secondary&quot; onClick={this.toggle}&gt;Cancel&lt;/Button&gt;
+          &lt;/ModalFooter&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default ModalExample;
+</code></pre></div></div></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

@@ -108,6 +108,17 @@ export default class Example extends React.Component {
   addon: PropTypes.bool,
   className: PropTypes.string,
   cssModule: PropTypes.object,
+};<!-- -->CustomInput.propTypes = {
+  className: PropTypes.string,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  type: PropTypes.string.isRequired, // radio, checkbox, select, range.
+  label: PropTypes.string, // used for checkbox and radios
+  inline: PropTypes.bool,
+  valid: PropTypes.bool, // applied the is-invalid class when true, does nothing when false
+  invalid: PropTypes.bool, // applied the is-valid class when true, does nothing when false
+  bsSize: PropTypes.string,
+  cssModule: PropTypes.object,
+  children: PropTypes.oneOfType(PropTypes.node, PropTypes.array, PropTypes.func) // for type=&quot;select&quot;
 };</code></pre><h3 id="Form-Grid">Form Grid</h3><div class="docs-example"><form class=""><div class="row form-group"><label for="exampleEmail" class="col-sm-2 col-form-label">Email</label><div class="col-sm-10"><input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" class="form-control"/></div></div><div class="row form-group"><label for="examplePassword" class="col-sm-2 col-form-label">Password</label><div class="col-sm-10"><input type="password" name="password" id="examplePassword" placeholder="password placeholder" class="form-control"/></div></div><div class="row form-group"><label for="exampleSelect" class="col-sm-2 col-form-label">Select</label><div class="col-sm-10"><select name="select" id="exampleSelect" type="select" class="form-control"></select></div></div><div class="row form-group"><label for="exampleSelectMulti" class="col-sm-2 col-form-label">Select Multiple</label><div class="col-sm-10"><select name="selectMulti" id="exampleSelectMulti" multiple="" type="select" class="form-control"></select></div></div><div class="row form-group"><label for="exampleText" class="col-sm-2 col-form-label">Text Area</label><div class="col-sm-10"><textarea name="text" id="exampleText" type="textarea" class="form-control"></textarea></div></div><div class="row form-group"><label for="exampleFile" class="col-sm-2 col-form-label">File</label><div class="col-sm-10"><input type="file" name="file" id="exampleFile" class="form-control-file"/><small class="form-text text-muted">This is some placeholder block-level help text for the above input. It&#x27;s a bit lighter and easily wraps to a new line.</small></div></div><fieldset class="row form-group"><legend class="col-form-label col-sm-2">Radio Buttons</legend><div class="col-sm-10"><div class="form-check"><label class="form-check-label "><input type="radio" name="radio2" class="form-check-input"/> <!-- -->Option one is this and that—be sure to include why it&#x27;s great</label></div><div class="form-check"><label class="form-check-label "><input type="radio" name="radio2" class="form-check-input"/> <!-- -->Option two can be something else and selecting it will deselect option one</label></div><div class="form-check disabled"><label class="form-check-label "><input type="radio" name="radio2" disabled="" class="form-check-input"/> <!-- -->Option three is disabled</label></div></div></fieldset><div class="row form-group"><label for="checkbox2" class="col-sm-2 col-form-label">Checkbox</label><div class="col-sm-10"><div class="form-check"><label class="form-check-label "><input type="checkbox" id="checkbox2" class="form-check-input"/> <!-- -->Check me out</label></div></div></div><div class="row form-check"><div class="col-sm-10 offset-sm-2"><button class="btn btn-secondary">Submit</button></div></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from &#x27;reactstrap&#x27;;
 
@@ -431,8 +442,8 @@ export default class Example extends React.Component {
     );
   }
 }
-</code></pre><h3 id="Custom-Controls">Custom Controls</h3><div class="docs-example"><form class=""><div class="form-group"><label for="exampleCheckbox" class="">Checkboxes</label><div><div class="custom-control custom-checkbox"><input type="checkbox" id="exampleCustomCheckbox" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomCheckbox">Check this custom checkbox</label></div><div class="custom-control custom-checkbox"><input type="checkbox" id="exampleCustomCheckbox2" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomCheckbox2">Or this one</label></div><div class="custom-control custom-checkbox"><input type="checkbox" disabled="" id="exampleCustomCheckbox3" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomCheckbox3">But not this disabled one</label></div></div></div><div class="form-group"><label for="exampleCheckbox" class="">Radios</label><div><div class="custom-control custom-radio"><input type="radio" name="customRadio" id="exampleCustomRadio" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomRadio">Select this custom radio</label></div><div class="custom-control custom-radio"><input type="radio" name="customRadio" id="exampleCustomRadio2" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomRadio2">Or this one</label></div><div class="custom-control custom-radio"><input type="radio" disabled="" id="exampleCustomRadio3" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomRadio3">But not this disabled one</label></div></div></div><div class="form-group"><label for="exampleCheckbox" class="">Inline</label><div><div class="custom-control custom-checkbox custom-control-inline"><input type="checkbox" id="exampleCustomInline" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomInline">An inline custom input</label></div><div class="custom-control custom-checkbox custom-control-inline"><input type="checkbox" id="exampleCustomInline2" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomInline2">and another one</label></div></div></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
-import { CustomCheckbox, CustomRadio, Form, FormGroup, Label } from &#x27;reactstrap&#x27;;
+</code></pre><h3 id="Custom-Inputs">Custom Inputs</h3><div class="docs-example"><form class=""><div class="form-group"><label for="exampleCheckbox" class="">Checkboxes</label><div><div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomCheckbox">Check this custom checkbox</label></div><div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox2" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomCheckbox2">Or this one</label></div><div class="custom-checkbox custom-control"><input type="checkbox" id="exampleCustomCheckbox3" disabled="" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomCheckbox3">But not this disabled one</label></div></div></div><div class="form-group"><label for="exampleCheckbox" class="">Radios</label><div><div class="custom-radio custom-control"><input type="radio" id="exampleCustomRadio" name="customRadio" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomRadio">Select this custom radio</label></div><div class="custom-radio custom-control"><input type="radio" id="exampleCustomRadio2" name="customRadio" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomRadio2">Or this one</label></div><div class="custom-radio custom-control"><input type="radio" id="exampleCustomRadio3" disabled="" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomRadio3">But not this disabled one</label></div></div></div><div class="form-group"><label for="exampleCheckbox" class="">Inline</label><div><div class="custom-checkbox custom-control custom-control-inline"><input type="checkbox" id="exampleCustomInline" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomInline">An inline custom input</label></div><div class="custom-checkbox custom-control custom-control-inline"><input type="checkbox" id="exampleCustomInline2" class="custom-control-input"/><label class="custom-control-label" for="exampleCustomInline2">and another one</label></div></div></div><div class="form-group"><label for="exampleCustomSelect" class="">Custom Select</label><select type="select" id="exampleCustomSelect" name="customSelect" class="custom-select"><option value="">Select</option><option>Value 1</option><option>Value 2</option><option>Value 3</option><option>Value 4</option><option>Value 5</option></select></div><div class="form-group"><label for="exampleCustomMutlipleSelect" class="">Custom Multiple Select</label><select type="select" id="exampleCustomMutlipleSelect" name="customSelect" multiple="" class="custom-select"><option value="">Select</option><option>Value 1</option><option>Value 2</option><option>Value 3</option><option>Value 4</option><option>Value 5</option></select></div><div class="form-group"><label for="exampleCustomSelectDisabled" class="">Custom Select Disabled</label><select type="select" id="exampleCustomSelectDisabled" name="customSelect" disabled="" class="custom-select"><option value="">Select</option><option>Value 1</option><option>Value 2</option><option>Value 3</option><option>Value 4</option><option>Value 5</option></select></div><div class="form-group"><label for="exampleCustomMutlipleSelectDisabled" class="">Custom Multiple Select Disabled</label><select type="select" id="exampleCustomMutlipleSelectDisabled" name="customSelect" multiple="" disabled="" class="custom-select"><option value="">Select</option><option>Value 1</option><option>Value 2</option><option>Value 3</option><option>Value 4</option><option>Value 5</option></select></div><div class="form-group"><label for="exampleCustomFileBrowser" class="">File Browser</label><div class="custom-file"><input type="file" id="exampleCustomFileBrowser" name="customFile" class="custom-file-input"/><label class="custom-file-label" for="exampleCustomFileBrowser">Choose file</label></div></div><div class="form-group"><label for="exampleCustomFileBrowser" class="">File Browser with Custom Label</label><div class="custom-file"><input type="file" id="exampleCustomFileBrowser" name="customFile" class="custom-file-input"/><label class="custom-file-label" for="exampleCustomFileBrowser">Yo, pick a file!</label></div></div><div class="form-group"><label for="exampleCustomFileBrowser" class="">File Browser Disabled</label><div class="custom-file"><input type="file" id="exampleCustomFileBrowser" name="customFile" disabled="" class="custom-file-input"/><label class="custom-file-label" for="exampleCustomFileBrowser">Choose file</label></div></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { CustomInput, Form, FormGroup, Label } from &#x27;reactstrap&#x27;;
 
 export default class Example extends React.Component {
   render() {
@@ -441,25 +452,81 @@ export default class Example extends React.Component {
         &lt;FormGroup&gt;
           &lt;Label for=&quot;exampleCheckbox&quot;&gt;Checkboxes&lt;/Label&gt;
           &lt;div&gt;
-            &lt;CustomCheckbox id=&quot;exampleCustomCheckbox&quot; description=&quot;Check this custom checkbox&quot; /&gt;
-            &lt;CustomCheckbox id=&quot;exampleCustomCheckbox2&quot; description=&quot;Or this one&quot; /&gt;
-            &lt;CustomCheckbox id=&quot;exampleCustomCheckbox3&quot; description=&quot;But not this disabled one&quot; disabled /&gt;
+            &lt;CustomInput type=&quot;checkbox&quot; id=&quot;exampleCustomCheckbox&quot; label=&quot;Check this custom checkbox&quot; /&gt;
+            &lt;CustomInput type=&quot;checkbox&quot; id=&quot;exampleCustomCheckbox2&quot; label=&quot;Or this one&quot; /&gt;
+            &lt;CustomInput type=&quot;checkbox&quot; id=&quot;exampleCustomCheckbox3&quot; label=&quot;But not this disabled one&quot; disabled /&gt;
           &lt;/div&gt;
         &lt;/FormGroup&gt;
         &lt;FormGroup&gt;
           &lt;Label for=&quot;exampleCheckbox&quot;&gt;Radios&lt;/Label&gt;
           &lt;div&gt;
-            &lt;CustomRadio id=&quot;exampleCustomRadio&quot; name=&quot;customRadio&quot; description=&quot;Select this custom radio&quot; /&gt;
-            &lt;CustomRadio id=&quot;exampleCustomRadio2&quot; name=&quot;customRadio&quot; description=&quot;Or this one&quot; /&gt;
-            &lt;CustomRadio id=&quot;exampleCustomRadio3&quot; description=&quot;But not this disabled one&quot; disabled /&gt;
+            &lt;CustomInput type=&quot;radio&quot; id=&quot;exampleCustomRadio&quot; name=&quot;customRadio&quot; label=&quot;Select this custom radio&quot; /&gt;
+            &lt;CustomInput type=&quot;radio&quot; id=&quot;exampleCustomRadio2&quot; name=&quot;customRadio&quot; label=&quot;Or this one&quot; /&gt;
+            &lt;CustomInput type=&quot;radio&quot; id=&quot;exampleCustomRadio3&quot; label=&quot;But not this disabled one&quot; disabled /&gt;
           &lt;/div&gt;
         &lt;/FormGroup&gt;
         &lt;FormGroup&gt;
           &lt;Label for=&quot;exampleCheckbox&quot;&gt;Inline&lt;/Label&gt;
           &lt;div&gt;
-            &lt;CustomCheckbox id=&quot;exampleCustomInline&quot; description=&quot;An inline custom input&quot; inline /&gt;
-            &lt;CustomCheckbox id=&quot;exampleCustomInline2&quot; description=&quot;and another one&quot; inline /&gt;
+            &lt;CustomInput type=&quot;checkbox&quot; id=&quot;exampleCustomInline&quot; label=&quot;An inline custom input&quot; inline /&gt;
+            &lt;CustomInput type=&quot;checkbox&quot; id=&quot;exampleCustomInline2&quot; label=&quot;and another one&quot; inline /&gt;
           &lt;/div&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleCustomSelect&quot;&gt;Custom Select&lt;/Label&gt;
+          &lt;CustomInput type=&quot;select&quot; id=&quot;exampleCustomSelect&quot; name=&quot;customSelect&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;Select&lt;/option&gt;
+            &lt;option&gt;Value 1&lt;/option&gt;
+            &lt;option&gt;Value 2&lt;/option&gt;
+            &lt;option&gt;Value 3&lt;/option&gt;
+            &lt;option&gt;Value 4&lt;/option&gt;
+            &lt;option&gt;Value 5&lt;/option&gt;
+          &lt;/CustomInput&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleCustomMutlipleSelect&quot;&gt;Custom Multiple Select&lt;/Label&gt;
+          &lt;CustomInput type=&quot;select&quot; id=&quot;exampleCustomMutlipleSelect&quot; name=&quot;customSelect&quot; multiple&gt;
+            &lt;option value=&quot;&quot;&gt;Select&lt;/option&gt;
+            &lt;option&gt;Value 1&lt;/option&gt;
+            &lt;option&gt;Value 2&lt;/option&gt;
+            &lt;option&gt;Value 3&lt;/option&gt;
+            &lt;option&gt;Value 4&lt;/option&gt;
+            &lt;option&gt;Value 5&lt;/option&gt;
+          &lt;/CustomInput&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleCustomSelectDisabled&quot;&gt;Custom Select Disabled&lt;/Label&gt;
+          &lt;CustomInput type=&quot;select&quot; id=&quot;exampleCustomSelectDisabled&quot; name=&quot;customSelect&quot; disabled&gt;
+            &lt;option value=&quot;&quot;&gt;Select&lt;/option&gt;
+            &lt;option&gt;Value 1&lt;/option&gt;
+            &lt;option&gt;Value 2&lt;/option&gt;
+            &lt;option&gt;Value 3&lt;/option&gt;
+            &lt;option&gt;Value 4&lt;/option&gt;
+            &lt;option&gt;Value 5&lt;/option&gt;
+          &lt;/CustomInput&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleCustomMutlipleSelectDisabled&quot;&gt;Custom Multiple Select Disabled&lt;/Label&gt;
+          &lt;CustomInput type=&quot;select&quot; id=&quot;exampleCustomMutlipleSelectDisabled&quot; name=&quot;customSelect&quot; multiple disabled&gt;
+            &lt;option value=&quot;&quot;&gt;Select&lt;/option&gt;
+            &lt;option&gt;Value 1&lt;/option&gt;
+            &lt;option&gt;Value 2&lt;/option&gt;
+            &lt;option&gt;Value 3&lt;/option&gt;
+            &lt;option&gt;Value 4&lt;/option&gt;
+            &lt;option&gt;Value 5&lt;/option&gt;
+          &lt;/CustomInput&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleCustomFileBrowser&quot;&gt;File Browser&lt;/Label&gt;
+          &lt;CustomInput type=&quot;file&quot; id=&quot;exampleCustomFileBrowser&quot; name=&quot;customFile&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleCustomFileBrowser&quot;&gt;File Browser with Custom Label&lt;/Label&gt;
+          &lt;CustomInput type=&quot;file&quot; id=&quot;exampleCustomFileBrowser&quot; name=&quot;customFile&quot; label=&quot;Yo, pick a file!&quot; /&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleCustomFileBrowser&quot;&gt;File Browser Disabled&lt;/Label&gt;
+          &lt;CustomInput type=&quot;file&quot; id=&quot;exampleCustomFileBrowser&quot; name=&quot;customFile&quot; disabled /&gt;
         &lt;/FormGroup&gt;
       &lt;/Form&gt;
     );

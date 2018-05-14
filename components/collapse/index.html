@@ -118,7 +118,28 @@ class Example extends Component {
 }
 
 export default Example;
-</code></pre><h3 id="Uncontrolled-Collapse">Uncontrolled Collapse</h3><p>For the most basic use-case, an uncontrolled component can provide the functionality wanted without the need to manage/control the state of the component.<!-- --> <code>UncontrolledCollapse</code> does not require an <code>isOpen</code> prop. Instead pass a <code>toggler</code> prop. The <code>toggler</code> prop is a string which will run querySelectorAll to find dom elements which will trigger toggle.</p></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+</code></pre><h3 id="Uncontrolled-Collapse">Uncontrolled Collapse</h3><p>For the most basic use-case, an uncontrolled component can provide the functionality wanted without the need to manage/control the state of the component.<!-- --> <code>UncontrolledCollapse</code> does not require an <code>isOpen</code> prop. Instead pass a <code>toggler</code> prop. The <code>toggler</code> prop is a string which will run querySelectorAll to find dom elements which will trigger toggle.</p><div class="docs-example"><div><button id="toggler" style="margin-bottom:1rem" class="btn btn-primary">Toggle</button><div toggler="#toggler" class="collapse"><div class="card"><div class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magni, voluptas debitis similique porro a molestias consequuntur earum odio officiis natus, amet hic, iste sed dignissimos esse fuga! Minus, alias.</div></div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { UncontrolledCollapse, Button, CardBody, Card } from &#x27;reactstrap&#x27;;
+
+const Example = () =&gt; (
+  &lt;div&gt;
+    &lt;Button color=&quot;primary&quot; id=&quot;toggler&quot; style={{ marginBottom: &#x27;1rem&#x27; }}&gt;
+      Toggle
+    &lt;/Button&gt;
+    &lt;UncontrolledCollapse toggler=&quot;#toggler&quot;&gt;
+      &lt;Card&gt;
+        &lt;CardBody&gt;
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt magni, voluptas debitis
+          similique porro a molestias consequuntur earum odio officiis natus, amet hic, iste sed
+          dignissimos esse fuga! Minus, alias.
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+    &lt;/UncontrolledCollapse&gt;
+  &lt;/div&gt;
+);
+
+export default Example;
+</code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
           <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

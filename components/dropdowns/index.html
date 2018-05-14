@@ -256,7 +256,29 @@ export default function Example () {
     &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
     &lt;DropdownItem&gt;Another Action&lt;/DropdownItem&gt;
   &lt;/DropdownMenu&gt;
-&lt;/Dropdown&gt;</code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+&lt;/Dropdown&gt;</code></pre><h3 id="setActiveFromChild">setActiveFromChild</h3><p>Use <code>setActiveFromChild</code> prop to automatically set the dropdown to active when any of the dropdown menu items are active. Note: this prop will not work in conjunction with react-router <code>Link</code> and <code>activeClassName</code>.</p><div class="docs-example"><nav class="navbar navbar-expand-md navbar-light bg-light"><ul class="ml-auto navbar-nav"><li class="nav-item"><a href="/components/" class="nav-link">Inactive Link</a></li><div class="active dropdown"><a aria-haspopup="true" class="nav-link dropdown-toggle" aria-expanded="false">Dropdown</a><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><a href="/blah" tabindex="0" class="dropdown-item active">Link</a></div></div></ul></nav></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Navbar, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from &#x27;reactstrap&#x27;;
+
+export default function Example () {
+  return (
+    &lt;Navbar color=&quot;light&quot; light expand=&quot;md&quot;&gt;
+      &lt;Nav className=&quot;ml-auto&quot; navbar&gt;
+        &lt;NavItem&gt;
+          &lt;NavLink href=&quot;/components/&quot;&gt;Inactive Link&lt;/NavLink&gt;
+        &lt;/NavItem&gt;
+        &lt;UncontrolledDropdown setActiveFromChild&gt;
+          &lt;DropdownToggle tag=&quot;a&quot; className=&quot;nav-link&quot; caret&gt;
+            Dropdown
+          &lt;/DropdownToggle&gt;
+          &lt;DropdownMenu&gt;
+            &lt;DropdownItem tag=&quot;a&quot; href=&quot;/blah&quot; active&gt;Link&lt;/DropdownItem&gt;
+          &lt;/DropdownMenu&gt;
+        &lt;/UncontrolledDropdown&gt;
+      &lt;/Nav&gt;
+    &lt;/Navbar&gt;
+  );
+}
+</code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
           <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

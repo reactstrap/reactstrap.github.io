@@ -86,7 +86,11 @@ export default class Example extends React.Component {
     &#x27;left-end&#x27;,
   ]),
   // Custom modifiers that are passed to Popper.js, see https://popper.js.org/popper-documentation.html#modifiers
-  modifiers: PropTypes.object
+  modifiers: PropTypes.object,
+  offset: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ])
 }</code></pre><h3 id="Popovers-List">Popovers List</h3><div class="docs-example"><div><span><button type="button" id="Popover-0" class="mr-1 btn btn-secondary">Top</button></span><span><button type="button" id="Popover-1" class="mr-1 btn btn-secondary">Bottom</button></span><span><button type="button" id="Popover-2" class="mr-1 btn btn-secondary">Left</button></span><span><button type="button" id="Popover-3" class="mr-1 btn btn-secondary">Right</button></span></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
 import React from &#x27;react&#x27;;

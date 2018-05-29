@@ -28,13 +28,7 @@ export default class Example extends React.Component {
     );
   }
 }
-</code></pre><h4>Properties</h4><pre><code class="language-jsx">ListGroup.propTypes = {
-    tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-    // boolean to render list group items edge-to-edge in a parent container
-    flush: PropTypes.bool,
-    className: PropTypes.string,
-    cssModule: PropTypes.object,
-  }</code></pre><legend>Tags</legend><div class="docs-example"><ul class="list-group"><li class="justify-content-between list-group-item">Cras justo odio <span class="badge badge-secondary badge-pill">14</span></li><li class="justify-content-between list-group-item">Dapibus ac facilisis in <span class="badge badge-secondary badge-pill">2</span></li><li class="justify-content-between list-group-item">Morbi leo risus <span class="badge badge-secondary badge-pill">1</span></li></ul></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+</code></pre><legend>Tags</legend><div class="docs-example"><ul class="list-group"><li class="justify-content-between list-group-item">Cras justo odio <span class="badge badge-secondary badge-pill">14</span></li><li class="justify-content-between list-group-item">Dapibus ac facilisis in <span class="badge badge-secondary badge-pill">2</span></li><li class="justify-content-between list-group-item">Morbi leo risus <span class="badge badge-secondary badge-pill">1</span></li></ul></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { ListGroup, ListGroupItem, Badge } from &#x27;reactstrap&#x27;;
 
 export default class Example extends React.Component {
@@ -133,22 +127,6 @@ export default class Example extends React.Component {
           Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
           &lt;/ListGroupItemText&gt;
         &lt;/ListGroupItem&gt;
-      &lt;/ListGroup&gt;
-    );
-  }
-}
-</code></pre><legend>Flush</legend><div class="docs-example"><ul class="list-group list-group-flush"><a href="#" class="disabled list-group-item">Cras justo odio</a><a href="#" class="list-group-item">Dapibus ac facilisis in</a><a href="#" class="list-group-item">Morbi leo risus</a><a href="#" class="list-group-item">Porta ac consectetur ac</a><a href="#" class="list-group-item">Vestibulum at eros</a></ul></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
-import { ListGroup, ListGroupItem } from &#x27;reactstrap&#x27;;
-
-export default class Example extends React.Component {
-  render() {
-    return (
-      &lt;ListGroup flush&gt;
-        &lt;ListGroupItem disabled tag=&quot;a&quot; href=&quot;#&quot;&gt;Cras justo odio&lt;/ListGroupItem&gt;
-        &lt;ListGroupItem tag=&quot;a&quot; href=&quot;#&quot;&gt;Dapibus ac facilisis in&lt;/ListGroupItem&gt;
-        &lt;ListGroupItem tag=&quot;a&quot; href=&quot;#&quot;&gt;Morbi leo risus&lt;/ListGroupItem&gt;
-        &lt;ListGroupItem tag=&quot;a&quot; href=&quot;#&quot;&gt;Porta ac consectetur ac&lt;/ListGroupItem&gt;
-        &lt;ListGroupItem tag=&quot;a&quot; href=&quot;#&quot;&gt;Vestibulum at eros&lt;/ListGroupItem&gt;
       &lt;/ListGroup&gt;
     );
   }

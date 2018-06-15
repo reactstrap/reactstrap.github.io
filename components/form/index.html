@@ -229,7 +229,7 @@ export default class Example extends React.Component {
     );
   }
 }
-</code></pre><h3 id="Form-Validation">Form Validation</h3><div class="docs-example"><form class=""><div class="form-group"><label for="exampleEmail" class="">Input without validation</label><input type="text" class="form-control"/><div class="invalid-feedback">You will not be able to see this</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div><div class="form-group"><label for="exampleEmail" class="">Valid input</label><input type="text" class="is-valid form-control"/><div class="valid-feedback">Sweet! that name is available</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div><div class="form-group"><label for="examplePassword" class="">Invalid input</label><input type="text" class="is-invalid form-control"/><div class="invalid-feedback">Oh noes! that name is already taken</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+</code></pre><h3 id="Form-Validation">Form Validation</h3><div class="docs-example"><form class=""><div class="form-group"><label for="exampleEmail" class="">Input without validation</label><input type="text" class="form-control"/><div class="invalid-feedback">You will not be able to see this</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div><div class="form-group"><label for="exampleEmail" class="">Valid input</label><input type="text" class="is-valid form-control"/><div class="valid-feedback">Sweet! that name is available</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div><div class="form-group"><label for="examplePassword" class="">Invalid input</label><input type="text" class="is-invalid form-control"/><div class="invalid-feedback">Oh noes! that name is already taken</div><small class="form-text text-muted">Example help text that remains unchanged.</small></div><p>Invalid checkboxes (or radio)</p><div class="form-check"><input type="checkbox" id="cityNewyork" class="form-check-input"/><label for="cityNewyork" class="form-check-label ">New York</label></div><div class="form-check"><input type="checkbox" id="invalidCityCheckbox" class="is-invalid form-check-input"/><label for="invalidCityCheckbox" class="form-check-label ">Gotham</label><div class="invalid-feedback">Gotham is not a real city.</div></div></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Form, FormGroup, Label, Input, FormFeedback, FormText } from &#x27;reactstrap&#x27;;
 
 export default class Example extends React.Component {
@@ -253,6 +253,16 @@ export default class Example extends React.Component {
           &lt;Input invalid /&gt;
           &lt;FormFeedback&gt;Oh noes! that name is already taken&lt;/FormFeedback&gt;
           &lt;FormText&gt;Example help text that remains unchanged.&lt;/FormText&gt;
+        &lt;/FormGroup&gt;
+        &lt;p&gt;Invalid checkboxes (or radio)&lt;/p&gt;
+        &lt;FormGroup check&gt;
+          &lt;Input id=&quot;cityNewyork&quot; type=&quot;checkbox&quot; /&gt;
+          &lt;Label for=&quot;cityNewyork&quot; check&gt;New York&lt;/Label&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup check&gt;
+          &lt;Input id=&quot;invalidCityCheckbox&quot; type=&quot;checkbox&quot; invalid/&gt;
+          &lt;Label for=&quot;invalidCityCheckbox&quot; check&gt;Gotham&lt;/Label&gt;
+          &lt;FormFeedback&gt;Gotham is not a real city.&lt;/FormFeedback&gt;
         &lt;/FormGroup&gt;
       &lt;/Form&gt;
     );

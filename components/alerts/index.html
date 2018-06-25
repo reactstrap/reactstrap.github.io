@@ -155,6 +155,46 @@ function AlertExample() {
 }
 
 export default AlertExample;
+</code></pre><h3 id="Alerts-without-fade">Alerts without fade</h3><p>Fade can be disbaled using <code>fade=false</code>.</p><div class="docs-example"><div><div class="alert alert-primary alert-dismissible" role="alert"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>I am a primary alert and I can be dismissed without animating!</div></div><div><div class="alert alert-info alert-dismissible" role="alert"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>I am an alert and I can be dismissed without animating!</div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { UncontrolledAlert } from &#x27;reactstrap&#x27;;
+import Alert from &#x27;../../../src/Alert&#x27;;
+
+export class AlertFadelessExample extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      visible: true
+    };
+
+    this.onDismiss = this.onDismiss.bind(this);
+  }
+
+  onDismiss() {
+    this.setState({ visible: false });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Alert color=&quot;primary&quot; isOpen={this.state.visible} toggle={this.onDismiss} fade={false}&gt;
+          I am a primary alert and I can be dismissed without animating!
+        &lt;/Alert&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export function UncontrolledAlertFadelessExample() {
+  return (
+    &lt;div&gt;
+      &lt;UncontrolledAlert color=&quot;info&quot; fade={false}&gt;
+        I am an alert and I can be dismissed without animating!
+      &lt;/UncontrolledAlert&gt;
+    &lt;/div&gt;
+  );
+}
 </code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
           <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

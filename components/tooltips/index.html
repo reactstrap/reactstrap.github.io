@@ -44,6 +44,8 @@ export default class Example extends React.Component {
   }
 }
 </code></pre><h4>Properties</h4><pre><code class="language-jsx">Tooltip.propTypes = {
+  // boundaries for popper, can be scrollParent, window, viewport, or any DOM element
+  boundariesElement: PropTypes.string,
   // boolean to control the state of the tooltip
   isOpen: PropTypes.bool,
   hideArrow: PropTypes.bool,

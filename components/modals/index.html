@@ -361,7 +361,7 @@ class ModalExample extends React.Component {
 }
 
 export default ModalExample;
-</code></pre><h4>Modals with custom close icon</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with custom close button</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+</code></pre><h4>Modals with custom close icon</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with custom close Icon</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
 import React from &#x27;react&#x27;;
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
@@ -390,6 +390,53 @@ class ModalExample extends React.Component {
           &lt;ModalHeader toggle={this.toggle} charCode=&quot;Y&quot;&gt;Modal title&lt;/ModalHeader&gt;
           &lt;ModalBody&gt;
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          &lt;/ModalBody&gt;
+          &lt;ModalFooter&gt;
+            &lt;Button color=&quot;primary&quot; onClick={this.toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+            &lt;Button color=&quot;secondary&quot; onClick={this.toggle}&gt;Cancel&lt;/Button&gt;
+          &lt;/ModalFooter&gt;
+        &lt;/Modal&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+
+export default ModalExample;
+</code></pre><h4>Modals with custom close button</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with custom close button</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+class ModalExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
+
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
+  }
+
+  render() {
+      const closeBtn = &lt;button className=&quot;close&quot; onClick={this.toggle}&gt;&amp;times;&lt;/button&gt;;
+
+      return (
+      &lt;div&gt;
+        &lt;Button color=&quot;danger&quot; onClick={this.toggle}&gt;{this.props.buttonLabel}&lt;/Button&gt;
+        &lt;Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}&gt;
+          &lt;ModalHeader toggle={this.toggle} close={closeBtn}&gt;Modal title&lt;/ModalHeader&gt;
+          &lt;ModalBody&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
           &lt;/ModalBody&gt;
           &lt;ModalFooter&gt;
             &lt;Button color=&quot;primary&quot; onClick={this.toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}

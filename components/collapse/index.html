@@ -47,7 +47,7 @@ class Example extends Component {
 
 export default Example;
 </code></pre><h3 id="Properties">Properties</h3><pre><code class="language-jsx">Collapse.propTypes = {
-  ...Transition.propTypes,
+  ...Transition.propTypes, // see note below
   isOpen: PropTypes.bool,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
@@ -58,7 +58,7 @@ export default Example;
   navbar: PropTypes.bool,
   cssModule: PropTypes.object,
   innerRef: PropTypes.object,
-};</code></pre><h3 id="Events">Events</h3><p>Use the <code>onEnter</code>, onEntering, onEntered, onExiting and onExited props for callbacks when the Collapse has finished opening (entering) or closing (exiting).</p><div class="docs-example"><div><button type="button" style="margin-bottom:1rem" class="btn btn-primary">Toggle</button><h5>Current state: <!-- -->Closed</h5><div class="collapse"><div class="card"><div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div></div></div></div></div><pre><code class="language-jsx">import React, { Component } from &#x27;react&#x27;;
+};</code></pre><p>Collapse is wrapped in a <code>Transition</code> component from <code>react-transition-group/transition</code>. Transition props are passed through to this wrapper. Refer to the <code>Transition</code> documentation for details: <a href="http://reactcommunity.org/react-transition-group/transition/">http://reactcommunity.org/react-transition-group/transition/</a>.</p><h3 id="Events">Events</h3><p>Use the <code>onEnter</code>, onEntering, onEntered, onExiting and onExited props for callbacks when the Collapse has finished opening (entering) or closing (exiting).</p><div class="docs-example"><div><button type="button" style="margin-bottom:1rem" class="btn btn-primary">Toggle</button><h5>Current state: <!-- -->Closed</h5><div class="collapse"><div class="card"><div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div></div></div></div></div><pre><code class="language-jsx">import React, { Component } from &#x27;react&#x27;;
 import { Collapse, Button, CardBody, Card } from &#x27;reactstrap&#x27;;
 
 class Example extends Component {

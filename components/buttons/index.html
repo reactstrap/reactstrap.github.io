@@ -45,7 +45,10 @@ export default class Example extends React.Component {
   innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 
   onClick: PropTypes.func,
-  size: PropTypes.string
+  size: PropTypes.string,
+
+  // use close prop for BS4 close icon utility
+  close: PropTypes.bool,
 }</code></pre><h3 id="Outline-Buttons">Outline Buttons</h3><div class="docs-example"><div><button class="btn btn-outline-primary">primary</button> <button class="btn btn-outline-secondary">secondary</button> <button class="btn btn-outline-success">success</button> <button class="btn btn-outline-info">info</button> <button class="btn btn-outline-warning">warning</button> <button class="btn btn-outline-danger">danger</button></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Button } from &#x27;reactstrap&#x27;;
 
@@ -118,7 +121,45 @@ class Example extends Component {
   }
 }
 
-export default Example;</code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+export default Example;</code></pre><h3 id="Close-icon">Close icon</h3><p>Use a generic close icon to dismiss content. Use <code>&lt;Button close /&gt;</code> for the default icon. Otherwise, custom content for the button may be defined. (e.g. JSX: <code>&lt;Button close&gt;&lt;span aria-hidden=&quot;true&quot;&gt;–&lt;/span&gt;&lt;/Button&gt;</code>) The default aria-label is &quot;Close&quot;.</p><div class="docs-example"><div><div class="card-group"><div class="card"><div class="card-body"><h5 class="card-title"><button class="close" aria-label="Close"><span aria-hidden="true">×</span></button></h5><p class="card-text">Default close icon</p></div></div><div class="card"><div class="card-body"><h5 class="card-title"><button class="close" aria-label="Cancel"><span aria-hidden="true">–</span></button></h5><p class="card-text">Custom content and aria-label</p></div></div></div></div></div><pre><code class="language-jsx">import React, { Component } from &#x27;react&#x27;;
+import { Button, Card, CardBody, CardText, CardGroup, CardTitle } from &#x27;reactstrap&#x27;;
+
+const Example = () =&gt; (
+  &lt;div&gt;
+    &lt;CardGroup&gt;
+      &lt;Card&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;
+
+            &lt;Button close /&gt;
+
+          &lt;/CardTitle&gt;
+          &lt;CardText&gt;Default close icon&lt;/CardText&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+
+      &lt;Card&gt;
+        &lt;CardBody&gt;
+          &lt;CardTitle&gt;
+
+            &lt;Button close aria-label=&quot;Cancel&quot;&gt;
+              &lt;span aria-hidden&gt;&amp;ndash;&lt;/span&gt;
+            &lt;/Button&gt;
+
+          &lt;/CardTitle&gt;
+          &lt;CardText&gt;
+          Custom content and aria-label
+          &lt;/CardText&gt;
+        &lt;/CardBody&gt;
+      &lt;/Card&gt;
+    &lt;/CardGroup&gt;
+
+
+  &lt;/div&gt;
+);
+
+export default Example;
+</code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
           <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

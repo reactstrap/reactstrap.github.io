@@ -262,6 +262,64 @@ export default class Example extends React.Component {
     );
   }
 }
+</code></pre><h3 id="Form-Grid-with-Form-Row">Form Grid with Form Row</h3><div class="docs-example"><form class=""><div class="form-row"><div class="col-md-6"><div class="position-relative form-group"><label for="exampleEmail" class="">Email</label><input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" class="form-control"/></div></div><div class="col-md-6"><div class="position-relative form-group"><label for="examplePassword" class="">Password</label><input type="password" name="password" id="examplePassword" placeholder="password placeholder" class="form-control"/></div></div></div><div class="position-relative form-group"><label for="exampleAddress" class="">Address</label><input type="text" name="address" id="exampleAddress" placeholder="1234 Main St" class="form-control"/></div><div class="position-relative form-group"><label for="exampleAddress2" class="">Address 2</label><input type="text" name="address2" id="exampleAddress2" placeholder="Apartment, studio, or floor" class="form-control"/></div><div class="form-row"><div class="col-md-6"><div class="position-relative form-group"><label for="exampleCity" class="">City</label><input type="text" name="city" id="exampleCity" class="form-control"/></div></div><div class="col-md-4"><div class="position-relative form-group"><label for="exampleState" class="">State</label><input type="text" name="state" id="exampleState" class="form-control"/></div></div><div class="col-md-2"><div class="position-relative form-group"><label for="exampleZip" class="">Zip</label><input type="text" name="zip" id="exampleZip" class="form-control"/></div></div></div><div class="position-relative form-check"><input type="checkbox" name="check" id="exampleCheck" class="form-check-input"/><label for="exampleCheck" class="form-check-label ">Check me out</label></div><button class="btn btn-secondary">Sign in</button></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      &lt;Form&gt;
+        &lt;Row form&gt;
+          &lt;Col md={6}&gt;
+            &lt;FormGroup&gt;
+              &lt;Label for=&quot;exampleEmail&quot;&gt;Email&lt;/Label&gt;
+              &lt;Input type=&quot;email&quot; name=&quot;email&quot; id=&quot;exampleEmail&quot; placeholder=&quot;with a placeholder&quot; /&gt;
+            &lt;/FormGroup&gt;
+          &lt;/Col&gt;
+          &lt;Col md={6}&gt;
+            &lt;FormGroup&gt;
+              &lt;Label for=&quot;examplePassword&quot;&gt;Password&lt;/Label&gt;
+              &lt;Input type=&quot;password&quot; name=&quot;password&quot; id=&quot;examplePassword&quot; placeholder=&quot;password placeholder&quot; /&gt;
+            &lt;/FormGroup&gt;
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleAddress&quot;&gt;Address&lt;/Label&gt;
+          &lt;Input type=&quot;text&quot; name=&quot;address&quot; id=&quot;exampleAddress&quot; placeholder=&quot;1234 Main St&quot;/&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;exampleAddress2&quot;&gt;Address 2&lt;/Label&gt;
+          &lt;Input type=&quot;text&quot; name=&quot;address2&quot; id=&quot;exampleAddress2&quot; placeholder=&quot;Apartment, studio, or floor&quot;/&gt;
+        &lt;/FormGroup&gt;
+        &lt;Row form&gt;
+          &lt;Col md={6}&gt;
+            &lt;FormGroup&gt;
+              &lt;Label for=&quot;exampleCity&quot;&gt;City&lt;/Label&gt;
+              &lt;Input type=&quot;text&quot; name=&quot;city&quot; id=&quot;exampleCity&quot;/&gt;
+            &lt;/FormGroup&gt;
+          &lt;/Col&gt;
+          &lt;Col md={4}&gt;
+            &lt;FormGroup&gt;
+              &lt;Label for=&quot;exampleState&quot;&gt;State&lt;/Label&gt;
+              &lt;Input type=&quot;text&quot; name=&quot;state&quot; id=&quot;exampleState&quot;/&gt;
+            &lt;/FormGroup&gt;
+          &lt;/Col&gt;
+          &lt;Col md={2}&gt;
+            &lt;FormGroup&gt;
+              &lt;Label for=&quot;exampleZip&quot;&gt;Zip&lt;/Label&gt;
+              &lt;Input type=&quot;text&quot; name=&quot;zip&quot; id=&quot;exampleZip&quot;/&gt;
+            &lt;/FormGroup&gt;  
+          &lt;/Col&gt;
+        &lt;/Row&gt;
+        &lt;FormGroup check&gt;
+          &lt;Input type=&quot;checkbox&quot; name=&quot;check&quot; id=&quot;exampleCheck&quot;/&gt;
+          &lt;Label for=&quot;exampleCheck&quot; check&gt;Check me out&lt;/Label&gt;
+        &lt;/FormGroup&gt;
+        &lt;Button&gt;Sign in&lt;/Button&gt;
+      &lt;/Form&gt;
+    );
+  }
+}
 </code></pre><h3 id="Inline-Form">Inline Form</h3><div class="docs-example"><form class="form-inline"><div class="mb-2 mr-sm-2 mb-sm-0 position-relative form-group"><label for="exampleEmail" class="mr-sm-2 ">Email</label><input type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" class="form-control"/></div><div class="mb-2 mr-sm-2 mb-sm-0 position-relative form-group"><label for="examplePassword" class="mr-sm-2 ">Password</label><input type="password" name="password" id="examplePassword" placeholder="don&#x27;t tell!" class="form-control"/></div><button class="btn btn-secondary">Submit</button></form></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Button, Form, FormGroup, Label, Input } from &#x27;reactstrap&#x27;;
 

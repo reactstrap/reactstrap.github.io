@@ -51,13 +51,13 @@ BreadcrumbItem.propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
 };
-</code></pre><h3 id="No-list">No list</h3><hr/><p>Breadcrumbs can work without the usage of list markup.</p><div class="docs-example"><div><nav class="" aria-label="breadcrumb"><ol class="breadcrumb"><a href="#" class="breadcrumb-item">Home</a><a href="#" class="breadcrumb-item">Library</a><a href="#" class="breadcrumb-item">Data</a><span class="active breadcrumb-item" aria-current="page">Bootstrap</span></ol></nav></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+</code></pre><h3 id="No-list">No list</h3><hr/><p>Breadcrumbs can work without the usage of list markup.</p><div class="docs-example"><div><nav class="" aria-label="breadcrumb"><div class="breadcrumb"><a href="#" class="breadcrumb-item">Home</a><a href="#" class="breadcrumb-item">Library</a><a href="#" class="breadcrumb-item">Data</a><span class="active breadcrumb-item" aria-current="page">Bootstrap</span></div></nav></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Breadcrumb, BreadcrumbItem } from &#x27;reactstrap&#x27;;
 
 const Example = (props) =&gt; {
   return (
     &lt;div&gt;
-      &lt;Breadcrumb tag=&quot;nav&quot;&gt;
+      &lt;Breadcrumb tag=&quot;nav&quot; listTag=&quot;div&quot;&gt;
         &lt;BreadcrumbItem tag=&quot;a&quot; href=&quot;#&quot;&gt;Home&lt;/BreadcrumbItem&gt;
         &lt;BreadcrumbItem tag=&quot;a&quot; href=&quot;#&quot;&gt;Library&lt;/BreadcrumbItem&gt;
         &lt;BreadcrumbItem tag=&quot;a&quot; href=&quot;#&quot;&gt;Data&lt;/BreadcrumbItem&gt;

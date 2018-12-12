@@ -73,7 +73,7 @@ export default class Example extends React.Component {
   &lt;Button&gt;Left&lt;/Button&gt;
   &lt;Button&gt;Middle&lt;/Button&gt;
   &lt;Button&gt;Right&lt;/Button&gt;
-&lt;/ButtonGroup&gt;</code></pre><h3 id="Nesting">Nesting</h3><div class="docs-example"><div><div role="group" class="btn-group"><button class="btn btn-secondary">1</button><button class="btn btn-secondary">2</button><div class="btn-group"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropdown</button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabindex="0" class="dropdown-item">Dropdown Link</button><button type="button" tabindex="0" class="dropdown-item">Dropdown Link</button></div></div></div></div></div><pre><code class="language-jsx">&lt;ButtonGroup&gt;
+&lt;/ButtonGroup&gt;</code></pre><h3 id="Nesting">Nesting</h3><div class="docs-example"><div><div role="group" class="btn-group"><button class="btn btn-secondary">1</button><button class="btn btn-secondary">2</button><div class="btn-group"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropdown</button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Dropdown Link</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Dropdown Link</button></div></div></div></div></div><pre><code class="language-jsx">&lt;ButtonGroup&gt;
   &lt;Button&gt;1&lt;/Button&gt;
   &lt;Button&gt;2&lt;/Button&gt;
   &lt;ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}&gt;
@@ -85,7 +85,7 @@ export default class Example extends React.Component {
       &lt;DropdownItem&gt;Dropdown Link&lt;/DropdownItem&gt;
     &lt;/DropdownMenu&gt;
   &lt;/ButtonDropdown&gt;
-&lt;/ButtonGroup&gt;</code></pre><h3 id="Vertical-variation">Vertical variation</h3><div class="docs-example"><div role="group" class="btn-group-vertical"><button class="btn btn-secondary">1</button><button class="btn btn-secondary">2</button><div class="btn-group"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropdown</button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabindex="0" class="dropdown-item">Dropdown Link</button><button type="button" tabindex="0" class="dropdown-item">Dropdown Link</button></div></div></div></div><pre><code class="language-jsx">&lt;ButtonGroup vertical&gt;
+&lt;/ButtonGroup&gt;</code></pre><h3 id="Vertical-variation">Vertical variation</h3><div class="docs-example"><div role="group" class="btn-group-vertical"><button class="btn btn-secondary">1</button><button class="btn btn-secondary">2</button><div class="btn-group"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropdown</button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Dropdown Link</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Dropdown Link</button></div></div></div></div><pre><code class="language-jsx">&lt;ButtonGroup vertical&gt;
   &lt;Button&gt;1&lt;/Button&gt;
   &lt;Button&gt;2&lt;/Button&gt;
   &lt;ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}&gt;

@@ -5,7 +5,7 @@
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <title data-react-helmet="true">reactstrap - Popovers</title>
-          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 16+"/><meta data-react-helmet="true" property="og:type" content="article"/>
           <link rel=icon href=/assets/favicon.ico>
           <link rel="stylesheet" href="/assets/style.css"/>
           <link rel="stylesheet" href="/assets/docs.css"/>
@@ -35,7 +35,7 @@ export default class Example extends React.Component {
   render() {
     return (
       &lt;div&gt;
-        &lt;Button id=&quot;Popover1&quot; onClick={this.toggle}&gt;
+        &lt;Button id=&quot;Popover1&quot; type=&quot;button&quot;&gt;
           Launch Popover
         &lt;/Button&gt;
         &lt;Popover placement=&quot;bottom&quot; isOpen={this.state.popoverOpen} target=&quot;Popover1&quot; toggle={this.toggle}&gt;
@@ -47,6 +47,8 @@ export default class Example extends React.Component {
   }
 }
 </code></pre><h4>Properties</h4><pre><code class="language-jsx">Popover.propTypes = {
+  // space separated list of triggers (e.g. &quot;click hover focus&quot;)
+  trigger: PropTypes.string,
   // boolean to control the state of the popover
   isOpen:  PropTypes.bool,
   // callback for toggling isOpen in the controlling component
@@ -93,7 +95,41 @@ export default class Example extends React.Component {
     PropTypes.string,
     PropTypes.number
   ])
-}</code></pre><h3 id="Popovers-List">Popovers List</h3><div class="docs-example"><div><span><button type="button" id="Popover-0" class="mr-1 btn btn-secondary">Top</button></span><span><button type="button" id="Popover-1" class="mr-1 btn btn-secondary">Bottom</button></span><span><button type="button" id="Popover-2" class="mr-1 btn btn-secondary">Left</button></span><span><button type="button" id="Popover-3" class="mr-1 btn btn-secondary">Right</button></span></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+}</code></pre><h3 id="Popovers-Trigger">Popovers Trigger</h3><div class="docs-example"><div><button type="button" id="PopoverFocus" class="btn btn-secondary">Launch Popover</button></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+import React from &#x27;react&#x27;;
+import { Button, Popover, PopoverHeader, PopoverBody } from &#x27;reactstrap&#x27;;
+
+export default class Example extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      popoverOpen: false
+    };
+  }
+
+  toggle() {
+    this.setState({
+      popoverOpen: !this.state.popoverOpen
+    });
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;Button id=&quot;PopoverFocus&quot; type=&quot;button&quot;&gt;
+          Launch Popover
+        &lt;/Button&gt;
+        &lt;Popover trigger=&quot;focus&quot; placement=&quot;bottom&quot; isOpen={this.state.popoverOpen} target=&quot;PopoverFocus&quot; toggle={this.toggle}&gt;
+          &lt;PopoverHeader&gt;Popover Title&lt;/PopoverHeader&gt;
+          &lt;PopoverBody&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/PopoverBody&gt;
+        &lt;/Popover&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre><h3 id="Popovers-Placements">Popovers Placements</h3><div class="docs-example"><div><span><button type="button" id="Popover-0" class="mr-1 btn btn-secondary">Top</button></span><span><button type="button" id="Popover-1" class="mr-1 btn btn-secondary">Bottom</button></span><span><button type="button" id="Popover-2" class="mr-1 btn btn-secondary">Left</button></span><span><button type="button" id="Popover-3" class="mr-1 btn btn-secondary">Right</button></span></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
 import React from &#x27;react&#x27;;
 import { Button, Popover, PopoverHeader, PopoverBody } from &#x27;reactstrap&#x27;;
@@ -117,7 +153,7 @@ class PopoverItem extends React.Component {
   render() {
     return (
       &lt;span&gt;
-        &lt;Button className=&quot;mr-1&quot; color=&quot;secondary&quot; id={&#x27;Popover-&#x27; + this.props.id} onClick={this.toggle}&gt;
+        &lt;Button className=&quot;mr-1&quot; color=&quot;secondary&quot; id={&#x27;Popover-&#x27; + this.props.id} type=&quot;button&quot;&gt;
           {this.props.item.text}
         &lt;/Button&gt;
         &lt;Popover placement={this.props.item.placement} isOpen={this.state.popoverOpen} target={&#x27;Popover-&#x27; + this.props.id} toggle={this.toggle}&gt;
@@ -167,6 +203,23 @@ class PopoverExampleMulti extends React.Component {
 }
 
 export default PopoverExampleMulti;
+</code></pre><h3 id="UncontrolledPopovers">UncontrolledPopovers</h3><div class="docs-example"><div><button type="button" id="UncontrolledPopover" class="btn btn-secondary">Launch Popover</button></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+import React from &#x27;react&#x27;;
+import { Button, UncontrolledPopover, PopoverHeader, PopoverBody } from &#x27;reactstrap&#x27;;
+
+export default function () {
+  return (
+    &lt;div&gt;
+      &lt;Button id=&quot;UncontrolledPopover&quot; type=&quot;button&quot;&gt;
+        Launch Popover
+      &lt;/Button&gt;
+      &lt;UncontrolledPopover placement=&quot;bottom&quot; target=&quot;UncontrolledPopover&quot;&gt;
+        &lt;PopoverHeader&gt;Popover Title&lt;/PopoverHeader&gt;
+        &lt;PopoverBody&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/PopoverBody&gt;
+      &lt;/UncontrolledPopover&gt;
+    &lt;/div&gt;
+  );
+}
 </code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
           <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

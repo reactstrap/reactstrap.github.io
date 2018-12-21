@@ -5,7 +5,7 @@
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <title data-react-helmet="true">reactstrap - Tooltips</title>
-          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 16+"/><meta data-react-helmet="true" property="og:type" content="article"/>
           <link rel=icon href=/assets/favicon.ico>
           <link rel="stylesheet" href="/assets/style.css"/>
           <link rel="stylesheet" href="/assets/docs.css"/>
@@ -15,6 +15,8 @@
           <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">GitHub</a></li></ul></div></div></nav><div class="content container"><div class="row"><main class="col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h1 class="h5">Components</h1><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link active" href="/components/tooltips/">Tooltips</a></li></ul></div></main><aside class="docSearch-content col-md-9 order-md-1"><div><h2 class="h3">Tooltips</h2><p>Tooltips are built with <a href="https://popper.js.org/">https://popper.js.org/</a> via <a href="https://github.com/souporserious/react-popper">https://github.com/souporserious/react-popper</a>.</p><div class="docs-example"><div><p>Somewhere in here is a <span style="text-decoration:underline;color:blue" href="#" id="TooltipExample">tooltip</span>.</p></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React from &#x27;react&#x27;;
 import { Tooltip } from &#x27;reactstrap&#x27;;
+import { mapToCssModules } from &#x27;../../../src/utils&#x27;
+import classNames from &#x27;classnames&#x27;
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -32,7 +34,10 @@ export default class Example extends React.Component {
     });
   }
 
+
+
   render() {
+    const classes = &#x27;tooltip-inner&#x27;
     return (
       &lt;div&gt;
         &lt;p&gt;Somewhere in here is a &lt;span style={{textDecoration: &quot;underline&quot;, color:&quot;blue&quot;}} href=&quot;#&quot; id=&quot;TooltipExample&quot;&gt;tooltip&lt;/span&gt;.&lt;/p&gt;
@@ -44,6 +49,8 @@ export default class Example extends React.Component {
   }
 }
 </code></pre><h4>Properties</h4><pre><code class="language-jsx">Tooltip.propTypes = {
+  // space separated list of triggers (e.g. &quot;click hover focus&quot;)
+  trigger: PropTypes.string,
   // boundaries for popper, can be scrollParent, window, viewport, or any DOM element
   boundariesElement: PropTypes.oneOfType([PropTypes.string, DOMElement]),
   // boolean to control the state of the tooltip
@@ -100,8 +107,7 @@ export default class Example extends React.Component {
     PropTypes.func,
     PropTypes.string,
     PropTypes.object
-  ]),
-  trigger: PropTypes.string,
+  ])
 }</code></pre><h3 id="Tooltip-Disable-Autohide">Tooltip Disable Autohide</h3><div class="docs-example"><div><p>Sometimes you need to allow users to select text within a <span style="text-decoration:underline;color:blue" href="#" id="DisabledAutoHideExample">tooltip</span>.</p></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React from &#x27;react&#x27;;
 import { Tooltip } from &#x27;reactstrap&#x27;;

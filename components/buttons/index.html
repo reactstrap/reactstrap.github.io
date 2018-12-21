@@ -5,7 +5,7 @@
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <title data-react-helmet="true">reactstrap - Buttons</title>
-          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 0.14.x and 15"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 16+"/><meta data-react-helmet="true" property="og:type" content="article"/>
           <link rel=icon href=/assets/favicon.ico>
           <link rel="stylesheet" href="/assets/style.css"/>
           <link rel="stylesheet" href="/assets/docs.css"/>
@@ -121,7 +121,7 @@ class Example extends Component {
   }
 }
 
-export default Example;</code></pre><h3 id="Close-icon">Close icon</h3><p>Use a generic close icon to dismiss content. Use <code>&lt;Button close /&gt;</code> for the default icon. Otherwise, custom content for the button may be defined. (e.g. JSX: <code>&lt;Button close&gt;&lt;span aria-hidden=&quot;true&quot;&gt;–&lt;/span&gt;&lt;/Button&gt;</code>) The default aria-label is &quot;Close&quot;.</p><div class="docs-example"><div><div class="card-group"><div class="card"><div class="card-body"><h5 class="card-title"><button class="close" aria-label="Close"><span aria-hidden="true">×</span></button></h5><p class="card-text">Default close icon</p></div></div><div class="card"><div class="card-body"><h5 class="card-title"><button class="close" aria-label="Cancel"><span aria-hidden="true">–</span></button></h5><p class="card-text">Custom content and aria-label</p></div></div></div></div></div><pre><code class="language-jsx">import React, { Component } from &#x27;react&#x27;;
+export default Example;</code></pre><h3 id="Close-icon">Close icon</h3><p>Use a generic close icon to dismiss content. Use <code>&lt;Button close /&gt;</code> for the default icon. Otherwise, custom content for the button may be defined. (e.g. JSX: <code>&lt;Button close&gt;&lt;span aria-hidden=&quot;true&quot;&gt;–&lt;/span&gt;&lt;/Button&gt;</code>) The default aria-label is &quot;Close&quot;.</p><div class="docs-example"><div><div class="card-group"><div class="card"><div class="card-body"><div class="card-title"><button class="close" aria-label="Close"><span aria-hidden="true">×</span></button></div><p class="card-text">Default close icon</p></div></div><div class="card"><div class="card-body"><div class="card-title"><button class="close" aria-label="Cancel"><span aria-hidden="true">–</span></button></div><p class="card-text">Custom content and aria-label</p></div></div></div></div></div><pre><code class="language-jsx">import React, { Component } from &#x27;react&#x27;;
 import { Button, Card, CardBody, CardText, CardGroup, CardTitle } from &#x27;reactstrap&#x27;;
 
 const Example = () =&gt; (

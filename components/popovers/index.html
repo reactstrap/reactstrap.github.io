@@ -95,36 +95,38 @@ export default class Example extends React.Component {
     PropTypes.string,
     PropTypes.number
   ])
-}</code></pre><h3 id="Popovers-Trigger">Popovers Trigger</h3><div class="docs-example"><div><button type="button" id="PopoverFocus" class="btn btn-secondary">Launch Popover</button></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+}</code></pre><h3 id="Popovers-Trigger">Popovers Trigger</h3><p>Trigger each popover to see information about the trigger</p><div class="docs-example"><div><button type="button" id="PopoverFocus" class="btn btn-secondary">Launch Popover (Focus)</button> <button type="button" id="PopoverClick" class="btn btn-secondary">Launch Popover (Click)</button> <button type="button" id="PopoverLegacy" class="btn btn-secondary">Launch Popover (Legacy)</button></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React from &#x27;react&#x27;;
-import { Button, Popover, PopoverHeader, PopoverBody } from &#x27;reactstrap&#x27;;
+import { Button, UncontrolledPopover, PopoverHeader, PopoverBody } from &#x27;reactstrap&#x27;;
 
 export default class Example extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      popoverOpen: false
-    };
-  }
-
-  toggle() {
-    this.setState({
-      popoverOpen: !this.state.popoverOpen
-    });
-  }
-
   render() {
     return (
       &lt;div&gt;
         &lt;Button id=&quot;PopoverFocus&quot; type=&quot;button&quot;&gt;
-          Launch Popover
+          Launch Popover (Focus)
         &lt;/Button&gt;
-        &lt;Popover trigger=&quot;focus&quot; placement=&quot;bottom&quot; isOpen={this.state.popoverOpen} target=&quot;PopoverFocus&quot; toggle={this.toggle}&gt;
-          &lt;PopoverHeader&gt;Popover Title&lt;/PopoverHeader&gt;
-          &lt;PopoverBody&gt;Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.&lt;/PopoverBody&gt;
-        &lt;/Popover&gt;
+        {&#x27; &#x27;}
+        &lt;Button id=&quot;PopoverClick&quot; type=&quot;button&quot;&gt;
+          Launch Popover (Click)
+        &lt;/Button&gt;
+        {&#x27; &#x27;}
+        &lt;Button id=&quot;PopoverLegacy&quot; type=&quot;button&quot;&gt;
+          Launch Popover (Legacy)
+        &lt;/Button&gt;
+        &lt;UncontrolledPopover trigger=&quot;focus&quot; placement=&quot;bottom&quot; target=&quot;PopoverFocus&quot;&gt;
+          &lt;PopoverHeader&gt;Focus Trigger&lt;/PopoverHeader&gt;
+          &lt;PopoverBody&gt;Focusing on the trigging element makes this popover appear. Blurring (clicking away) makes it disappear. You cannot select this text as the popover will disappear when you try.&lt;/PopoverBody&gt;
+        &lt;/UncontrolledPopover&gt;
+        &lt;UncontrolledPopover trigger=&quot;click&quot; placement=&quot;bottom&quot; target=&quot;PopoverClick&quot;&gt;
+          &lt;PopoverHeader&gt;Click Trigger&lt;/PopoverHeader&gt;
+          &lt;PopoverBody&gt;Clicking on the triggering element makes this popover appear. Clicking on it again will make it disappear. You can select this text, but clicking away (somewhere other than the triggering element) will not dismiss this popover.&lt;/PopoverBody&gt;
+        &lt;/UncontrolledPopover&gt;
+        &lt;UncontrolledPopover trigger=&quot;legacy&quot; placement=&quot;bottom&quot; target=&quot;PopoverLegacy&quot;&gt;
+          &lt;PopoverHeader&gt;Legacy Trigger&lt;/PopoverHeader&gt;
+          &lt;PopoverBody&gt;
+            Legacy is a reactstrap special trigger value (outside of bootstrap&#x27;s spec/standard). Before reactstrap correctly supported click and focus, it had a hybrid which was very useful and has been brought back as trigger=&quot;legacy&quot;. One advantage of the legacy trigger is that it allows the popover text to be selected while also closing when clicking outside the triggering element and popover itself.&lt;/PopoverBody&gt;
+        &lt;/UncontrolledPopover&gt;
       &lt;/div&gt;
     );
   }

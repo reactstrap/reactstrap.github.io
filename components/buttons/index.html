@@ -32,23 +32,42 @@ export default class Example extends React.Component {
 }
 </code></pre><h4>Properties</h4><pre><code class="language-jsx">Button.propTypes = {
   active: PropTypes.bool,
+  &#x27;aria-label&#x27;: PropTypes.string,
   block: PropTypes.bool,
   color: PropTypes.string, // default: &#x27;secondary&#x27;
   disabled: PropTypes.bool,
+  outline: PropTypes.bool,
 
   // Pass in a Component to override default button element
   // example: react-router Link
   // default: &#x27;button&#x27;
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  tag: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.string,
+    PropTypes.shape({ $$typeof: PropTypes.symbol, render: PropTypes.func }),
+    PropTypes.arrayOf(PropTypes.oneOfType([
+      PropTypes.func,
+      PropTypes.string,
+      PropTypes.shape({ $$typeof: PropTypes.symbol, render: PropTypes.func }),
+    ]))
+  ]),
 
   // ref will only get you a reference to the Button component, use innerRef to get a reference to the DOM element (for things like focus management).
-  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  innerRef: PropTypes.oneOfType([PropTypes.object, PropTypes.func, PropTypes.string]),
 
   onClick: PropTypes.func,
   size: PropTypes.string,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  cssModule: PropTypes.object,
 
   // use close prop for BS4 close icon utility
   close: PropTypes.bool,
+}
+
+Button.defaultProps = {
+  color: &#x27;secondary&#x27;,
+  tag: &#x27;button&#x27;,
 }</code></pre><h3 id="Outline-Buttons">Outline Buttons</h3><div class="docs-example"><div><button class="btn btn-outline-primary">primary</button> <button class="btn btn-outline-secondary">secondary</button> <button class="btn btn-outline-success">success</button> <button class="btn btn-outline-info">info</button> <button class="btn btn-outline-warning">warning</button> <button class="btn btn-outline-danger">danger</button></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Button } from &#x27;reactstrap&#x27;;
 

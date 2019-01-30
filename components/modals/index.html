@@ -104,6 +104,8 @@ export default ModalExample;
   // see [Fade](/components/fade/) for more details
   modalTransition: PropTypes.shape(Fade.propTypes),
   innerRef: PropTypes.object,
+  // if modal should be destructed/removed from DOM after closing
+  unmountOnClose: PropTypes.bool // defaults to true
 }</code></pre><h4>Backdrop</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><form class="form-inline"><div class="form-group"><label for="backdrop" class="">Backdrop value</label> <select name="backdrop" id="backdrop" class="form-control"><option value="true">true</option><option value="false">false</option><option value="static">&quot;static&quot;</option></select></div> <button type="button" class="btn btn-danger">Launch Modal</button></form></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
 import React from &#x27;react&#x27;;
@@ -446,6 +448,64 @@ class ModalExample extends React.Component {
       &lt;/div&gt;
     );
   }
+}
+
+export default ModalExample;
+</code></pre><h4>Destructuring</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><form class="form-inline"><div class="form-group"><label for="unmountOnClose" class="">UnmountOnClose value</label> <select name="unmountOnClose" id="unmountOnClose" class="form-control"><option value="true">true</option><option value="false">false</option></select></div> <button type="button" class="btn btn-danger">Launch Modal</button></form></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } from &#x27;reactstrap&#x27;;
+
+class ModalExample extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            modal: false,
+            unmountOnClose: true
+        };
+
+        this.toggle = this.toggle.bind(this);
+        this.changeUnmountOnClose = this.changeUnmountOnClose.bind(this);
+    }
+
+    toggle() {
+        this.setState({
+            modal: !this.state.modal
+        });
+    }
+
+    changeUnmountOnClose(e) {
+        let value = e.target.value;
+        this.setState({ unmountOnClose: JSON.parse(value) });
+    }
+
+    render() {
+        return (
+            &lt;div&gt;
+                &lt;Form inline onSubmit={(e) =&gt; e.preventDefault()}&gt;
+                    &lt;FormGroup&gt;
+                        &lt;Label for=&quot;unmountOnClose&quot;&gt;UnmountOnClose value&lt;/Label&gt;{&#x27; &#x27;}
+                        &lt;Input type=&quot;select&quot; name=&quot;unmountOnClose&quot; id=&quot;unmountOnClose&quot; onChange={this.changeUnmountOnClose}&gt;
+                            &lt;option value=&quot;true&quot;&gt;true&lt;/option&gt;
+                            &lt;option value=&quot;false&quot;&gt;false&lt;/option&gt;
+                        &lt;/Input&gt;
+                    &lt;/FormGroup&gt;
+                    {&#x27; &#x27;}
+                    &lt;Button color=&quot;danger&quot; onClick={this.toggle}&gt;{this.props.buttonLabel}&lt;/Button&gt;
+                &lt;/Form&gt;
+                &lt;Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className} unmountOnClose={this.state.unmountOnClose}&gt;
+                    &lt;ModalHeader toggle={this.toggle}&gt;Modal title&lt;/ModalHeader&gt;
+                    &lt;ModalBody&gt;
+                        &lt;Input type=&quot;textarea&quot; placeholder=&quot;Write something (data should remain in modal if unmountOnClose is set to false)&quot; rows={5} /&gt;
+                    &lt;/ModalBody&gt;
+                    &lt;ModalFooter&gt;
+                        &lt;Button color=&quot;primary&quot; onClick={this.toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+                        &lt;Button color=&quot;secondary&quot; onClick={this.toggle}&gt;Cancel&lt;/Button&gt;
+                    &lt;/ModalFooter&gt;
+                &lt;/Modal&gt;
+            &lt;/div&gt;
+        );
+    }
 }
 
 export default ModalExample;

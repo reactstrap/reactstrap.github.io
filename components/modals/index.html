@@ -509,6 +509,57 @@ class ModalExample extends React.Component {
 }
 
 export default ModalExample;
+</code></pre><h4>Focus after close</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><form class="form-inline"><div class="form-group"><label for="focusAfterClose" class="">Focus After Close</label><select id="focusAfterClose" class="mx-2 form-control"><option value="true">Yes</option><option value="false">No</option></select></div><button type="button" class="btn btn-danger">Open</button></form></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React from &#x27;react&#x27;;
+import { Button, Modal, ModalBody, ModalFooter, Label, Input, FormGroup, Form } from &#x27;reactstrap&#x27;;
+
+class ModalFocusAfterClose extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            open: false,
+            focusAfterClose: true
+        };
+        this.toggle = this.toggle.bind(this);
+        this.handleSelectChange = this.handleSelectChange.bind(this);
+    }
+
+    toggle() {
+        this.setState(({ open }) =&gt; ({ open: !open }));
+    }
+
+    handleSelectChange({target: { value }}) {
+        this.setState({ focusAfterClose: JSON.parse(value) });
+    }
+
+    render() {
+        return (
+            &lt;div&gt;
+                &lt;Form inline onSubmit={(e) =&gt; e.preventDefault()}&gt;
+                    &lt;FormGroup&gt;
+                        &lt;Label for=&quot;focusAfterClose&quot;&gt;Focus After Close&lt;/Label&gt;
+                        &lt;Input className=&quot;mx-2&quot; type=&quot;select&quot; id=&quot;focusAfterClose&quot; onChange={this.handleSelectChange}&gt;
+                            &lt;option value=&quot;true&quot;&gt;Yes&lt;/option&gt;
+                            &lt;option value=&quot;false&quot;&gt;No&lt;/option&gt;
+                        &lt;/Input&gt;
+                    &lt;/FormGroup&gt;
+                    &lt;Button color=&quot;danger&quot; onClick={this.toggle}&gt;Open&lt;/Button&gt;
+                &lt;/Form&gt;
+                &lt;Modal returnFocusAfterClose={this.state.focusAfterClose} isOpen={this.state.open}&gt;
+                    &lt;ModalBody&gt;
+                        Observe the &quot;Open&quot; button. It will be focused after close when &quot;returnFocusAfterClose&quot; is true and will not be focused if &quot;returnFocusAfterClose&quot; is false.
+                    &lt;/ModalBody&gt;
+                    &lt;ModalFooter&gt;
+                        &lt;Button color=&quot;primary&quot; onClick={this.toggle}&gt;Close&lt;/Button&gt;
+                    &lt;/ModalFooter&gt;
+                &lt;/Modal&gt;
+            &lt;/div&gt;
+        )
+    }
+}
+
+export default ModalFocusAfterClose;
 </code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
           <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

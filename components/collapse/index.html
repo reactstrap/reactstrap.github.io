@@ -23,7 +23,7 @@ class Example extends Component {
   }
 
   toggle() {
-    this.setState({ collapse: !this.state.collapse });
+    this.setState(state =&gt; ({ collapse: !state.collapse }));
   }
 
   render() {
@@ -89,7 +89,7 @@ class Example extends Component {
   }
 
   toggle() {
-    this.setState({ collapse: !this.state.collapse });
+    this.setState(state =&gt; ({ collapse: !state.collapse }));
   }
 
   render() {

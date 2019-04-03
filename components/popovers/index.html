@@ -94,7 +94,16 @@ export default class Example extends React.Component {
   offset: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number
-  ])
+  ]),
+
+  // Whether to show/hide the popover with a fade effect
+  // (default: true)
+  fade: PropTypes.bool,
+
+  // Whether to flip the direction of the popover if too close to
+  // the container edge
+  // (default: true)
+  flip: PropTypes.bool,
 }</code></pre><h3 id="Popovers-Trigger">Popovers Trigger</h3><p>Trigger each popover to see information about the trigger</p><div class="docs-example"><div><button type="button" id="PopoverFocus" class="btn btn-secondary">Launch Popover (Focus)</button> <button type="button" id="PopoverClick" class="btn btn-secondary">Launch Popover (Click)</button> <button type="button" id="PopoverLegacy" class="btn btn-secondary">Launch Popover (Legacy)</button></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React from &#x27;react&#x27;;
 import { Button, UncontrolledPopover, PopoverHeader, PopoverBody } from &#x27;reactstrap&#x27;;

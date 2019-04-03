@@ -107,7 +107,16 @@ export default class Example extends React.Component {
     PropTypes.func,
     PropTypes.string,
     PropTypes.object
-  ])
+  ]),
+
+  // Whether to show/hide the popover with a fade effect
+  // (default: true)
+  fade: PropTypes.bool,
+
+  // Whether to flip the direction of the popover if too close to
+  // the container edge
+  // (default: true)
+  flip: PropTypes.bool,
 }</code></pre><h3 id="Tooltip-Disable-Autohide">Tooltip Disable Autohide</h3><div class="docs-example"><div><p>Sometimes you need to allow users to select text within a <span style="text-decoration:underline;color:blue" href="#" id="DisabledAutoHideExample">tooltip</span>.</p></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 import React from &#x27;react&#x27;;
 import { Tooltip } from &#x27;reactstrap&#x27;;

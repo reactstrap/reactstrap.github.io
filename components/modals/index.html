@@ -107,7 +107,9 @@ export default ModalExample;
   modalTransition: PropTypes.shape(Fade.propTypes),
   innerRef: PropTypes.object,
   // if modal should be destructed/removed from DOM after closing
-  unmountOnClose: PropTypes.bool // defaults to true
+  unmountOnClose: PropTypes.bool, // defaults to true
+  // if the element which triggered the modal to open should focused after the modal closes (see example somewhere below)
+  returnFocusAfterClose: PropTypes.bool // defaults to true
 }</code></pre><h4>Backdrop</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><form class="form-inline"><div class="form-group"><label for="backdrop" class="">Backdrop value</label> <select name="backdrop" id="backdrop" class="form-control"><option value="true">true</option><option value="false">false</option><option value="static">&quot;static&quot;</option></select></div> <button type="button" class="btn btn-danger">Launch Modal</button></form></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
 import React from &#x27;react&#x27;;

@@ -51,6 +51,7 @@ export default class Example extends React.Component {
   }
 }
 </code></pre><h4>Properties</h4><pre><code class="language-jsx">Dropdown.propTypes = {
+  a11y: PropTypes.bool, // defaults to true. Set to false to enable more bootstrap like tabbing behavior
   disabled: PropTypes.bool,
   direction: PropTypes.oneOf([&#x27;up&#x27;, &#x27;down&#x27;, &#x27;left&#x27;, &#x27;right&#x27;]),
   group: PropTypes.bool,

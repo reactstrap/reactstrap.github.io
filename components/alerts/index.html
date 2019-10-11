@@ -116,31 +116,19 @@ const Example = (props) =&gt; {
 };
 
 export default Example;
-</code></pre><h3 id="Dismissing">Dismissing</h3><div class="docs-example"><div class="alert alert-info alert-dismissible fade" role="alert"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>I am an alert and I can be dismissed!</div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+</code></pre><h3 id="Dismissing">Dismissing</h3><div class="docs-example"><div class="alert alert-info alert-dismissible fade" role="alert"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>I am an alert and I can be dismissed!</div></div><pre><code class="language-jsx">import React, { useState } from &#x27;react&#x27;;
 import { Alert } from &#x27;reactstrap&#x27;;
 
-class AlertExample extends React.Component {
-  constructor(props) {
-    super(props);
+const AlertExample = (props) =&gt; {
+  const [visible, setVisible] = useState(true);
 
-    this.state = {
-      visible: true
-    };
+  const onDismiss = () =&gt; setVisible(false);
 
-    this.onDismiss = this.onDismiss.bind(this);
-  }
-
-  onDismiss() {
-    this.setState({ visible: false });
-  }
-
-  render() {
-    return (
-      &lt;Alert color=&quot;info&quot; isOpen={this.state.visible} toggle={this.onDismiss}&gt;
-        I am an alert and I can be dismissed!
-      &lt;/Alert&gt;
-    );
-  }
+  return (
+    &lt;Alert color=&quot;info&quot; isOpen={visible} toggle={onDismiss}&gt;
+      I am an alert and I can be dismissed!
+    &lt;/Alert&gt;
+  );
 }
 
 export default AlertExample;
@@ -156,35 +144,22 @@ function AlertExample() {
 }
 
 export default AlertExample;
-</code></pre><h3 id="Alerts-without-fade">Alerts without fade</h3><p>Fade can be disabled using <code>fade=false</code>.</p><div class="docs-example"><div><div class="alert alert-primary alert-dismissible" role="alert"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>I am a primary alert and I can be dismissed without animating!</div></div><div><div class="alert alert-info alert-dismissible" role="alert"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>I am an alert and I can be dismissed without animating!</div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+</code></pre><h3 id="Alerts-without-fade">Alerts without fade</h3><p>Fade can be disabled using <code>fade=false</code>.</p><div class="docs-example"><div><div class="alert alert-primary alert-dismissible" role="alert"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>I am a primary alert and I can be dismissed without animating!</div></div><div><div class="alert alert-info alert-dismissible" role="alert"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">×</span></button>I am an alert and I can be dismissed without animating!</div></div></div><pre><code class="language-jsx">import React, { useState } from &#x27;react&#x27;;
 import { UncontrolledAlert } from &#x27;reactstrap&#x27;;
 import Alert from &#x27;../../../src/Alert&#x27;;
 
-export class AlertFadelessExample extends React.Component {
+export const AlertFadelessExample = (props) =&gt; {
+  const [visible, setVisible] = useState(true);
 
-  constructor(props) {
-    super(props);
+  const onDismiss = () =&gt; setVisible(false);
 
-    this.state = {
-      visible: true
-    };
-
-    this.onDismiss = this.onDismiss.bind(this);
-  }
-
-  onDismiss() {
-    this.setState({ visible: false });
-  }
-
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;Alert color=&quot;primary&quot; isOpen={this.state.visible} toggle={this.onDismiss} fade={false}&gt;
-          I am a primary alert and I can be dismissed without animating!
-        &lt;/Alert&gt;
+  return (
+    &lt;div&gt;
+      &lt;Alert color=&quot;primary&quot; isOpen={visible} toggle={onDismiss} fade={false}&gt;
+        I am a primary alert and I can be dismissed without animating!
+      &lt;/Alert&gt;
       &lt;/div&gt;
-    );
-  }
+  );
 }
 
 export function UncontrolledAlertFadelessExample() {

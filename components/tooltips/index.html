@@ -13,41 +13,25 @@
         </head>
         <body>
           <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button aria-label="Toggle navigation" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" aria-expanded="false"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">GitHub</a></li></ul></div></div></nav><div class="content container"><div class="row"><main class="docSearch-navigation col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h1 class="h5">Components</h1><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/spinners/">Spinners</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/toasts/">Toasts</a></li><li class="nav-item"><a class="nav-link active" href="/components/tooltips/">Tooltips</a></li></ul></div></main><aside class="docSearch-content col-md-9 order-md-1"><div><h2 class="h3">Tooltips</h2><p>Tooltips are built with <a href="https://popper.js.org/">https://popper.js.org/</a> via <a href="https://github.com/souporserious/react-popper">https://github.com/souporserious/react-popper</a>.</p><div class="docs-example"><div><p>Somewhere in here is a <span style="text-decoration:underline;color:blue" href="#" id="TooltipExample">tooltip</span>.</p></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
-import React from &#x27;react&#x27;;
+import React, { useState } from &#x27;react&#x27;;
 import { Tooltip } from &#x27;reactstrap&#x27;;
-import { mapToCssModules } from &#x27;../../../src/utils&#x27;
-import classNames from &#x27;classnames&#x27;
 
-export default class Example extends React.Component {
-  constructor(props) {
-    super(props);
+const Example = (props) =&gt; {
+  const [tooltipOpen, setTooltipOpen] = useState(false);
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      tooltipOpen: false
-    };
-  }
+  const toggle = () =&gt; setTooltipOpen(!tooltipOpen);
 
-  toggle() {
-    this.setState({
-      tooltipOpen: !this.state.tooltipOpen
-    });
-  }
-
-
-
-  render() {
-    const classes = &#x27;tooltip-inner&#x27;
-    return (
-      &lt;div&gt;
-        &lt;p&gt;Somewhere in here is a &lt;span style={{textDecoration: &quot;underline&quot;, color:&quot;blue&quot;}} href=&quot;#&quot; id=&quot;TooltipExample&quot;&gt;tooltip&lt;/span&gt;.&lt;/p&gt;
-        &lt;Tooltip placement=&quot;right&quot; isOpen={this.state.tooltipOpen} target=&quot;TooltipExample&quot; toggle={this.toggle}&gt;
-          Hello world!
-        &lt;/Tooltip&gt;
-      &lt;/div&gt;
-    );
-  }
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Somewhere in here is a &lt;span style={{textDecoration: &quot;underline&quot;, color:&quot;blue&quot;}} href=&quot;#&quot; id=&quot;TooltipExample&quot;&gt;tooltip&lt;/span&gt;.&lt;/p&gt;
+      &lt;Tooltip placement=&quot;right&quot; isOpen={tooltipOpen} target=&quot;TooltipExample&quot; toggle={toggle}&gt;
+        Hello world!
+      &lt;/Tooltip&gt;
+    &lt;/div&gt;
+  );
 }
+
+export default Example;
 </code></pre><h4>Properties</h4><pre><code class="language-jsx">Tooltip.propTypes = {
   // space separated list of triggers (e.g. &quot;click hover focus&quot;)
   trigger: PropTypes.string,
@@ -118,107 +102,79 @@ export default class Example extends React.Component {
   // (default: true)
   flip: PropTypes.bool,
 }</code></pre><h3 id="Tooltip-Disable-Autohide">Tooltip Disable Autohide</h3><div class="docs-example"><div><p>Sometimes you need to allow users to select text within a <span style="text-decoration:underline;color:blue" href="#" id="DisabledAutoHideExample">tooltip</span>.</p></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
-import React from &#x27;react&#x27;;
+import React, { useState } from &#x27;react&#x27;;
 import { Tooltip } from &#x27;reactstrap&#x27;;
 
-export default class Example extends React.Component {
-  constructor(props) {
-    super(props);
+const Example = (props) =&gt; {
+  const [tooltipOpen, setTooltipOpen] = useState(false);
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      tooltipOpen: false
-    };
-  }
+  const toggle = () =&gt; setTooltipOpen(!tooltipOpen);
 
-  toggle() {
-    this.setState({
-      tooltipOpen: !this.state.tooltipOpen
-    });
-  }
-
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;p&gt;Sometimes you need to allow users to select text within a &lt;span style={{textDecoration: &quot;underline&quot;, color:&quot;blue&quot;}} href=&quot;#&quot; id=&quot;DisabledAutoHideExample&quot;&gt;tooltip&lt;/span&gt;.&lt;/p&gt;
-        &lt;Tooltip placement=&quot;top&quot; isOpen={this.state.tooltipOpen} autohide={false} target=&quot;DisabledAutoHideExample&quot; toggle={this.toggle}&gt;
-          Try to select this text!
-        &lt;/Tooltip&gt;
-      &lt;/div&gt;
-    );
-  }
-}
-</code></pre><h3 id="Tooltips-List">Tooltips List</h3><div class="docs-example"><div><span><button id="Tooltip-0" class="mr-1 btn btn-secondary">Top</button></span><span><button id="Tooltip-1" class="mr-1 btn btn-secondary">Bottom</button></span><span><button id="Tooltip-2" class="mr-1 btn btn-secondary">Left</button></span><span><button id="Tooltip-3" class="mr-1 btn btn-secondary">Right</button></span></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
-
-import React from &#x27;react&#x27;;
-import { Button, Tooltip } from &#x27;reactstrap&#x27;;
-
-class TooltipItem extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      tooltipOpen: false
-    };
-  }
-
-  toggle() {
-    this.setState({
-      tooltipOpen: !this.state.tooltipOpen
-    });
-  }
-
-  render() {
-    return (
-      &lt;span&gt;
-        &lt;Button className=&quot;mr-1&quot; color=&quot;secondary&quot; id={&#x27;Tooltip-&#x27; + this.props.id}&gt;
-          {this.props.item.text}
-        &lt;/Button&gt;
-        &lt;Tooltip placement={this.props.item.placement} isOpen={this.state.tooltipOpen} target={&#x27;Tooltip-&#x27; + this.props.id} toggle={this.toggle}&gt;
-          Tooltip Content!
-        &lt;/Tooltip&gt;
-      &lt;/span&gt;
-    );
-  }
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Sometimes you need to allow users to select text within a &lt;span style={{textDecoration: &quot;underline&quot;, color:&quot;blue&quot;}} href=&quot;#&quot; id=&quot;DisabledAutoHideExample&quot;&gt;tooltip&lt;/span&gt;.&lt;/p&gt;
+      &lt;Tooltip placement=&quot;top&quot; isOpen={tooltipOpen} autohide={false} target=&quot;DisabledAutoHideExample&quot; toggle={toggle}&gt;
+        Try to select this text!
+      &lt;/Tooltip&gt;
+    &lt;/div&gt;
+  );
 }
 
-class TooltipExampleMulti extends React.Component {
-  constructor(props) {
-    super(props);
+export default Example;
+</code></pre><h3 id="Tooltips-List">Tooltips List</h3><div class="docs-example"><span><button id="Tooltip-0" class="mr-1 btn btn-secondary">Top</button></span><span><button id="Tooltip-1" class="mr-1 btn btn-secondary">Bottom</button></span><span><button id="Tooltip-2" class="mr-1 btn btn-secondary">Left</button></span><span><button id="Tooltip-3" class="mr-1 btn btn-secondary">Right</button></span></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
-    this.state = {
-      tooltips: [
+import React, { useState } from &quot;react&quot;;
+import { Button, Tooltip } from &quot;reactstrap&quot;;
+
+const TooltipItem = props =&gt; {
+  const { item, id } = props;
+  const [tooltipOpen, setTooltipOpen] = useState(false);
+
+  const toggle = () =&gt; setTooltipOpen(!tooltipOpen);
+
+  return (
+    &lt;span&gt;
+      &lt;Button className=&quot;mr-1&quot; color=&quot;secondary&quot; id={&quot;Tooltip-&quot; + id}&gt;
+        {item.text}
+      &lt;/Button&gt;
+      &lt;Tooltip
+        placement={item.placement}
+        isOpen={tooltipOpen}
+        target={&quot;Tooltip-&quot; + id}
+        toggle={toggle}
+      &gt;
+        Tooltip Content!
+      &lt;/Tooltip&gt;
+    &lt;/span&gt;
+  );
+};
+
+const TooltipExampleMulti = props =&gt; {
+  return (
+    &lt;&gt;
+      {[
         {
-          placement: &#x27;top&#x27;,
-          text: &#x27;Top&#x27;
+          placement: &quot;top&quot;,
+          text: &quot;Top&quot;
         },
         {
-          placement: &#x27;bottom&#x27;,
-          text: &#x27;Bottom&#x27;
+          placement: &quot;bottom&quot;,
+          text: &quot;Bottom&quot;
         },
         {
-          placement: &#x27;left&#x27;,
-          text: &#x27;Left&#x27;
+          placement: &quot;left&quot;,
+          text: &quot;Left&quot;
         },
         {
-          placement: &#x27;right&#x27;,
-          text: &#x27;Right&#x27;
+          placement: &quot;right&quot;,
+          text: &quot;Right&quot;
         }
-      ]
-    };
-  }
-
-  render() {
-    return (
-      &lt;div&gt;
-        { this.state.tooltips.map((tooltip, i) =&gt; {
-          return &lt;TooltipItem key={i} item={tooltip} id={i} /&gt;;
-        })}
-      &lt;/div&gt;
-    );
-  }
-}
+      ].map((tooltip, i) =&gt; {
+        return &lt;TooltipItem key={i} item={tooltip} id={i} /&gt;;
+      })}
+    &lt;/&gt;
+  );
+};
 
 export default TooltipExampleMulti;
 </code></pre><h3 id="Uncontrolled-Tooltip">Uncontrolled Tooltip</h3><p>For the most basic use-case an uncontrolled component can provide the functionality wanted without the need to manage/control the state of the component. <code>UncontrolledTooltip</code> does not require <code>isOpen</code> nor <code>toggle</code> props to work.</p><div class="docs-example"><div><p>Somewhere in here is a <span style="text-decoration:underline;color:blue" href="#" id="UncontrolledTooltipExample">tooltip</span>.</p></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */

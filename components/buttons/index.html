@@ -15,21 +15,21 @@
           <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button aria-label="Toggle navigation" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" aria-expanded="false"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">GitHub</a></li></ul></div></div></nav><div class="content container"><div class="row"><main class="docSearch-navigation col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h1 class="h5">Components</h1><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link active" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/spinners/">Spinners</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/toasts/">Toasts</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></main><aside class="docSearch-content col-md-9 order-md-1"><div><h2 class="h3">Buttons</h2><div class="docs-example"><div><button class="btn btn-primary">primary</button> <button class="btn btn-secondary">secondary</button> <button class="btn btn-success">success</button> <button class="btn btn-info">info</button> <button class="btn btn-warning">warning</button> <button class="btn btn-danger">danger</button> <button class="btn btn-link">link</button></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Button } from &#x27;reactstrap&#x27;;
 
-export default class Example extends React.Component {
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;Button color=&quot;primary&quot;&gt;primary&lt;/Button&gt;{&#x27; &#x27;}
-        &lt;Button color=&quot;secondary&quot;&gt;secondary&lt;/Button&gt;{&#x27; &#x27;}
-        &lt;Button color=&quot;success&quot;&gt;success&lt;/Button&gt;{&#x27; &#x27;}
-        &lt;Button color=&quot;info&quot;&gt;info&lt;/Button&gt;{&#x27; &#x27;}
-        &lt;Button color=&quot;warning&quot;&gt;warning&lt;/Button&gt;{&#x27; &#x27;}
-        &lt;Button color=&quot;danger&quot;&gt;danger&lt;/Button&gt;{&#x27; &#x27;}
-        &lt;Button color=&quot;link&quot;&gt;link&lt;/Button&gt;
-      &lt;/div&gt;
-    );
-  }
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Button color=&quot;primary&quot;&gt;primary&lt;/Button&gt;{&#x27; &#x27;}
+      &lt;Button color=&quot;secondary&quot;&gt;secondary&lt;/Button&gt;{&#x27; &#x27;}
+      &lt;Button color=&quot;success&quot;&gt;success&lt;/Button&gt;{&#x27; &#x27;}
+      &lt;Button color=&quot;info&quot;&gt;info&lt;/Button&gt;{&#x27; &#x27;}
+      &lt;Button color=&quot;warning&quot;&gt;warning&lt;/Button&gt;{&#x27; &#x27;}
+      &lt;Button color=&quot;danger&quot;&gt;danger&lt;/Button&gt;{&#x27; &#x27;}
+      &lt;Button color=&quot;link&quot;&gt;link&lt;/Button&gt;
+    &lt;/div&gt;
+  );
 }
+
+export default Example;
 </code></pre><h4>Properties</h4><pre><code class="language-jsx">Button.propTypes = {
   active: PropTypes.bool,
   &#x27;aria-label&#x27;: PropTypes.string,
@@ -71,73 +71,61 @@ Button.defaultProps = {
 }</code></pre><h3 id="Outline-Buttons">Outline Buttons</h3><div class="docs-example"><div><button class="btn btn-outline-primary">primary</button> <button class="btn btn-outline-secondary">secondary</button> <button class="btn btn-outline-success">success</button> <button class="btn btn-outline-info">info</button> <button class="btn btn-outline-warning">warning</button> <button class="btn btn-outline-danger">danger</button></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Button } from &#x27;reactstrap&#x27;;
 
-export default class Example extends React.Component {
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;Button outline color=&quot;primary&quot;&gt;primary&lt;/Button&gt;{&#x27; &#x27;}
-        &lt;Button outline color=&quot;secondary&quot;&gt;secondary&lt;/Button&gt;{&#x27; &#x27;}
-        &lt;Button outline color=&quot;success&quot;&gt;success&lt;/Button&gt;{&#x27; &#x27;}
-        &lt;Button outline color=&quot;info&quot;&gt;info&lt;/Button&gt;{&#x27; &#x27;}
-        &lt;Button outline color=&quot;warning&quot;&gt;warning&lt;/Button&gt;{&#x27; &#x27;}
-        &lt;Button outline color=&quot;danger&quot;&gt;danger&lt;/Button&gt;
-      &lt;/div&gt;
-    );
-  }
+const Example = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;Button outline color=&quot;primary&quot;&gt;primary&lt;/Button&gt;{&#x27; &#x27;}
+      &lt;Button outline color=&quot;secondary&quot;&gt;secondary&lt;/Button&gt;{&#x27; &#x27;}
+      &lt;Button outline color=&quot;success&quot;&gt;success&lt;/Button&gt;{&#x27; &#x27;}
+      &lt;Button outline color=&quot;info&quot;&gt;info&lt;/Button&gt;{&#x27; &#x27;}
+      &lt;Button outline color=&quot;warning&quot;&gt;warning&lt;/Button&gt;{&#x27; &#x27;}
+      &lt;Button outline color=&quot;danger&quot;&gt;danger&lt;/Button&gt;
+    &lt;/div&gt;
+  );
+
 }
+
+export default Example;
 </code></pre><h3 id="Sizes">Sizes</h3><div class="docs-example"><button class="btn btn-primary btn-lg">Large Button</button> <button class="btn btn-secondary btn-lg">Large Button</button></div><pre><code class="language-jsx">&lt;Button color=&quot;primary&quot; size=&quot;lg&quot;&gt;Large Button&lt;/Button&gt;{&#x27; &#x27;}
 &lt;Button color=&quot;secondary&quot; size=&quot;lg&quot;&gt;Large Button&lt;/Button&gt;</code></pre><div class="docs-example"><button class="btn btn-primary btn-sm">Small Button</button> <button class="btn btn-secondary btn-sm">Small Button</button></div><pre><code class="language-jsx">&lt;Button color=&quot;primary&quot; size=&quot;sm&quot;&gt;Small Button&lt;/Button&gt;{&#x27; &#x27;}
 &lt;Button color=&quot;secondary&quot; size=&quot;sm&quot;&gt;Small Button&lt;/Button&gt;</code></pre><div class="docs-example"><button class="btn btn-primary btn-lg btn-block">Block level button</button><button class="btn btn-secondary btn-lg btn-block">Block level button</button></div><pre><code class="language-jsx">&lt;Button color=&quot;primary&quot; size=&quot;lg&quot; block&gt;Block level button&lt;/Button&gt;
 &lt;Button color=&quot;secondary&quot; size=&quot;lg&quot; block&gt;Block level button&lt;/Button&gt;</code></pre><h3 id="Active-State">Active State</h3><div class="docs-example"><button class="btn btn-primary btn-lg active">Primary link</button> <button class="btn btn-secondary btn-lg active">Link</button></div><pre><code class="language-jsx">&lt;Button color=&quot;primary&quot; size=&quot;lg&quot; active&gt;Primary link&lt;/Button&gt;{&#x27; &#x27;}
 &lt;Button color=&quot;secondary&quot; size=&quot;lg&quot; active&gt;Link&lt;/Button&gt;</code></pre><h3 id="Disabled-State">Disabled State</h3><div class="docs-example"><button disabled="" class="btn btn-primary btn-lg disabled">Primary button</button> <button disabled="" class="btn btn-secondary btn-lg disabled">Button</button></div><pre><code class="language-jsx">&lt;Button color=&quot;primary&quot; size=&quot;lg&quot; disabled&gt;Primary button&lt;/Button&gt;{&#x27; &#x27;}
-&lt;Button color=&quot;secondary&quot; size=&quot;lg&quot; disabled&gt;Button&lt;/Button&gt;</code></pre><h3 id="Checkbox-and-Radio-Buttons-Stateful-Buttons">Checkbox and Radio Buttons (Stateful Buttons)</h3><p>In order to have checkbox and radio buttons, your component needs to manage the state of which button(s) are active/select. It is not in the opinion of this library to manage state within it&#x27;s components so it is left up to you. Below is a simple example showcasing how this could be done using the components which already exist in this library.</p><div class="docs-example"><div><h5>Radio Buttons</h5><div role="group" class="btn-group"><button type="button" class="btn btn-primary">One</button><button type="button" class="btn btn-primary">Two</button><button type="button" class="btn btn-primary">Three</button></div><p>Selected: </p><h5>Checkbox Buttons</h5><div role="group" class="btn-group"><button type="button" class="btn btn-primary">One</button><button type="button" class="btn btn-primary">Two</button><button type="button" class="btn btn-primary">Three</button></div><p>Selected: <!-- -->[]</p></div></div><pre><code class="language-jsx">import React, { Component } from &#x27;react&#x27;;
+&lt;Button color=&quot;secondary&quot; size=&quot;lg&quot; disabled&gt;Button&lt;/Button&gt;</code></pre><h3 id="Checkbox-and-Radio-Buttons-Stateful-Buttons">Checkbox and Radio Buttons (Stateful Buttons)</h3><p>In order to have checkbox and radio buttons, your component needs to manage the state of which button(s) are active/select. It is not in the opinion of this library to manage state within it&#x27;s components so it is left up to you. Below is a simple example showcasing how this could be done using the components which already exist in this library.</p><div class="docs-example"><div><h5>Radio Buttons</h5><div role="group" class="btn-group"><button type="button" class="btn btn-primary">One</button><button type="button" class="btn btn-primary">Two</button><button type="button" class="btn btn-primary">Three</button></div><p>Selected: </p><h5>Checkbox Buttons</h5><div role="group" class="btn-group"><button type="button" class="btn btn-primary">One</button><button type="button" class="btn btn-primary">Two</button><button type="button" class="btn btn-primary">Three</button></div><p>Selected: <!-- -->[]</p></div></div><pre><code class="language-jsx">import React, { useState } from &#x27;react&#x27;;
 import { Button, ButtonGroup } from &#x27;reactstrap&#x27;;
 
-class Example extends Component {
-  constructor (props) {
-    super(props);
+const Example = (props) =&gt; {
+  const [cSelected, setCSelected] = useState([]);
+  const [rSelected, setRSelected] = useState(null);
 
-    this.state = { cSelected: [] };
-
-    this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
-    this.onCheckboxBtnClick = this.onCheckboxBtnClick.bind(this);
-  }
-
-  onRadioBtnClick(rSelected) {
-    this.setState({ rSelected });
-  }
-
-  onCheckboxBtnClick(selected) {
-    const index = this.state.cSelected.indexOf(selected);
+  const onCheckboxBtnClick = (selected) =&gt; {
+    const index = cSelected.indexOf(selected);
     if (index &lt; 0) {
-      this.state.cSelected.push(selected);
+      cSelected.push(selected);
     } else {
-      this.state.cSelected.splice(index, 1);
+      cSelected.splice(index, 1);
     }
-    this.setState({ cSelected: [...this.state.cSelected] });
+    setCSelected([...cSelected]);
   }
+  return (
+    &lt;div&gt;
+      &lt;h5&gt;Radio Buttons&lt;/h5&gt;
+      &lt;ButtonGroup&gt;
+        &lt;Button color=&quot;primary&quot; onClick={() =&gt; setRSelected(1)} active={rSelected === 1}&gt;One&lt;/Button&gt;
+        &lt;Button color=&quot;primary&quot; onClick={() =&gt; setRSelected(2)} active={rSelected === 2}&gt;Two&lt;/Button&gt;
+        &lt;Button color=&quot;primary&quot; onClick={() =&gt; setRSelected(3)} active={rSelected === 3}&gt;Three&lt;/Button&gt;
+      &lt;/ButtonGroup&gt;
+      &lt;p&gt;Selected: {rSelected}&lt;/p&gt;
 
-  render() {
-    return (
-      &lt;div&gt;
-        &lt;h5&gt;Radio Buttons&lt;/h5&gt;
-        &lt;ButtonGroup&gt;
-          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onRadioBtnClick(1)} active={this.state.rSelected === 1}&gt;One&lt;/Button&gt;
-          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onRadioBtnClick(2)} active={this.state.rSelected === 2}&gt;Two&lt;/Button&gt;
-          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onRadioBtnClick(3)} active={this.state.rSelected === 3}&gt;Three&lt;/Button&gt;
-        &lt;/ButtonGroup&gt;
-        &lt;p&gt;Selected: {this.state.rSelected}&lt;/p&gt;
-
-        &lt;h5&gt;Checkbox Buttons&lt;/h5&gt;
-        &lt;ButtonGroup&gt;
-          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onCheckboxBtnClick(1)} active={this.state.cSelected.includes(1)}&gt;One&lt;/Button&gt;
-          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onCheckboxBtnClick(2)} active={this.state.cSelected.includes(2)}&gt;Two&lt;/Button&gt;
-          &lt;Button color=&quot;primary&quot; onClick={() =&gt; this.onCheckboxBtnClick(3)} active={this.state.cSelected.includes(3)}&gt;Three&lt;/Button&gt;
-        &lt;/ButtonGroup&gt;
-        &lt;p&gt;Selected: {JSON.stringify(this.state.cSelected)}&lt;/p&gt;
-      &lt;/div&gt;
-    );
-  }
+      &lt;h5&gt;Checkbox Buttons&lt;/h5&gt;
+      &lt;ButtonGroup&gt;
+        &lt;Button color=&quot;primary&quot; onClick={() =&gt; onCheckboxBtnClick(1)} active={cSelected.includes(1)}&gt;One&lt;/Button&gt;
+        &lt;Button color=&quot;primary&quot; onClick={() =&gt; onCheckboxBtnClick(2)} active={cSelected.includes(2)}&gt;Two&lt;/Button&gt;
+        &lt;Button color=&quot;primary&quot; onClick={() =&gt; onCheckboxBtnClick(3)} active={cSelected.includes(3)}&gt;Three&lt;/Button&gt;
+      &lt;/ButtonGroup&gt;
+      &lt;p&gt;Selected: {JSON.stringify(cSelected)}&lt;/p&gt;
+    &lt;/div&gt;
+  );
 }
 
 export default Example;</code></pre><h3 id="Close-icon">Close icon</h3><p>Use a generic close icon to dismiss content. Use <code>&lt;Button close /&gt;</code> for the default icon. Otherwise, custom content for the button may be defined. (e.g. JSX: <code>&lt;Button close&gt;&lt;span aria-hidden=&quot;true&quot;&gt;–&lt;/span&gt;&lt;/Button&gt;</code>) The default aria-label is &quot;Close&quot;.</p><div class="docs-example"><div><div class="card-group"><div class="card"><div class="card-body"><div class="card-title"><button class="close" aria-label="Close"><span aria-hidden="true">×</span></button></div><p class="card-text">Default close icon</p></div></div><div class="card"><div class="card-body"><div class="card-title"><button class="close" aria-label="Cancel"><span aria-hidden="true">–</span></button></div><p class="card-text">Custom content and aria-label</p></div></div></div></div></div><pre><code class="language-jsx">import React, { Component } from &#x27;react&#x27;;

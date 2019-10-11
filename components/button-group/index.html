@@ -15,17 +15,17 @@
           <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button aria-label="Toggle navigation" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" aria-expanded="false"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">GitHub</a></li></ul></div></div></nav><div class="content container"><div class="row"><main class="docSearch-navigation col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h1 class="h5">Components</h1><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link active" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/spinners/">Spinners</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/toasts/">Toasts</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></main><aside class="docSearch-content col-md-9 order-md-1"><div><h2 class="h3">Button Group</h2><div class="docs-example"><div><div role="group" class="btn-group"><button class="btn btn-secondary">Left</button><button class="btn btn-secondary">Middle</button><button class="btn btn-secondary">Right</button></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Button, ButtonGroup } from &#x27;reactstrap&#x27;;
 
-export default class Example extends React.Component {
-  render() {
-    return (
-      &lt;ButtonGroup&gt;
-        &lt;Button&gt;Left&lt;/Button&gt;
-        &lt;Button&gt;Middle&lt;/Button&gt;
-        &lt;Button&gt;Right&lt;/Button&gt;
-      &lt;/ButtonGroup&gt;
-    );
-  }
+const Example = (props) =&gt; {
+  return (
+    &lt;ButtonGroup&gt;
+      &lt;Button&gt;Left&lt;/Button&gt;
+      &lt;Button&gt;Middle&lt;/Button&gt;
+      &lt;Button&gt;Right&lt;/Button&gt;
+    &lt;/ButtonGroup&gt;
+  );
 }
+
+export default Example;
 </code></pre><h4>Properties</h4><pre><code class="language-jsx">ButtonGroup.propTypes = {
   ariaLabel: PropTypes.string,
   className: PropTypes.string,
@@ -35,28 +35,28 @@ export default class Example extends React.Component {
 };</code></pre><h3 id="Button-Toolbar">Button Toolbar</h3><div class="docs-example"><div role="toolbar" class="btn-toolbar"><div role="group" class="btn-group"><button class="btn btn-secondary">1</button><button class="btn btn-secondary">2</button><button class="btn btn-secondary">3</button><button class="btn btn-secondary">4</button></div><div role="group" class="btn-group"><button class="btn btn-secondary">5</button><button class="btn btn-secondary">6</button><button class="btn btn-secondary">7</button></div><div role="group" class="btn-group"><button class="btn btn-secondary">8</button></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { Button, ButtonGroup, ButtonToolbar } from &#x27;reactstrap&#x27;;
 
-export default class Example extends React.Component {
-  render() {
-    return (
-      &lt;ButtonToolbar&gt;
-        &lt;ButtonGroup&gt;
-          &lt;Button&gt;1&lt;/Button&gt;
-          &lt;Button&gt;2&lt;/Button&gt;
-          &lt;Button&gt;3&lt;/Button&gt;
-          &lt;Button&gt;4&lt;/Button&gt;
-        &lt;/ButtonGroup&gt;
-        &lt;ButtonGroup&gt;
-          &lt;Button&gt;5&lt;/Button&gt;
-          &lt;Button&gt;6&lt;/Button&gt;
-          &lt;Button&gt;7&lt;/Button&gt;
-        &lt;/ButtonGroup&gt;
-        &lt;ButtonGroup&gt;
-          &lt;Button&gt;8&lt;/Button&gt;
-        &lt;/ButtonGroup&gt;
-      &lt;/ButtonToolbar&gt;
-    );
-  }
+const Example = (props) =&gt; {
+  return (
+    &lt;ButtonToolbar&gt;
+      &lt;ButtonGroup&gt;
+        &lt;Button&gt;1&lt;/Button&gt;
+        &lt;Button&gt;2&lt;/Button&gt;
+        &lt;Button&gt;3&lt;/Button&gt;
+        &lt;Button&gt;4&lt;/Button&gt;
+      &lt;/ButtonGroup&gt;
+      &lt;ButtonGroup&gt;
+        &lt;Button&gt;5&lt;/Button&gt;
+        &lt;Button&gt;6&lt;/Button&gt;
+        &lt;Button&gt;7&lt;/Button&gt;
+      &lt;/ButtonGroup&gt;
+      &lt;ButtonGroup&gt;
+        &lt;Button&gt;8&lt;/Button&gt;
+      &lt;/ButtonGroup&gt;
+    &lt;/ButtonToolbar&gt;
+  );
 }
+
+export default Example;
 </code></pre><h3 id="Sizing">Sizing</h3><div class="docs-example"><div><div role="group" class="btn-group-lg btn-group"><button class="btn btn-secondary">Left</button><button class="btn btn-secondary">Middle</button><button class="btn btn-secondary">Right</button></div><br/><div role="group" class="mt-1 btn-group"><button class="btn btn-secondary">Left</button><button class="btn btn-secondary">Middle</button><button class="btn btn-secondary">Right</button></div><br/><div role="group" class="mt-1 btn-group-sm btn-group"><button class="btn btn-secondary">Left</button><button class="btn btn-secondary">Middle</button><button class="btn btn-secondary">Right</button></div></div></div><pre><code class="language-jsx">&lt;ButtonGroup size=&quot;lg&quot;&gt;
   &lt;Button&gt;Left&lt;/Button&gt;
   &lt;Button&gt;Middle&lt;/Button&gt;

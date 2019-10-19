@@ -12,45 +12,33 @@
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
         </head>
         <body>
-          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button aria-label="Toggle navigation" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" aria-expanded="false"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">GitHub</a></li></ul></div></div></nav><div class="content container"><div class="row"><main class="docSearch-navigation col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h1 class="h5">Components</h1><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link active" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/spinners/">Spinners</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/toasts/">Toasts</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></main><aside class="docSearch-content col-md-9 order-md-1"><div><h2 class="h3">Dropdowns</h2><p>The <code>Dropdown</code> component is used to pass the <code>isOpen</code> &amp; <code>toggle</code> props via context to the following components: <code>DropdownToggle</code>, <code>DropdownMenu</code>. The <code>DropdownToggle</code> uses the <code>Button</code> component internally, meaning it also accepts all the props the <a href="/components/buttons/">Button component</a> accepts.</p><div class="docs-example"><div class="dropdown"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropdown</button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><h6 tabindex="-1" class="dropdown-header">Header</h6><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Some Action</button><button type="button" disabled="" tabindex="-1" class="disabled dropdown-item">Action (disabled)</button><div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Foo Action</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Bar Action</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Quo Action</button></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+          <div id="app"><div class="wrapper" data-reactroot=""><nav class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button aria-label="Toggle navigation" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" aria-expanded="false"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">GitHub</a></li></ul></div></div></nav><div class="content container"><div class="row"><main class="docSearch-navigation col-md-3 order-md-2"><div class="docs-sidebar mb-3"><h1 class="h5">Components</h1><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link active" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/spinners/">Spinners</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/toasts/">Toasts</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></main><aside class="docSearch-content col-md-9 order-md-1"><div><h2 class="h3">Dropdowns</h2><p>The <code>Dropdown</code> component is used to pass the <code>isOpen</code> &amp; <code>toggle</code> props via context to the following components: <code>DropdownToggle</code>, <code>DropdownMenu</code>. The <code>DropdownToggle</code> uses the <code>Button</code> component internally, meaning it also accepts all the props the <a href="/components/buttons/">Button component</a> accepts.</p><div class="docs-example"><div class="dropdown"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropdown</button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><h6 tabindex="-1" class="dropdown-header">Header</h6><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Some Action</button><button type="button" disabled="" tabindex="-1" class="disabled dropdown-item">Action (disabled)</button><div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Foo Action</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Bar Action</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Quo Action</button></div></div></div><pre><code class="language-jsx">import React, { useState } from &#x27;react&#x27;;
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from &#x27;reactstrap&#x27;;
 
-export default class Example extends React.Component {
-  constructor(props) {
-    super(props);
+const Example = (props) =&gt; {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: false
-    };
-  }
+  const toggle = () =&gt; setDropdownOpen(prevState =&gt; !prevState);
 
-  toggle() {
-    this.setState(prevState =&gt; ({
-      dropdownOpen: !prevState.dropdownOpen
-    }));
-  }
-
-  render() {
-    return (
-      &lt;Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}&gt;
-        &lt;DropdownToggle caret&gt;
-          Dropdown
+  return (
+    &lt;Dropdown isOpen={dropdownOpen} toggle={toggle}&gt;
+      &lt;DropdownToggle caret&gt;
+        Dropdown
         &lt;/DropdownToggle&gt;
-        &lt;DropdownMenu&gt;
-          &lt;DropdownItem header&gt;Header&lt;/DropdownItem&gt;
-          &lt;DropdownItem&gt;Some Action&lt;/DropdownItem&gt;
-          &lt;DropdownItem disabled&gt;Action (disabled)&lt;/DropdownItem&gt;
-          &lt;DropdownItem divider /&gt;
-          &lt;DropdownItem&gt;Foo Action&lt;/DropdownItem&gt;
-          &lt;DropdownItem&gt;Bar Action&lt;/DropdownItem&gt;
-          &lt;DropdownItem&gt;Quo Action&lt;/DropdownItem&gt;
-        &lt;/DropdownMenu&gt;
-      &lt;/Dropdown&gt;
-    );
-  }
+      &lt;DropdownMenu&gt;
+        &lt;DropdownItem header&gt;Header&lt;/DropdownItem&gt;
+        &lt;DropdownItem&gt;Some Action&lt;/DropdownItem&gt;
+        &lt;DropdownItem disabled&gt;Action (disabled)&lt;/DropdownItem&gt;
+        &lt;DropdownItem divider /&gt;
+        &lt;DropdownItem&gt;Foo Action&lt;/DropdownItem&gt;
+        &lt;DropdownItem&gt;Bar Action&lt;/DropdownItem&gt;
+        &lt;DropdownItem&gt;Quo Action&lt;/DropdownItem&gt;
+      &lt;/DropdownMenu&gt;
+    &lt;/Dropdown&gt;
+  );
 }
-</code></pre><h4>Properties</h4><pre><code class="language-jsx">Dropdown.propTypes = {
+
+export default Example;</code></pre><h4>Properties</h4><pre><code class="language-jsx">Dropdown.propTypes = {
   a11y: PropTypes.bool, // defaults to true. Set to false to enable more bootstrap like tabbing behavior
   disabled: PropTypes.bool,
   direction: PropTypes.oneOf([&#x27;up&#x27;, &#x27;down&#x27;, &#x27;left&#x27;, &#x27;right&#x27;]),
@@ -141,47 +129,35 @@ DropdownItem.propTypes = {
   &lt;DropdownMenu&gt;
     ...
   &lt;/DropdownMenu&gt;
-&lt;/Dropdown&gt;</code></pre><h4>Custom Dropdown</h4><div class="docs-example"><div class="dropdown"><span data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" class="">Custom Dropdown Content</span><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><div>Custom dropdown item</div><div>Custom dropdown item</div><div>Custom dropdown item</div><div>Custom dropdown item</div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+&lt;/Dropdown&gt;</code></pre><h4>Custom Dropdown</h4><div class="docs-example"><div class="dropdown"><span data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" class="">Custom Dropdown Content</span><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><div>Custom dropdown item</div><div>Custom dropdown item</div><div>Custom dropdown item</div><div>Custom dropdown item</div></div></div></div><pre><code class="language-jsx">import React, { useState } from &#x27;react&#x27;;
 import { Dropdown, DropdownMenu, DropdownToggle } from &#x27;reactstrap&#x27;;
 
-export default class Example extends React.Component {
-  constructor(props) {
-    super(props);
+const Example = () =&gt; {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      dropdownOpen: false
-    };
-  }
+  const toggle = () =&gt; setDropdownOpen(prevState =&gt; !prevState);
 
-  toggle() {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    });
-  }
-
-  render() {
-    return (
-      &lt;Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}&gt;
-        &lt;DropdownToggle
-          tag=&quot;span&quot;
-          onClick={this.toggle}
-          data-toggle=&quot;dropdown&quot;
-          aria-expanded={this.state.dropdownOpen}
-        &gt;
-          Custom Dropdown Content
-        &lt;/DropdownToggle&gt;
-        &lt;DropdownMenu&gt;
-          &lt;div onClick={this.toggle}&gt;Custom dropdown item&lt;/div&gt;
-          &lt;div onClick={this.toggle}&gt;Custom dropdown item&lt;/div&gt;
-          &lt;div onClick={this.toggle}&gt;Custom dropdown item&lt;/div&gt;
-          &lt;div onClick={this.toggle}&gt;Custom dropdown item&lt;/div&gt;
-        &lt;/DropdownMenu&gt;
-      &lt;/Dropdown&gt;
-    );
-  }
+  return (
+    &lt;Dropdown isOpen={dropdownOpen} toggle={toggle}&gt;
+      &lt;DropdownToggle
+        tag=&quot;span&quot;
+        onClick={toggle}
+        data-toggle=&quot;dropdown&quot;
+        aria-expanded={dropdownOpen}
+      &gt;
+        Custom Dropdown Content
+      &lt;/DropdownToggle&gt;
+      &lt;DropdownMenu&gt;
+        &lt;div onClick={toggle}&gt;Custom dropdown item&lt;/div&gt;
+        &lt;div onClick={toggle}&gt;Custom dropdown item&lt;/div&gt;
+        &lt;div onClick={toggle}&gt;Custom dropdown item&lt;/div&gt;
+        &lt;div onClick={toggle}&gt;Custom dropdown item&lt;/div&gt;
+      &lt;/DropdownMenu&gt;
+    &lt;/Dropdown&gt;
+  );
 }
-</code></pre><h3 id="Uncontrolled-Dropdown">Uncontrolled Dropdown</h3><p>For the most basic use-case an uncontrolled component can provide the functionality wanted without the need to manage/control the state of the component. <code>UncontrolledDropdown</code> does not require <code>isOpen</code> nor <code>toggle</code> props to work. For the <code>ButtonDropdown</code> flavor, an uncontrolled component have been made as well; <code>UncontrolledButtonDropdown</code>.</p><div class="docs-example"><div class="dropdown"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropdown</button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><h6 tabindex="-1" class="dropdown-header">Header</h6><button type="button" disabled="" tabindex="-1" class="disabled dropdown-item">Action</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Action</button><div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Action</button></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+
+export default Example;</code></pre><h3 id="Uncontrolled-Dropdown">Uncontrolled Dropdown</h3><p>For the most basic use-case an uncontrolled component can provide the functionality wanted without the need to manage/control the state of the component. <code>UncontrolledDropdown</code> does not require <code>isOpen</code> nor <code>toggle</code> props to work. For the <code>ButtonDropdown</code> flavor, an uncontrolled component have been made as well; <code>UncontrolledButtonDropdown</code>.</p><div class="docs-example"><div class="dropdown"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropdown</button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><h6 tabindex="-1" class="dropdown-header">Header</h6><button type="button" disabled="" tabindex="-1" class="disabled dropdown-item">Action</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Action</button><div tabindex="-1" class="dropdown-divider"></div><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Another Action</button></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
 import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from &#x27;reactstrap&#x27;;
 
 export default function Example () {

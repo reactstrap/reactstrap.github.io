@@ -16,14 +16,14 @@
 import { Collapse, Button, CardBody, Card } from &#x27;reactstrap&#x27;;
 
 const Example = (props) =&gt; {
-  const [collapse, setCollapse] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () =&gt; setCollapse(!collapse);
+  const toggle = () =&gt; setIsOpen(!isOpen);
 
   return (
     &lt;div&gt;
       &lt;Button color=&quot;primary&quot; onClick={toggle} style={{ marginBottom: &#x27;1rem&#x27; }}&gt;Toggle&lt;/Button&gt;
-      &lt;Collapse isOpen={collapse}&gt;
+      &lt;Collapse isOpen={isOpen}&gt;
         &lt;Card&gt;
           &lt;CardBody&gt;
           Anim pariatur cliche reprehenderit,

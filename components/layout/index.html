@@ -57,12 +57,17 @@ const Example = (props) =&gt; {
 
 export default Example;
 </code></pre><h4>Container Properties</h4><pre><code class="language-jsx">Container.propTypes = {
-  fluid:  PropTypes.bool
-  // applies .container-fluid class
+  fluid: PropTypes.oneOfType([PropTypes.bool, PropTypes.string])
+  // applies .container-fluid class if bool or .container-{breakpoint} if string
 }</code></pre><h4>Row Properties</h4><pre><code class="language-jsx">Row.propTypes = {
   noGutters: PropTypes.bool,
   // see https://reactstrap.github.io/components/form Form Grid with Form Row
-  form: PropTypes.bool
+  form: PropTypes.bool,
+  xs: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  sm: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  md: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  lg: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  xl: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 }</code></pre><h4>Col Properties</h4><pre><code class="language-jsx">const stringOrNumberProp = PropTypes.oneOfType([PropTypes.number, PropTypes.string]);
 const columnProps = PropTypes.oneOfType([
   PropTypes.string,
@@ -88,7 +93,65 @@ Col.propTypes = {
   // override the predefined width (the ones above) with your own custom widths.
   // see https://github.com/reactstrap/reactstrap/issues/297#issuecomment-273556116
   widths: PropTypes.array,
-}</code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
+}</code></pre><h4>Container</h4><div class="docs-example"><div class="themed-container container">.container</div><div class="themed-container container-sm">.container-sm</div><div class="themed-container container-md">.container-md</div><div class="themed-container container-lg">.container-lg</div><div class="themed-container container-xl">.container-xl</div><div class="themed-container container-fluid">.container-fluid</div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Container } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;&gt;
+      &lt;Container className=&quot;themed-container&quot;&gt;.container&lt;/Container&gt;
+      &lt;Container className=&quot;themed-container&quot; fluid=&quot;sm&quot;&gt;.container-sm&lt;/Container&gt;
+      &lt;Container className=&quot;themed-container&quot; fluid=&quot;md&quot;&gt;.container-md&lt;/Container&gt;
+      &lt;Container className=&quot;themed-container&quot; fluid=&quot;lg&quot;&gt;.container-lg&lt;/Container&gt;
+      &lt;Container className=&quot;themed-container&quot; fluid=&quot;xl&quot;&gt;.container-xl&lt;/Container&gt;
+      &lt;Container className=&quot;themed-container&quot; fluid={true}&gt;.container-fluid&lt;/Container&gt;
+    &lt;/&gt;
+  );
+}
+
+export default Example;
+</code></pre><h4>Row Columns</h4><div class="docs-example"><div class="container"><div class="row row-cols-2"><div class="col">Column</div><div class="col">Column</div><div class="col">Column</div><div class="col">Column</div></div><div class="row row-cols-3"><div class="col">Column</div><div class="col">Column</div><div class="col">Column</div><div class="col">Column</div></div><div class="row row-cols-4"><div class="col">Column</div><div class="col">Column</div><div class="col">Column</div><div class="col">Column</div></div><div class="row row-cols-4"><div class="col">Column</div><div class="col">Column</div><div class="col-6">Column</div><div class="col">Column</div></div><div class="row row-cols-1 row-cols-sm-2 row-cols-md-4"><div class="col">Column</div><div class="col">Column</div><div class="col">Column</div><div class="col">Column</div></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Container, Row, Col } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;Container&gt;
+      &lt;Row xs=&quot;2&quot;&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+      &lt;/Row&gt;
+      &lt;Row xs=&quot;3&quot;&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+      &lt;/Row&gt;
+      &lt;Row xs=&quot;4&quot;&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+      &lt;/Row&gt;
+      &lt;Row xs=&quot;4&quot;&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col xs=&quot;6&quot;&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+      &lt;/Row&gt;
+      &lt;Row xs=&quot;1&quot; sm=&quot;2&quot; md=&quot;4&quot;&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+        &lt;Col&gt;Column&lt;/Col&gt;
+      &lt;/Row&gt;
+    &lt;/Container&gt;
+  );
+}
+
+export default Example;
+</code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p></div></div></div></div></div></div>
           <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

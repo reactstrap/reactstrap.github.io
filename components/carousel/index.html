@@ -119,6 +119,8 @@ export default Example;
   // controls whether the slide animation on the Carousel works or not
   slide: PropTypes.bool,
   cssModule: PropTypes.object,
+  // controls whether the touch gestures on the Carousel works or not (default: true)
+  enableTouch: PropTypes.bool,
 };</code></pre><h3 id="CarouselItem-Properties">CarouselItem Properties</h3><pre><code class="language-jsx">CarouselItem.propTypes = {
   ...Transition.propTypes,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),

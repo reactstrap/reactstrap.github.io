@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Button Group</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 16+"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/main.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><div class="bg-dark fixed-top d-flex flex-column flex-md-row justify-content-center align-items-center text-center" style="width:100%;min-height:4em"><span class="text-light mr-3 h4">Black Lives Matter.</span><a class="h4 banner-link" target="_blank" rel="noreferrer" href="https://support.eji.org/give/153413/#!/donation/checkout">Support the Equal Justice Initiative.</a></div><nav style="margin-top:100px" class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button aria-label="Toggle navigation" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">GitHub</a></li><li class="nav-item"><a class="font-weight-bold nav-link" href="/premium-themes/">Premium Themes</a></li></ul></div></div></nav><div class="content container"><div class="row"><main class="docSearch-navigation col-md-3 order-md-2"><div class="docs-sidebar mb-3"><div class="carbon-adds-wrapper"></div><h1 class="h5">Components</h1><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link active" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/list/">List</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/spinners/">Spinners</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/toasts/">Toasts</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></main><aside class="docSearch-content col-md-9 order-md-1"><div><h2 class="h3">Button Group</h2><div class="docs-example"><div><div role="group" class="btn-group"><button class="btn btn-secondary">Left</button><button class="btn btn-secondary">Middle</button><button class="btn btn-secondary">Right</button></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Button, ButtonGroup } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;ButtonGroup&gt;
+      &lt;Button&gt;Left&lt;/Button&gt;
+      &lt;Button&gt;Middle&lt;/Button&gt;
+      &lt;Button&gt;Right&lt;/Button&gt;
+    &lt;/ButtonGroup&gt;
+  );
+}
+
+export default Example;
+</code></pre><h4>Properties</h4><pre><code class="language-jsx">ButtonGroup.propTypes = {
+  ariaLabel: PropTypes.string,
+  className: PropTypes.string,
+  role: PropTypes.string,
+  size: PropTypes.string,
+  vertical: PropTypes.bool
+};</code></pre><h3 id="Button-Toolbar">Button Toolbar</h3><div class="docs-example"><div role="toolbar" class="btn-toolbar"><div role="group" class="btn-group"><button class="btn btn-secondary">1</button><button class="btn btn-secondary">2</button><button class="btn btn-secondary">3</button><button class="btn btn-secondary">4</button></div><div role="group" class="btn-group"><button class="btn btn-secondary">5</button><button class="btn btn-secondary">6</button><button class="btn btn-secondary">7</button></div><div role="group" class="btn-group"><button class="btn btn-secondary">8</button></div></div></div><pre><code class="language-jsx">import React from &#x27;react&#x27;;
+import { Button, ButtonGroup, ButtonToolbar } from &#x27;reactstrap&#x27;;
+
+const Example = (props) =&gt; {
+  return (
+    &lt;ButtonToolbar&gt;
+      &lt;ButtonGroup&gt;
+        &lt;Button&gt;1&lt;/Button&gt;
+        &lt;Button&gt;2&lt;/Button&gt;
+        &lt;Button&gt;3&lt;/Button&gt;
+        &lt;Button&gt;4&lt;/Button&gt;
+      &lt;/ButtonGroup&gt;
+      &lt;ButtonGroup&gt;
+        &lt;Button&gt;5&lt;/Button&gt;
+        &lt;Button&gt;6&lt;/Button&gt;
+        &lt;Button&gt;7&lt;/Button&gt;
+      &lt;/ButtonGroup&gt;
+      &lt;ButtonGroup&gt;
+        &lt;Button&gt;8&lt;/Button&gt;
+      &lt;/ButtonGroup&gt;
+    &lt;/ButtonToolbar&gt;
+  );
+}
+
+export default Example;
+</code></pre><h3 id="Sizing">Sizing</h3><div class="docs-example"><div><div role="group" class="btn-group-lg btn-group"><button class="btn btn-secondary">Left</button><button class="btn btn-secondary">Middle</button><button class="btn btn-secondary">Right</button></div><br/><div role="group" class="mt-1 btn-group"><button class="btn btn-secondary">Left</button><button class="btn btn-secondary">Middle</button><button class="btn btn-secondary">Right</button></div><br/><div role="group" class="mt-1 btn-group-sm btn-group"><button class="btn btn-secondary">Left</button><button class="btn btn-secondary">Middle</button><button class="btn btn-secondary">Right</button></div></div></div><pre><code class="language-jsx">&lt;ButtonGroup size=&quot;lg&quot;&gt;
+  &lt;Button&gt;Left&lt;/Button&gt;
+  &lt;Button&gt;Middle&lt;/Button&gt;
+  &lt;Button&gt;Right&lt;/Button&gt;
+&lt;/ButtonGroup&gt;
+
+&lt;ButtonGroup&gt;
+  &lt;Button&gt;Left&lt;/Button&gt;
+  &lt;Button&gt;Middle&lt;/Button&gt;
+  &lt;Button&gt;Right&lt;/Button&gt;
+&lt;/ButtonGroup&gt;
+
+&lt;ButtonGroup size=&quot;sm&quot;&gt;
+  &lt;Button&gt;Left&lt;/Button&gt;
+  &lt;Button&gt;Middle&lt;/Button&gt;
+  &lt;Button&gt;Right&lt;/Button&gt;
+&lt;/ButtonGroup&gt;</code></pre><h3 id="Nesting">Nesting</h3><div class="docs-example"><div><div role="group" class="btn-group"><button class="btn btn-secondary">1</button><button class="btn btn-secondary">2</button><div class="btn-group"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropdown</button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Dropdown Link</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Dropdown Link</button></div></div></div></div></div><pre><code class="language-jsx">&lt;ButtonGroup&gt;
+  &lt;Button&gt;1&lt;/Button&gt;
+  &lt;Button&gt;2&lt;/Button&gt;
+  &lt;ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}&gt;
+    &lt;DropdownToggle caret&gt;
+      Dropdown
+    &lt;/DropdownToggle&gt;
+    &lt;DropdownMenu&gt;
+      &lt;DropdownItem&gt;Dropdown Link&lt;/DropdownItem&gt;
+      &lt;DropdownItem&gt;Dropdown Link&lt;/DropdownItem&gt;
+    &lt;/DropdownMenu&gt;
+  &lt;/ButtonDropdown&gt;
+&lt;/ButtonGroup&gt;</code></pre><h3 id="Vertical-variation">Vertical variation</h3><div class="docs-example"><div role="group" class="btn-group-vertical"><button class="btn btn-secondary">1</button><button class="btn btn-secondary">2</button><div class="btn-group"><button type="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-secondary">Dropdown</button><div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Dropdown Link</button><button type="button" tabindex="0" role="menuitem" class="dropdown-item">Dropdown Link</button></div></div></div></div><pre><code class="language-jsx">&lt;ButtonGroup vertical&gt;
+  &lt;Button&gt;1&lt;/Button&gt;
+  &lt;Button&gt;2&lt;/Button&gt;
+  &lt;ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}&gt;
+    &lt;DropdownToggle caret&gt;
+      Dropdown
+    &lt;/DropdownToggle&gt;
+    &lt;DropdownMenu&gt;
+      &lt;DropdownItem&gt;Dropdown Link&lt;/DropdownItem&gt;
+      &lt;DropdownItem&gt;Dropdown Link&lt;/DropdownItem&gt;
+    &lt;/DropdownMenu&gt;
+  &lt;/ButtonDropdown&gt;
+&lt;/ButtonGroup&gt;</code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p><a href="https://www.netlify.com"><img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deploys by Netlify"/></a></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>

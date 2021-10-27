@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <title data-react-helmet="true">reactstrap - Modals</title>
+          <meta data-react-helmet="true" name="description" content="reactstrap - easy to use React Bootstrap 4 components compatible with React 16+"/><meta data-react-helmet="true" property="og:type" content="article"/>
+          <link rel=icon href=/assets/favicon.ico>
+          <link rel="stylesheet" href="/assets/main.css"/>
+          <link rel="stylesheet" href="/assets/docs.css"/>
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        </head>
+        <body>
+          <div id="app"><div class="wrapper" data-reactroot=""><div class="bg-dark fixed-top d-flex flex-column flex-md-row justify-content-center align-items-center text-center" style="width:100%;min-height:4em"><span class="text-light mr-3 h4">Black Lives Matter.</span><a class="h4 banner-link" target="_blank" rel="noreferrer" href="https://support.eji.org/give/153413/#!/donation/checkout">Support the Equal Justice Initiative.</a></div><nav style="margin-top:100px" class="header navbar navbar-expand-md navbar-light bg-faded"><div class="container"><a class="mr-auto navbar-brand" href="/">reactstrap</a><button aria-label="Toggle navigation" type="button" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse"><ul class="ml-sm-auto navbar-nav"><li class="nav-item"><form class=""><input type="text" id="algolia-doc-search" placeholder="Search docs" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellcheck="false" class="form-control"/></form></li><li class="nav-item"><a class="nav-link active" href="/components/">Components</a></li><li class="nav-item"><a class="nav-link" href="/utilities/">Utilities</a></li><li class="nav-item"><a href="https://github.com/reactstrap/reactstrap" class="nav-link">GitHub</a></li><li class="nav-item"><a class="font-weight-bold nav-link" href="/premium-themes/">Premium Themes</a></li></ul></div></div></nav><div class="content container"><div class="row"><main class="docSearch-navigation col-md-3 order-md-2"><div class="docs-sidebar mb-3"><div class="carbon-adds-wrapper"></div><h1 class="h5">Components</h1><ul class="flex-column nav"><li class="nav-item"><a class="nav-link" href="/components/alerts/">Alerts</a></li><li class="nav-item"><a class="nav-link" href="/components/badge/">Badge</a></li><li class="nav-item"><a class="nav-link" href="/components/breadcrumbs/">Breadcrumbs</a></li><li class="nav-item"><a class="nav-link" href="/components/button-dropdown/">Button Dropdown</a></li><li class="nav-item"><a class="nav-link" href="/components/button-group/">Button Group</a></li><li class="nav-item"><a class="nav-link" href="/components/buttons/">Buttons</a></li><li class="nav-item"><a class="nav-link" href="/components/card/">Card</a></li><li class="nav-item"><a class="nav-link" href="/components/carousel/">Carousel</a></li><li class="nav-item"><a class="nav-link" href="/components/collapse/">Collapse</a></li><li class="nav-item"><a class="nav-link" href="/components/dropdowns/">Dropdowns</a></li><li class="nav-item"><a class="nav-link" href="/components/fade/">Fade</a></li><li class="nav-item"><a class="nav-link" href="/components/form/">Form</a></li><li class="nav-item"><a class="nav-link" href="/components/input-group/">Input Group</a></li><li class="nav-item"><a class="nav-link" href="/components/jumbotron/">Jumbotron</a></li><li class="nav-item"><a class="nav-link" href="/components/layout/">Layout</a></li><li class="nav-item"><a class="nav-link" href="/components/list/">List</a></li><li class="nav-item"><a class="nav-link" href="/components/listgroup/">List Group</a></li><li class="nav-item"><a class="nav-link" href="/components/media/">Media</a></li><li class="nav-item"><a class="nav-link active" href="/components/modals/">Modals</a></li><li class="nav-item"><a class="nav-link" href="/components/navbar/">Navbar</a></li><li class="nav-item"><a class="nav-link" href="/components/navs/">Navs</a></li><li class="nav-item"><a class="nav-link" href="/components/pagination/">Pagination</a></li><li class="nav-item"><a class="nav-link" href="/components/popovers/">Popovers</a></li><li class="nav-item"><a class="nav-link" href="/components/progress/">Progress</a></li><li class="nav-item"><a class="nav-link" href="/components/spinners/">Spinners</a></li><li class="nav-item"><a class="nav-link" href="/components/tables/">Tables</a></li><li class="nav-item"><a class="nav-link" href="/components/tabs/">Tabs</a></li><li class="nav-item"><a class="nav-link" href="/components/toasts/">Toasts</a></li><li class="nav-item"><a class="nav-link" href="/components/tooltips/">Tooltips</a></li></ul></div></main><aside class="docSearch-content col-md-9 order-md-1"><div><h2 class="h3">Modals</h2><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal</button></div></div><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with custom className</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React, { useState } from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+const ModalExample = (props) =&gt; {
+  const {
+    buttonLabel,
+    className
+  } = props;
+
+  const [modal, setModal] = useState(false);
+
+  const toggle = () =&gt; setModal(!modal);
+
+  return (
+    &lt;div&gt;
+      &lt;Button color=&quot;danger&quot; onClick={toggle}&gt;{buttonLabel}&lt;/Button&gt;
+      &lt;Modal isOpen={modal} toggle={toggle} className={className}&gt;
+        &lt;ModalHeader toggle={toggle}&gt;Modal title&lt;/ModalHeader&gt;
+        &lt;ModalBody&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/ModalBody&gt;
+        &lt;ModalFooter&gt;
+          &lt;Button color=&quot;primary&quot; onClick={toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+          &lt;Button color=&quot;secondary&quot; onClick={toggle}&gt;Cancel&lt;/Button&gt;
+        &lt;/ModalFooter&gt;
+      &lt;/Modal&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default ModalExample;
+</code></pre><h4>Properties</h4><pre><code class="language-jsx">Modal.propTypes = {
+  // boolean to control the state of the popover
+  isOpen:  PropTypes.bool,
+  autoFocus: PropTypes.bool,
+  // if modal should be centered vertically in viewport
+  centered: PropTypes.bool,
+  // corresponds to bootstrap&#x27;s modal sizes, ie. &#x27;lg&#x27; or &#x27;sm&#x27;
+  size: PropTypes.string,
+  // callback for toggling isOpen in the controlling component
+  toggle:  PropTypes.func,
+  role: PropTypes.string, // defaults to &quot;dialog&quot;
+  // used to reference the ID of the title element in the modal
+  labelledBy: PropTypes.string,
+  keyboard: PropTypes.bool,
+  // control backdrop, see http://v4-alpha.getbootstrap.com/components/modal/#options
+  backdrop: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.oneOf([&#x27;static&#x27;])
+  ]),
+  // if body of modal should be scrollable when content is long
+  scrollable: PropTypes.bool,
+  // allows for a node/component to exist next to the modal (outside of it). Useful for external close buttons
+  external: PropTypes.node,
+  // called on componentDidMount
+  onEnter: PropTypes.func,
+  // called on componentWillUnmount
+  onExit: PropTypes.func,
+  // called when done transitioning in
+  onOpened: PropTypes.func,
+  // called when done transitioning out
+  onClosed: PropTypes.func,
+  className: PropTypes.string,
+  wrapClassName: PropTypes.string,
+  modalClassName: PropTypes.string,
+  backdropClassName: PropTypes.string,
+  contentClassName: PropTypes.string,
+  // boolean to control whether the fade transition occurs (default: true)
+  fade: PropTypes.bool,
+  cssModule: PropTypes.object,
+  // zIndex defaults to 1000.
+  zIndex: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
+  // backdropTransition - controls backdrop transition
+  // timeout is 150ms by default to match bootstrap
+  // see [Fade](/components/fade/) for more details
+  backdropTransition: PropTypes.shape(Fade.propTypes),
+  // modalTransition - controls modal transition
+  // timeout is 300ms by default to match bootstrap
+  // see [Fade](/components/fade/) for more details
+  modalTransition: PropTypes.shape(Fade.propTypes),
+  innerRef: PropTypes.object,
+  // if modal should be destructed/removed from DOM after closing
+  unmountOnClose: PropTypes.bool, // defaults to true
+  // if the element which triggered the modal to open should focused after the modal closes (see example somewhere below)
+  returnFocusAfterClose: PropTypes.bool, // defaults to true
+  // container to append the modal to
+  container: PropTypes.oneOfType([PropTypes.string, PropTypes.func, DOMElement]),
+  trapFocus: PropTypes.bool // Traps focus within modal
+}</code></pre><h4>Backdrop</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><form class="form-inline"><div class="form-group"><label for="backdrop" class="">Backdrop value</label> <select name="backdrop" id="backdrop" class="form-control"><option value="true">true</option><option value="false">false</option><option value="static">&quot;static&quot;</option></select></div><div class="mx-2 form-check"><label class="form-check-label"><input type="checkbox" checked="" class="form-check-input"/> Keyboard</label></div> <button type="button" class="btn btn-danger">Launch Modal</button></form></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React, { useState } from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } from &#x27;reactstrap&#x27;;
+
+const ModalExample = (props) =&gt; {
+  const {
+    buttonLabel,
+    className
+  } = props;
+  const [modal, setModal] = useState(false);
+  const [backdrop, setBackdrop] = useState(true);
+  const [keyboard, setKeyboard] = useState(true);
+
+  const toggle = () =&gt; setModal(!modal);
+
+  const changeBackdrop = e =&gt; {
+    let value = e.target.value;
+    if (value !== &#x27;static&#x27;) {
+      value = JSON.parse(value);
+    }
+    setBackdrop(value);
+  }
+
+  const changeKeyboard = e =&gt; {
+    setKeyboard(e.currentTarget.checked);
+  }
+
+  return (
+    &lt;div&gt;
+      &lt;Form inline onSubmit={(e) =&gt; e.preventDefault()}&gt;
+        &lt;FormGroup&gt;
+          &lt;Label for=&quot;backdrop&quot;&gt;Backdrop value&lt;/Label&gt;{&#x27; &#x27;}
+          &lt;Input type=&quot;select&quot; name=&quot;backdrop&quot; id=&quot;backdrop&quot; onChange={changeBackdrop}&gt;
+            &lt;option value=&quot;true&quot;&gt;true&lt;/option&gt;
+            &lt;option value=&quot;false&quot;&gt;false&lt;/option&gt;
+            &lt;option value=&quot;static&quot;&gt;&quot;static&quot;&lt;/option&gt;
+          &lt;/Input&gt;
+        &lt;/FormGroup&gt;
+        &lt;FormGroup className=&quot;mx-2&quot; check&gt;
+          &lt;Label check&gt;
+            &lt;Input type=&quot;checkbox&quot; checked={keyboard} onChange={changeKeyboard} /&gt; Keyboard
+          &lt;/Label&gt;
+        &lt;/FormGroup&gt;
+        {&#x27; &#x27;}
+        &lt;Button color=&quot;danger&quot; onClick={toggle}&gt;{buttonLabel}&lt;/Button&gt;
+      &lt;/Form&gt;
+      &lt;Modal isOpen={modal} toggle={toggle} className={className} backdrop={backdrop} keyboard={keyboard}&gt;
+        &lt;ModalHeader toggle={toggle}&gt;Modal title&lt;/ModalHeader&gt;
+        &lt;ModalBody&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/ModalBody&gt;
+        &lt;ModalFooter&gt;
+          &lt;Button color=&quot;primary&quot; onClick={toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+          &lt;Button color=&quot;secondary&quot; onClick={toggle}&gt;Cancel&lt;/Button&gt;
+        &lt;/ModalFooter&gt;
+      &lt;/Modal&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default ModalExample;
+</code></pre><h4>Nested Modals</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal w/ Nested Example</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React, { useState } from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+const ModalExample = (props) =&gt; {
+  const {
+    buttonLabel,
+    className
+  } = props;
+
+  const [modal, setModal] = useState(false);
+  const [nestedModal, setNestedModal] = useState(false);
+  const [closeAll, setCloseAll] = useState(false);
+
+  const toggle = () =&gt; setModal(!modal);
+  const toggleNested = () =&gt; {
+    setNestedModal(!nestedModal);
+    setCloseAll(false);
+  }
+  const toggleAll = () =&gt; {
+    setNestedModal(!nestedModal);
+    setCloseAll(true);
+  }
+
+  return (
+    &lt;div&gt;
+      &lt;Button color=&quot;danger&quot; onClick={toggle}&gt;{buttonLabel}&lt;/Button&gt;
+      &lt;Modal isOpen={modal} toggle={toggle} className={className}&gt;
+        &lt;ModalHeader toggle={toggle}&gt;Modal title&lt;/ModalHeader&gt;
+        &lt;ModalBody&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          &lt;br /&gt;
+          &lt;Button color=&quot;success&quot; onClick={toggleNested}&gt;Show Nested Modal&lt;/Button&gt;
+          &lt;Modal isOpen={nestedModal} toggle={toggleNested} onClosed={closeAll ? toggle : undefined}&gt;
+            &lt;ModalHeader&gt;Nested Modal title&lt;/ModalHeader&gt;
+            &lt;ModalBody&gt;Stuff and things&lt;/ModalBody&gt;
+            &lt;ModalFooter&gt;
+              &lt;Button color=&quot;primary&quot; onClick={toggleNested}&gt;Done&lt;/Button&gt;{&#x27; &#x27;}
+              &lt;Button color=&quot;secondary&quot; onClick={toggleAll}&gt;All Done&lt;/Button&gt;
+            &lt;/ModalFooter&gt;
+          &lt;/Modal&gt;
+        &lt;/ModalBody&gt;
+        &lt;ModalFooter&gt;
+          &lt;Button color=&quot;primary&quot; onClick={toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+          &lt;Button color=&quot;secondary&quot; onClick={toggle}&gt;Cancel&lt;/Button&gt;
+        &lt;/ModalFooter&gt;
+      &lt;/Modal&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default ModalExample;
+</code></pre><h4>Modals with Custom Transition Timeouts</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with Custom Transition Timeouts Example</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React, { useState } from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+const ModalExample = (props) =&gt; {
+  const {
+    buttonLabel,
+    className
+  } = props;
+
+  const [modal, setModal] = useState(false);
+
+  const toggle = () =&gt; setModal(!modal);
+
+  return (
+    &lt;div&gt;
+      &lt;Button color=&quot;danger&quot; onClick={toggle}&gt;{buttonLabel}&lt;/Button&gt;
+      &lt;Modal isOpen={modal} modalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 1300 }}
+        toggle={toggle} className={className}&gt;
+        &lt;ModalHeader toggle={toggle}&gt;Modal title&lt;/ModalHeader&gt;
+        &lt;ModalBody&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/ModalBody&gt;
+        &lt;ModalFooter&gt;
+          &lt;Button color=&quot;primary&quot; onClick={toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+          &lt;Button color=&quot;secondary&quot; onClick={toggle}&gt;Cancel&lt;/Button&gt;
+        &lt;/ModalFooter&gt;
+      &lt;/Modal&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default ModalExample;
+</code></pre><h4>Modals without Fade Effect</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal without Fade Effect Example</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React, { useState } from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+const ModalExample = (props) =&gt; {
+  const {
+    buttonLabel,
+    className
+  } = props;
+
+  const [modal, setModal] = useState(false);
+
+  const toggle = () =&gt; setModal(!modal);
+
+  return (
+    &lt;div&gt;
+      &lt;Button color=&quot;danger&quot; onClick={toggle}&gt;{buttonLabel}&lt;/Button&gt;
+      &lt;Modal isOpen={modal} fade={false} toggle={toggle} className={className}&gt;
+        &lt;ModalHeader toggle={toggle}&gt;Modal title&lt;/ModalHeader&gt;
+        &lt;ModalBody&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/ModalBody&gt;
+        &lt;ModalFooter&gt;
+          &lt;Button color=&quot;primary&quot; onClick={toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+          &lt;Button color=&quot;secondary&quot; onClick={toggle}&gt;Cancel&lt;/Button&gt;
+        &lt;/ModalFooter&gt;
+      &lt;/Modal&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default ModalExample;
+</code></pre><h4>Modals with external button</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with external close button</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React, { useState } from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+const ModalExample = (props) =&gt; {
+  const {
+    buttonLabel,
+    className
+  } = props;
+
+  const [modal, setModal] = useState(false);
+
+  const toggle = () =&gt; setModal(!modal);
+
+  const externalCloseBtn = &lt;button className=&quot;close&quot; style={{ position: &#x27;absolute&#x27;, top: &#x27;15px&#x27;, right: &#x27;15px&#x27; }} onClick={toggle}&gt;&amp;times;&lt;/button&gt;;
+  return (
+    &lt;div&gt;
+      &lt;Button color=&quot;danger&quot; onClick={toggle}&gt;{buttonLabel}&lt;/Button&gt;
+      &lt;Modal isOpen={modal} toggle={toggle} className={className} external={externalCloseBtn}&gt;
+        &lt;ModalHeader&gt;Modal title&lt;/ModalHeader&gt;
+        &lt;ModalBody&gt;
+          &lt;b&gt;Look at the top right of the page/viewport!&lt;/b&gt;&lt;br /&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/ModalBody&gt;
+        &lt;ModalFooter&gt;
+          &lt;Button color=&quot;primary&quot; onClick={toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+          &lt;Button color=&quot;secondary&quot; onClick={toggle}&gt;Cancel&lt;/Button&gt;
+        &lt;/ModalFooter&gt;
+      &lt;/Modal&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default ModalExample;
+</code></pre><h4>Modals with custom close icon</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with custom close Icon</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React, { useState } from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+const ModalExample = (props) =&gt; {
+  const {
+    buttonLabel,
+    className
+  } = props;
+
+  const [modal, setModal] = useState(false);
+
+  const toggle = () =&gt; setModal(!modal);
+
+  return (
+    &lt;div&gt;
+      &lt;Button color=&quot;danger&quot; onClick={toggle}&gt;{buttonLabel}&lt;/Button&gt;
+      &lt;Modal isOpen={modal} toggle={toggle} className={className}&gt;
+        &lt;ModalHeader toggle={toggle} charCode=&quot;Y&quot;&gt;Modal title&lt;/ModalHeader&gt;
+        &lt;ModalBody&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/ModalBody&gt;
+        &lt;ModalFooter&gt;
+          &lt;Button color=&quot;primary&quot; onClick={toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+          &lt;Button color=&quot;secondary&quot; onClick={toggle}&gt;Cancel&lt;/Button&gt;
+        &lt;/ModalFooter&gt;
+      &lt;/Modal&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default ModalExample;
+</code></pre><h4>Modals with custom close button</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><button type="button" class="btn btn-danger">Launch Modal with custom close button</button></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React, { useState } from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from &#x27;reactstrap&#x27;;
+
+const ModalExample = (props) =&gt; {
+  const {
+    buttonLabel,
+    className
+  } = props;
+
+  const [modal, setModal] = useState(false);
+
+  const toggle = () =&gt; setModal(!modal);
+
+  const closeBtn = &lt;button className=&quot;close&quot; onClick={toggle}&gt;&amp;times;&lt;/button&gt;;
+
+  return (
+  &lt;div&gt;
+    &lt;Button color=&quot;danger&quot; onClick={toggle}&gt;{buttonLabel}&lt;/Button&gt;
+    &lt;Modal isOpen={modal} toggle={toggle} className={className}&gt;
+      &lt;ModalHeader toggle={toggle} close={closeBtn}&gt;Modal title&lt;/ModalHeader&gt;
+      &lt;ModalBody&gt;
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      &lt;/ModalBody&gt;
+      &lt;ModalFooter&gt;
+        &lt;Button color=&quot;primary&quot; onClick={toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+        &lt;Button color=&quot;secondary&quot; onClick={toggle}&gt;Cancel&lt;/Button&gt;
+      &lt;/ModalFooter&gt;
+    &lt;/Modal&gt;
+  &lt;/div&gt;
+);
+}
+
+export default ModalExample;
+</code></pre><h4>Destructuring</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><form class="form-inline"><div class="form-group"><label for="unmountOnClose" class="">UnmountOnClose value</label> <select name="unmountOnClose" id="unmountOnClose" class="form-control"><option value="true">true</option><option value="false">false</option></select></div> <button type="button" class="btn btn-danger">Launch Modal</button></form></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React, { useState } from &#x27;react&#x27;;
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } from &#x27;reactstrap&#x27;;
+
+const ModalExample = (props) =&gt; {
+    const {
+      buttonLabel,
+      className
+    } = props;
+  
+    const [modal, setModal] = useState(false);
+    const [unmountOnClose, setUnmountOnClose] = useState(true);
+  
+    const toggle = () =&gt; setModal(!modal);
+    const changeUnmountOnClose = e =&gt; {
+        let value = e.target.value;
+        setUnmountOnClose(JSON.parse(value));
+    }
+  
+    return (
+        &lt;div&gt;
+            &lt;Form inline onSubmit={(e) =&gt; e.preventDefault()}&gt;
+                &lt;FormGroup&gt;
+                    &lt;Label for=&quot;unmountOnClose&quot;&gt;UnmountOnClose value&lt;/Label&gt;{&#x27; &#x27;}
+                    &lt;Input type=&quot;select&quot; name=&quot;unmountOnClose&quot; id=&quot;unmountOnClose&quot; onChange={changeUnmountOnClose}&gt;
+                        &lt;option value=&quot;true&quot;&gt;true&lt;/option&gt;
+                        &lt;option value=&quot;false&quot;&gt;false&lt;/option&gt;
+                    &lt;/Input&gt;
+                &lt;/FormGroup&gt;
+                {&#x27; &#x27;}
+                &lt;Button color=&quot;danger&quot; onClick={toggle}&gt;{buttonLabel}&lt;/Button&gt;
+            &lt;/Form&gt;
+            &lt;Modal isOpen={modal} toggle={toggle} className={className} unmountOnClose={unmountOnClose}&gt;
+                &lt;ModalHeader toggle={toggle}&gt;Modal title&lt;/ModalHeader&gt;
+                &lt;ModalBody&gt;
+                    &lt;Input type=&quot;textarea&quot; placeholder=&quot;Write something (data should remain in modal if unmountOnClose is set to false)&quot; rows={5} /&gt;
+                &lt;/ModalBody&gt;
+                &lt;ModalFooter&gt;
+                    &lt;Button color=&quot;primary&quot; onClick={toggle}&gt;Do Something&lt;/Button&gt;{&#x27; &#x27;}
+                    &lt;Button color=&quot;secondary&quot; onClick={toggle}&gt;Cancel&lt;/Button&gt;
+                &lt;/ModalFooter&gt;
+            &lt;/Modal&gt;
+        &lt;/div&gt;
+    );
+}
+
+export default ModalExample;
+</code></pre><h4>Focus after close</h4><div class="docs-example"><div class="btn-group"><div class="btn"><div><form class="form-inline"><div class="form-group"><label for="focusAfterClose" class="">Focus After Close</label><select id="focusAfterClose" class="mx-2 form-control"><option value="true">Yes</option><option value="false">No</option></select></div><button type="button" class="btn btn-danger">Open</button></form></div></div></div></div><pre><code class="language-jsx">/* eslint react/no-multi-comp: 0, react/prop-types: 0 */
+
+import React, { useState } from &#x27;react&#x27;;
+import { Button, Modal, ModalBody, ModalFooter, Label, Input, FormGroup, Form } from &#x27;reactstrap&#x27;;
+
+const ModalFocusAfterClose = (props) =&gt; {
+    const [open, setOpen] = useState(false);
+    const [focusAfterClose, setFocusAfterClose] = useState(true);
+
+    const toggle = () =&gt; setOpen(!open);
+    const handleSelectChange = ({target: { value }}) =&gt; {
+        setFocusAfterClose(JSON.parse(value));
+    }
+
+    return (
+        &lt;div&gt;
+            &lt;Form inline onSubmit={(e) =&gt; e.preventDefault()}&gt;
+                &lt;FormGroup&gt;
+                    &lt;Label for=&quot;focusAfterClose&quot;&gt;Focus After Close&lt;/Label&gt;
+                    &lt;Input className=&quot;mx-2&quot; type=&quot;select&quot; id=&quot;focusAfterClose&quot; onChange={handleSelectChange}&gt;
+                        &lt;option value=&quot;true&quot;&gt;Yes&lt;/option&gt;
+                        &lt;option value=&quot;false&quot;&gt;No&lt;/option&gt;
+                    &lt;/Input&gt;
+                &lt;/FormGroup&gt;
+                &lt;Button color=&quot;danger&quot; onClick={toggle}&gt;Open&lt;/Button&gt;
+            &lt;/Form&gt;
+            &lt;Modal returnFocusAfterClose={focusAfterClose} isOpen={open}&gt;
+                &lt;ModalBody&gt;
+                    Observe the &quot;Open&quot; button. It will be focused after close when &quot;returnFocusAfterClose&quot; is true and will not be focused if &quot;returnFocusAfterClose&quot; is false.
+                &lt;/ModalBody&gt;
+                &lt;ModalFooter&gt;
+                    &lt;Button color=&quot;primary&quot; onClick={toggle}&gt;Close&lt;/Button&gt;
+                &lt;/ModalFooter&gt;
+            &lt;/Modal&gt;
+        &lt;/div&gt;
+    )
+}
+
+export default ModalFocusAfterClose;
+</code></pre></div></aside></div></div><div class="footer"><div class="container"><div class="row"><div class="text-center col"><p class="social"><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=star&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=reactstrap&amp;repo=reactstrap&amp;type=fork&amp;count=true" frameBorder="0" scrolling="0" width="100" height="20px"></iframe></p><a href="https://www.netlify.com"><img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deploys by Netlify"/></a></div></div></div></div></div></div>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-40000603-2', 'auto');
+          </script>
+          <script src="/assets/prism.js" data-manual></script>
+          <script src="/bundle.js"></script>
+          <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+          <script type="text/javascript">
+            docsearch({
+              apiKey: '2999e8cb716a50f4bd09a3addb18bf4f',
+              indexName: 'reactstrap',
+              inputSelector: '#algolia-doc-search',
+              debug: false // Set debug to true if you want to inspect the dropdown
+            });
+          </script>
+        </body>
+      </html>
